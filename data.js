@@ -19,7 +19,7 @@ const APP_DATA = {
         {
           time: "10:20~10:30",
           sessions: [
-            { name: "휴식", room: "로비", talks: [] }
+            { name: "휴식 및 이동", room: "로비", talks: [] }
           ]
         },
         {
@@ -31,14 +31,14 @@ const APP_DATA = {
         {
           time: "12:00~13:00",
           sessions: [
-            { name: "점심식사 및 전시부스 관람", room: "전시장", talks: [] }
+            { name: "점심식사 및 전시부스 참관", room: "전시장", talks: [] }
           ]
         },
         {
           time: "13:00~14:20",
           sessions: [
-            { name: "유체1", room: "A룸", talks: [] },
-            { name: "소재-가공-패키징1", room: "B룸", talks: [] }
+            { name: "유체I", room: "영주홀A", note: "초청강연 1편, 일반 구두발표 5편", talks: [] },
+            { name: "소재, 가공, 패키징I", room: "영주홀룸", note: "초청강연 1편, 일반 구두발표 5편", talks: [] }
           ]
         },
         {
@@ -50,8 +50,8 @@ const APP_DATA = {
         {
           time: "14:40~16:00",
           sessions: [
-            { name: "메디컬1", room: "A룸", talks: [] },
-            { name: "화학1", room: "B룸", talks: [] }
+            { name: "메디컬I", room: "영주홀A", note: "초청강연 1편, 일반 구두발표 5편", talks: [] },
+            { name: "화학I", room: "영주홀룸", note: "초청강연 1편, 일반 구두발표 5편", talks: [] }
           ]
         },
         {
@@ -63,21 +63,21 @@ const APP_DATA = {
         {
           time: "16:15~17:15",
           sessions: [
-            { name: "포스터WP-1", room: "D룸", talks: [] },
-            { name: "특별세션1", room: "E룸", talks: [] }
+            { name: "포스터WP-I", room: "백록홀", note: "일반 포스터발표 00편", talks: [] },
+            { name: "특별세션I (기술사업화 역량강화)", room: "영주홀B", note: "초청강연 3편", talks: [] }
           ]
         },
         {
           time: "17:15~17:55",
           sessions: [
-            { name: "포스터WP-1 (계속)", room: "D룸", talks: [] },
-            { name: "세션없음", room: "E룸", talks: [] }
+            { name: "포스터WP-I (계속)", room: "백록홀", note: "일반 포스터발표 00편", talks: [] },
+            { name: "세션없음", room: "영주홀B", talks: [] }
           ]
         },
         {
           time: "18:00~18:30",
           sessions: [
-            { name: "2026 MNS 춘계학술대회 평의원회", room: "F룸", talks: [] }
+            { name: "2026 MNS 춘계학술대회 평의원회", room: "영주홀A", note: "참석대상: 평의원", talks: [] }
           ]
         },
         {
@@ -89,7 +89,7 @@ const APP_DATA = {
         {
           time: "19:00~21:00",
           sessions: [
-            { name: "신진연구자 환영회", room: "연회장", talks: [] }
+            { name: "신진연구자 환영회", room: "추후공지", talks: [] }
           ]
         }
       ]
