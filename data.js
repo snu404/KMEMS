@@ -37,7 +37,60 @@ const APP_DATA = {
         {
           time: "13:00~14:20",
           sessions: [
-            { name: "유체I", room: "영주홀A", note: "초청강연 1편, 일반 구두발표 5편", talks: [] },
+            { name: "유체I", room: "영주홀A", note: "초청강연 1편, 일반 구두발표 5편", talks: [
+        // 초청강연(Invited)
+        {
+          kind: "Invited",
+          time: "13:00~13:20",
+          title: "Invited Talk Title goes here",
+          speaker_affil: "서울대학교 기계공학부",
+          speaker_name: "홍길동",
+          pdf: "pdf/D1_Fluid1_INV_01.pdf"
+        },
+
+        // 일반 구두발표(Oral)
+        {
+          kind: "Oral",
+          time: "13:20~13:30",
+          title: "Oral Presentation 1 Title",
+          speaker_affil: "KAIST 기계공학과",
+          speaker_name: "김민수",
+          pdf: "pdf/D1_Fluid1_O_01.pdf"
+        },
+        {
+          kind: "Oral",
+          time: "13:30~13:40",
+          title: "Oral Presentation 2 Title",
+          speaker_affil: "POSTECH 화학공학과",
+          speaker_name: "이서연",
+          pdf: "pdf/D1_Fluid1_O_02.pdf"
+        },
+        {
+          kind: "Oral",
+          time: "13:40~13:50",
+          title: "Oral Presentation 3 Title",
+          speaker_affil: "UNIST 기계공학과",
+          speaker_name: "박지훈",
+          pdf: "pdf/D1_Fluid1_O_03.pdf"
+        },
+        {
+          kind: "Oral",
+          time: "13:50~14:00",
+          title: "Oral Presentation 4 Title",
+          speaker_affil: "고려대학교 기계공학부",
+          speaker_name: "최유진",
+          pdf: "pdf/D1_Fluid1_O_04.pdf"
+        },
+        {
+          kind: "Oral",
+          time: "14:00~14:10",
+          title: "Oral Presentation 5 Title",
+          speaker_affil: "연세대학교 기계공학과",
+          speaker_name: "정현우",
+          pdf: "pdf/D1_Fluid1_O_05.pdf"
+        }
+      ]
+ },
             { name: "소재, 가공, 패키징I", room: "영주홀B", note: "초청강연 1편, 일반 구두발표 5편", talks: [] }
           ]
         },
