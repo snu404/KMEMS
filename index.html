@@ -401,7 +401,7 @@ function render_() {
             <div class="t1">
               <div class="time">${t.time || ''}</div>
 
-           <div class="title">${(t.kind === "Invited" || t.kind === "Special")? `<span class="kbadge">★</span>` : ``}${t.title || ''}</div>
+           <div class="title">${(t.kind === "Invited" || t.kind === "Special")? `<span class="kbadge">초청</span>` : ``}${t.title || ''}</div>
             </div>
             <div class="authors">${[t.speaker_affil, t.speaker_name].filter(Boolean).join(' · ') || (t.authors || '')}</div>
             <div class="btns">
