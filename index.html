@@ -260,85 +260,53 @@
 
     render_();
 
-  // ---- Sponsors Data (원하는대로 수정) ----
+  // ---- Sponsors Data ----
   const SPONSORS = [
-    // logos/ 폴더에 이미지 넣고 경로 맞추면 됩니다.
-    { tier: "Platinum", name: "Company A", url: "https://example.com", logo: "logos/company-a.png", note: "Platinum Sponsor" },
-    { tier: "Gold",     name: "Company B", url: "https://example.com", logo: "logos/company-b.png", note: "Gold Sponsor" },
-    { tier: "Gold",     name: "Company C", url: "https://example.com", logo: "logos/company-c.png", note: "" },
-    { tier: "Silver",   name: "Company D", url: "https://example.com", logo: "logos/company-d.png", note: "" },
-    { tier: "Support",  name: "Company E", url: "https://example.com", logo: "logos/company-e.png", note: "Exhibitor" }
+    { name: "Company A", url: "https://example.com", logo: "logos/company-a.png", note: "" },
+    { name: "Company B", url: "https://example.com", logo: "logos/company-b.png", note: "" },
+    { name: "Company C", url: "https://example.com", logo: "logos/company-c.png", note: "" },
+    { name: "Company D", url: "https://example.com", logo: "logos/company-d.png", note: "" },
+    { name: "Company E", url: "https://example.com", logo: "logos/company-e.png", note: "" }
   ];
-
-  const TIER_ORDER = ["Platinum", "Gold", "Silver", "Bronze", "Support"];
-  const TIER_LABEL = {
-    Platinum: "Platinum",
-    Gold: "Gold",
-    Silver: "Silver",
-    Bronze: "Bronze",
-    Support: "Supporters"
-  };
-
-  function groupByTier_(items) {
-    const m = new Map();
-    for (const t of TIER_ORDER) m.set(t, []);
-    for (const it of items) {
-      const key = TIER_ORDER.includes(it.tier) ? it.tier : "Support";
-      m.get(key).push(it);
-    }
-    return m;
-  }
 
   function renderSponsors_() {
     const mount = document.getElementById("sponsorsMount");
     if (!mount) return;
 
-    const grouped = groupByTier_(SPONSORS);
-    mount.innerHTML = "";
-
-    for (const tier of TIER_ORDER) {
-      const list = grouped.get(tier) || [];
-      if (list.length === 0) continue;
-
-      const sec = document.createElement("div");
-      sec.className = "tier";
-
-      const title = document.createElement("div");
-      title.className = "tier-title";
-      title.innerHTML = `
-        <div class="left">
-          <span class="badge">${TIER_LABEL[tier] || tier}</span>
-          <h3>${tier === "Support" ? "협찬/전시" : "협찬사"}</h3>
+    mount.innerHTML = `
+      <div class="tier">
+        <div class="tier-title">
+          <h3>협찬사</h3>
+          <div class="count">${SPONSORS.length}개</div>
         </div>
-        <div class="count">${list.length}개</div>
+        <div class="logo-grid" id="logoGrid"></div>
+      </div>
+    `;
+
+    const grid = document.getElementById("logoGrid");
+
+    for (const s of SPONSORS) {
+      const a = document.createElement("a");
+      a.className = "logo-card";
+      a.href = s.url || "#";
+      a.target = s.url ? "_blank" : "_self";
+      a.rel = s.url ? "noopener" : "";
+
+      a.innerHTML = `
+        <div class="logo-box">
+          ${s.logo
+            ? `<img src="${s.logo}" alt="${s.name} logo" loading="lazy" />`
+            : `<div style="font-weight:900;color:#777">${s.name}</div>`}
+        </div>
+        <div class="logo-name">${s.name}</div>
+        ${s.note ? `<div class="logo-note">${s.note}</div>` : ``}
       `;
-      sec.appendChild(title);
 
-      const grid = document.createElement("div");
-      grid.className = "logo-grid";
-
-      for (const s of list) {
-        const a = document.createElement("a");
-        a.className = "logo-card";
-        a.href = s.url || "#";
-        a.target = s.url ? "_blank" : "_self";
-        a.rel = s.url ? "noopener" : "";
-        a.innerHTML = `
-          <div class="logo-box">
-            ${s.logo ? `<img src="${s.logo}" alt="${s.name} logo" loading="lazy" />` : `<div style="font-weight:900;color:#777">${s.name}</div>`}
-          </div>
-          <div class="logo-name">${s.name}</div>
-          ${s.note ? `<div class="logo-note">${s.note}</div>` : ``}
-        `;
-        grid.appendChild(a);
-      }
-
-      sec.appendChild(grid);
-      mount.appendChild(sec);
+      grid.appendChild(a);
     }
   }
 
-  // 페이지 최초 로드 시 1회 렌더
+  // 페이지 로드 시 실행
   renderSponsors_();
 
   </script>
