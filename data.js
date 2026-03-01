@@ -91,7 +91,59 @@ const APP_DATA = {
         }
       ]
  },
-            { name: "소재, 가공, 패키징I", room: "영주홀B", note: "초청강연 1편, 일반 구두발표 5편", talks: [] }
+            { name: "소재, 가공, 패키징I", room: "영주홀B", note: "초청강연 1편, 일반 구두발표 5편", talks: [
+        // 초청강연(Invited)
+        {
+          kind: "Invited",
+          time: "13:00~13:25",
+          title: "Highly Anisotropic 2D van der Waals Materials for Spintronic Device Applications",
+          speaker_affil: "전북대학교",
+          speaker_name: "조준현",
+          pdf: "pdf/D1_Packaging1_INV_01.pdf"
+        },
+
+        // 일반 구두발표(Oral)
+        {
+          kind: "Oral",
+          time: "13:25~13:40",
+          title: "Self-Regulated Photosynthesis Assistance System Using MXene-Based Multifunctional",
+          speaker_affil: "전북대학교",
+          speaker_name: "고유진",
+          pdf: "pdf/D1_Packaging1_O_01.pdf"
+        },
+        {
+          kind: "Oral",
+          time: "13:40~13:55",
+          title: "레이저 어닐링 기반 나노스케일 스텐실 박막의 제작과 스텐실 리소그래피를 통한 금속 나노디스크 배열 제작",
+          speaker_affil: "한국과학기술원",
+          speaker_name: "민두홍",
+          pdf: "pdf/D1_Packaging1_O_02.pdf"
+        },
+        {
+          kind: "Oral",
+          time: "13:55~14:10",
+          title: "Poisson Effect-Assisted Replication Lithography and Its Implementation in a Roll-to-Roll Continuous Fabrication System",
+          speaker_affil: "경북대학교",
+          speaker_name: "김민수",
+          pdf: "pdf/D1_Packaging1_O_03.pdf"
+        },
+        {
+          kind: "Oral",
+          time: "14:10~14:25",
+          title: "금형 공정 기반 다중구조 CNP-PDMS 표면의 초발수 및 광열 특성을 이용한 에너지프리 방빙 기술",
+          speaker_affil: "국민대학교",
+          speaker_name: "이영석",
+          pdf: "pdf/D1_Packaging1_O_04.pdf"
+        },
+        {
+          kind: "Oral",
+          time: "14:25~14:40",
+            title: "Fabrication of Aerogel-Based Transparent Haze Film for Enhanced Forward Light Scattering and Passive Radiative Cooling in Solar Cells",
+          speaker_affil: "중앙대학교",
+          speaker_name: "이경완",
+          pdf: "pdf/D1_Fluid1_O_05.pdf"
+        }
+      ] }
           ]
         },
         {
