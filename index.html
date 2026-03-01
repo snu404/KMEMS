@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Conference Program (2박3일)</title>
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#111111">
+
+  <style>
+    :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    body { margin: 0; background: #f6f7f9; color: #111; }
+    header { position: sticky; top: 0; background: #111; color: #fff; padding: 14px 16px; z-index: 10; }
+    header h1 { margin: 0; font-size: 16px; font-weight: 700; }
+    .wrap { padding: 12px; max-width: 980px; margin: 0 auto; }
+    .row { display: grid; gap: 10px; grid-template-columns: 1fr; }
+    .controls { display: grid; gap: 10px; grid-template-columns: 1fr; margin: 10px 0 12px; }
+    .seg { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .seg button {
+      border: 1px solid #ddd; background: #fff; padding: 10px; border-radius: 12px;
+      font-weight: 700; cursor: pointer;
+    }
+    .seg button.active { background: #111; color: #fff; border-color: #111; }
+    input[type="search"] {
+      width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 12px; font-size: 14px;
+    }
+    .dayTitle { font-size: 14px; font-weight: 800; margin: 14px 2px 8px; color: #333; }
+    .session {
+      background: #fff; border: 1px solid #e7e7e7; border-radius: 16px;
+      padding: 12px; box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+    }
+    .sessionHead { display:flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+    .sessionHead .name { font-weight: 900; font-size: 14px; }
+    .sessionHead .meta { font-size: 12px; color: #666; white-space: nowrap; }
+    .talks { margin-top: 8px; display: grid; gap: 8px; }
+    .talk {
+      border: 1px solid #eee; border-radius: 14px; padding: 10px; background: #fafafa;
+      display: grid; gap: 6px;
+    }
+    .talk .t1 { display:flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+    .talk .time { font-weight: 800; font-size: 12px; color:#222; white-space: nowrap; }
+    .talk .title { font-weight: 800; font-size: 13px; }
+    .talk .authors { font-size: 12px; color: #666; }
+    .btns { display:flex; gap: 8px; flex-wrap: wrap; }
+    a.btn {
+      display:inline-flex; align-items:center; gap:6px;
+      padding: 8px 10px; border-radius: 12px; border: 1px solid #ddd;
+      background:#fff; color:#111; text-decoration:none; font-size: 12px; font-weight: 800;
+    }
+    footer { padding: 18px 12px; color:#777; font-size: 12px; text-align:center; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Conference Program (2박 3일) · Mobile App</h1>
+  </header>
+
+  <div class="wrap">
+    <div class="controls">
+      <div class="seg" id="daySeg"></div>
+      <input id="q" type="search" placeholder="검색: 발표제목/저자/세션/키워드" />
+    </div>
+
+    <div id="content" class="row"></div>
+
+    <footer>
+      • 항목을 누르면 PDF 초록으로 이동합니다. <br/>
+      • 홈 화면에 추가하면 앱처럼 사용 가능합니다(PWA).
+    </footer>
+  </div>
+
+  <script src="data.js"></script>
+  <script>
+    // ---- PWA Service Worker 등록 ----
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js').catch(console.error);
+    }
+
+    // ---- 상태 ----
+    const state = {
+      dayIndex: 0,
+      query: ''
+    };
+
+    // URL 파라미터로 deep-link 지원: ?day=1&q=laser
+    const params = new URLSearchParams(location.search);
+    if (params.has('day')) state.dayIndex = Math.max(0, Math.min(2, Number(params.get('day')) || 0));
+    if (params.has('q')) state.query = params.get('q') || '';
+
+    const daySeg = document.getElementById('daySeg');
+    const content = document.getElementById('content');
+    const qInput = document.getElementById('q');
+    qInput.value = state.query;
+
+    function setUrl_() {
+      const u = new URL(location.href);
+      u.searchParams.set('day', String(state.dayIndex));
+      if (state.query) u.searchParams.set('q', state.query); else u.searchParams.delete('q');
+      history.replaceState({}, '', u.toString());
+    }
+
+    function norm_(s){ return (s || '').toLowerCase().trim(); }
+
+    function renderDayTabs_() {
+      daySeg.innerHTML = '';
+      APP_DATA.days.forEach((d, idx) => {
+        const b = document.createElement('button');
+        b.textContent = d.label; // e.g., Day 1 (Mon)
+        b.className = idx === state.dayIndex ? 'active' : '';
+        b.onclick = () => { state.dayIndex = idx; setUrl_(); render_(); };
+        daySeg.appendChild(b);
+      });
+    }
+
+    function talkMatches_(talk, q) {
+      if (!q) return true;
+      const hay = norm_([
+        talk.time, talk.title, talk.authors, talk.keywords?.join(' '),
+        talk.room, talk.session, talk.id
+      ].join(' '));
+      return hay.includes(q);
+    }
+
+    function render_() {
+      renderDayTabs_();
+
+      const day = APP_DATA.days[state.dayIndex];
+      const q = norm_(state.query);
+
+      content.innerHTML = '';
+      const dayTitle = document.createElement('div');
+      dayTitle.className = 'dayTitle';
+      dayTitle.textContent = `${day.date} · ${day.label}`;
+      content.appendChild(dayTitle);
+
+      day.sessions.forEach(sess => {
+        // 세션 내 talk 필터링
+        const talks = sess.talks.filter(t => talkMatches_(t, q));
+        if (talks.length === 0) return;
+
+        const card = document.createElement('div');
+        card.className = 'session';
+
+        const head = document.createElement('div');
+        head.className = 'sessionHead';
+        head.innerHTML = `
+          <div class="name">${sess.name}</div>
+          <div class="meta">${sess.time} · ${sess.room}</div>
+        `;
+        card.appendChild(head);
+
+        const talksWrap = document.createElement('div');
+        talksWrap.className = 'talks';
+
+        talks.forEach(t => {
+          const item = document.createElement('div');
+          item.className = 'talk';
+
+          const pdfUrl = t.pdf;               // e.g., "pdf/D1_S1_01.pdf" or external URL
+          const pdfView = `viewer.html?pdf=${encodeURIComponent(pdfUrl)}`; // (선택) 내부 뷰어를 쓰고 싶으면 viewer.html 추가 가능
+          // 여기서는 가장 단순하게 "그대로 pdf 링크"로 둡니다.
+          const openUrl = pdfUrl;
+
+          item.innerHTML = `
+            <div class="t1">
+              <div class="time">${t.time || ''}</div>
+              <div class="title">${t.title}</div>
+            </div>
+            <div class="authors">${t.authors || ''}</div>
+            <div class="btns">
+              <a class="btn" href="${openUrl}" target="_blank" rel="noopener">📄 초록 PDF</a>
+              ${t.slides ? `<a class="btn" href="${t.slides}" target="_blank" rel="noopener">🖥️ Slides</a>` : ``}
+              ${t.video ? `<a class="btn" href="${t.video}" target="_blank" rel="noopener">🎥 Video</a>` : ``}
+            </div>
+          `;
+          talksWrap.appendChild(item);
+        });
+
+        card.appendChild(talksWrap);
+        content.appendChild(card);
+      });
+
+      if (content.children.length <= 1) {
+        const empty = document.createElement('div');
+        empty.style.padding = '12px';
+        empty.style.color = '#666';
+        empty.textContent = '검색 결과가 없습니다.';
+        content.appendChild(empty);
+      }
+    }
+
+    qInput.addEventListener('input', (e) => {
+      state.query = e.target.value;
+      setUrl_();
+      render_();
+    });
+
+    render_();
+  </script>
+</body>
+</html>
