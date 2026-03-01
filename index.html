@@ -346,7 +346,7 @@ function render_() {
       : `1fr`;
 
     for (const sess of (blk.sessions || [])) {
-      const talksAll = sess.talks || [];
+      const talksAll = Array.isArray(sess.talks) ? sess.talks : [];
       const talksFiltered = talksAll.filter(t => talkMatches_(t, q));
       const talksToShow = q ? talksFiltered : talksAll;
 
