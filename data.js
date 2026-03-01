@@ -15,7 +15,7 @@ const APP_DATA = {
               title: "Opening Keynote: Future of MEMS",
               authors: "J. Lee (KAIST)",
               keywords: ["MEMS", "Future"],
-              pdf: "pdf/D1_S1_01.pdf"
+              pdf: "pdf/dummy.pdf"
             },
             {
               id: "D1-S1-02",
