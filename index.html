@@ -375,7 +375,7 @@ function render_() {
             <div class="time"></div>
             <div class="title">${sess.name || ''}</div>
           </div>
-          <div class="authors" style="color:#666;">${sess.room ? `장소: ${sess.room}` : ''}</div>
+          <div class="authors" style="color:#666;">${sess.note ? sess.note : (sess.room ? `장소: ${sess.room}` : '')}</div>
         `;
         talksWrap.appendChild(note);
       } else {
