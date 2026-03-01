@@ -419,12 +419,14 @@ function render_() {
 }
 
 window.addEventListener('resize', () => render_());
-    
-<!--    qInput.addEventListener('input', (e) => {
-      state.query = e.target.value;
-      setUrl_();
-      render_();
-    }); -->
+
+/* 검색 입력 이벤트 (사용하려면 주석 해제)
+qInput.addEventListener('input', (e) => {
+  state.query = e.target.value;
+  setUrl_();
+  render_();
+});
+*/
 
     render_();
 
