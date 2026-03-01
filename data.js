@@ -1,8 +1,8 @@
 const APP_DATA = {
   days: [
     {
-      label: "Day 1 (Mon)",
-      date: "2026-03-01",
+      label: "Day 1 (Wed)",
+      date: "2026-03-25",
       sessions: [
         {
           name: "Session 1: Keynote",
@@ -38,8 +38,8 @@ const APP_DATA = {
       ]
     },
     {
-      label: "Day 2 (Tue)",
-      date: "2026-03-02",
+      label: "Day 2 (Thu)",
+      date: "2026-03-26",
       sessions: [
         {
           name: "Session 3: Micro/Nano Fabrication",
@@ -52,8 +52,8 @@ const APP_DATA = {
       ]
     },
     {
-      label: "Day 3 (Wed)",
-      date: "2026-03-03",
+      label: "Day 3 (Fri)",
+      date: "2026-03-27",
       sessions: [
         {
           name: "Session 4: Closing",
