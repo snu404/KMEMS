@@ -277,7 +277,7 @@ const APP_DATA = {
           ]
         },
         { time: "11:00~11:10", sessions: [ { name: "휴식 및 이동", room: "로비", talks: [] } ] },
-        { time: "11:10~11:40", sessions: [ { name: "학술상 강연 (질병 치료 및 진단을 위한 마이크로니들 기술)", room: "이벤트홀", note: "연세대학교 류원형 교수", talks: [] } ] },
+        { time: "11:10~11:40", sessions: [ { name: "2025 MNS 학술상 수상 기념 초청 강연 (질병 치료 및 진단을 위한 마이크로니들 기술)", room: "이벤트홀", note: "연세대학교 류원형 교수", talks: [] } ] },
         { time: "11:40~12:00", sessions: [ { name: "폐회식 준비", room: "이벤트홀", talks: [] } ] },
         { time: "12:00~12:30", sessions: [ { name: "우수논문 시상 및 폐회식", room: "이벤트홀", talks: [] } ] }
       ]
