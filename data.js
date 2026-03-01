@@ -38,7 +38,7 @@ const APP_DATA = {
           time: "13:00~14:20",
           sessions: [
             { name: "유체I", room: "영주홀A", note: "초청강연 1편, 일반 구두발표 5편", talks: [] },
-            { name: "소재, 가공, 패키징I", room: "영주홀룸", note: "초청강연 1편, 일반 구두발표 5편", talks: [] }
+            { name: "소재, 가공, 패키징I", room: "영주홀B", note: "초청강연 1편, 일반 구두발표 5편", talks: [] }
           ]
         },
         {
@@ -51,7 +51,7 @@ const APP_DATA = {
           time: "14:40~16:00",
           sessions: [
             { name: "메디컬I", room: "영주홀A", note: "초청강연 1편, 일반 구두발표 5편", talks: [] },
-            { name: "화학I", room: "영주홀룸", note: "초청강연 1편, 일반 구두발표 5편", talks: [] }
+            { name: "화학I", room: "영주홀B", note: "초청강연 1편, 일반 구두발표 5편", talks: [] }
           ]
         },
         {
@@ -106,52 +106,52 @@ const APP_DATA = {
         {
           time: "08:00~08:56",
           sessions: [
-            { name: "융복합1-메디컬2", room: "A룸", talks: [] },
-            { name: "물리1", room: "B룸", talks: [] }
+            { name: "융복합I-메디컬II", room: "영주홀A", note: "초청강연 1편, 일반 구두발표 3편", talks: [] },
+            { name: "물리I", room: "영주홀B", note: "초청강연 1편, 일반 구두발표 3편", talks: [] }
           ]
         },
         { time: "08:56~09:10", sessions: [ { name: "휴식 및 이동", room: "로비", talks: [] } ] },
-        { time: "09:10~09:30", sessions: [ { name: "개회식", room: "A룸", talks: [] } ] },
-        { time: "09:30~10:10", sessions: [ { name: "기조강연1", room: "A룸", talks: [] } ] },
-        { time: "10:10~11:00", sessions: [ { name: "기조강연2", room: "A룸", talks: [] } ] },
+        { time: "09:10~09:30", sessions: [ { name: "개회식", room: "이벤트홀A", talks: [] } ] },
+        { time: "09:30~10:10", sessions: [ { name: "기조강연I", room: "이벤트홀A", Note: "Spatial & Physical AI: Empowering the Future of Smart Cities, 네이버랩스 차재원 박사", talks: [] } ] },
+        { time: "10:10~11:00", sessions: [ { name: "기조강연II", room: "이벤트홀A", Note: "로봇 기술의 발전과 활용, 성균관대학교 문형필 교수", talks: [] } ] },
         { time: "11:00~11:15", sessions: [ { name: "휴식 및 이동", room: "로비", talks: [] } ] },
         {
           time: "11:15~12:23",
           sessions: [
-            { name: "유체2", room: "A룸", talks: [] },
-            { name: "물리2-소재가공패키징2", room: "B룸", talks: [] }
+            { name: "유체II", room: "영주홀A", note: "초청강연 1편, 일반 구두발표 4편", talks: [] },
+            { name: "물리II-소재, 가공, 패키징II", room: "영주홀B", note: "초청강연 1편, 일반 구두발표 4편", talks: [] }
           ]
         },
-        { time: "12:23~13:20", sessions: [ { name: "점심식사 및 전시부스 관람 (세션없음)", room: "전시장", talks: [] } ] },
-        { time: "13:20~13:50", sessions: [ { name: "점심식사 및 전시부스 관람 (삼성 미리보기술 육성사업 설명회)", room: "D룸", talks: [] } ] },
+        { time: "12:23~13:20", sessions: [ { name: "점심식사 및 전시부스 참관", room: "전시장", talks: [] } ] },
+        { time: "13:20~13:50", sessions: [ { name: "삼성 미래기술 육성사업 설명회)", room: "영주홀B", talks: [] } ] },
         {
           time: "13:50~14:58",
           sessions: [
-            { name: "바이오1", room: "A룸", talks: [] },
-            { name: "유연1", room: "B룸", talks: [] }
+            { name: "바이오I", room: "영주홀A", note: "초청강연 1편, 일반 구두발표 4편", talks: [] },
+            { name: "유연I", room: "영주홀B", note: "초청강연 1편, 일반 구두발표 4편", talks: [] }
           ]
         },
         { time: "14:58~15:15", sessions: [ { name: "휴식 및 이동", room: "로비", talks: [] } ] },
         {
           time: "15:15~16:23",
           sessions: [
-            { name: "유체3", room: "A룸", talks: [] },
-            { name: "소재가공패키징3", room: "B룸", talks: [] }
+            { name: "유체III", room: "영주홀A", note: "초청강연 1편, 일반 구두발표 4편", talks: [] },
+            { name: "소재, 가공, 패키징III", room: "영주홀B", note: "초청강연 1편, 일반 구두발표 4편", talks: [] }
           ]
         },
         { time: "16:23~16:40", sessions: [ { name: "휴식 및 이동", room: "로비", talks: [] } ] },
         {
           time: "16:40~17:40",
           sessions: [
-            { name: "포스터발표TP-2", room: "D룸", talks: [] },
-            { name: "특별세션2", room: "E룸", talks: [] }
+            { name: "포스터발표TP-II", room: "백록홀", note: "일반 포스터발표 00편", talks: [] },
+            { name: "특별세션II (연구 역량강화)", room: "영주홀B", note: "초청강연 2편", talks: [] }
           ]
         },
         {
           time: "17:40~18:20",
           sessions: [
-            { name: "포스터발표TP-2 (계속)", room: "D룸", talks: [] },
-            { name: "세션없음", room: "E룸", talks: [] }
+            { name: "포스터발표TP-II (계속)", room: "백록홀", note: "일반 포스터발표 00편", talks: [] },
+            { name: "세션없음", room: "영주홀B", talks: [] }
           ]
         },
         { time: "18:20~18:30", sessions: [ { name: "휴식 및 이동", room: "로비", talks: [] } ] },
@@ -170,29 +170,29 @@ const APP_DATA = {
         {
           time: "08:00~09:08",
           sessions: [
-            { name: "바이오2", room: "A룸", talks: [] },
-            { name: "유체4-유연2-화학3", room: "B룸", talks: [] }
+            { name: "바이오II", room: "영주홀A", note: "초청강연 1편, 일반 구두발표 4편", talks: [] },
+            { name: "유체IV-유연II-화학III", room: "영주홀B", note: "초청강연 1편, 일반 구두발표 4편", talks: [] }
           ]
         },
         { time: "09:08~09:20", sessions: [ { name: "휴식 및 이동", room: "로비", talks: [] } ] },
         {
           time: "09:20~10:20",
           sessions: [
-            { name: "포스터발표FP-3", room: "D룸", talks: [] },
-            { name: "특별세션3", room: "E룸", talks: [] }
+            { name: "포스터발표FP-III", room: "백록홀", note: "일반 포스터발표 00편", talks: [] },
+            { name: "특별세션III (신진과학자 세션)", room: "영주홀B", note: "초청강연 4편", talks: [] }
           ]
         },
         {
           time: "10:20~11:00",
           sessions: [
-            { name: "포스터발표FP-3 (계속)", room: "D룸", talks: [] },
-            { name: "세션없음", room: "E룸", talks: [] }
+            { name: "포스터발표FP-III (계속)", room: "백록홀", note: "일반 포스터발표 00편", talks: [] },
+            { name: "세션없음", room: "영주홀B", talks: [] }
           ]
         },
         { time: "11:00~11:10", sessions: [ { name: "휴식 및 이동", room: "로비", talks: [] } ] },
-        { time: "11:10~11:40", sessions: [ { name: "학술상 강연", room: "A룸", talks: [] } ] },
-        { time: "11:40~12:00", sessions: [ { name: "폐회식 준비", room: "A룸", talks: [] } ] },
-        { time: "12:00~12:30", sessions: [ { name: "우수논문 시상 및 폐회식", room: "A룸", talks: [] } ] }
+        { time: "11:10~11:40", sessions: [ { name: "학술상 강연", room: "이벤트홀", note: "질병 치료 및 진단을 위한 마이크로니들 기술, 연세대학교 류원형 교수", talks: [] } ] },
+        { time: "11:40~12:00", sessions: [ { name: "폐회식 준비", room: "이벤트홀", talks: [] } ] },
+        { time: "12:00~12:30", sessions: [ { name: "우수논문 시상 및 폐회식", room: "이벤트홀", talks: [] } ] }
       ]
     }
   ]
