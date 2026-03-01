@@ -1,30 +1,37 @@
-const CACHE_NAME = "conf-pwa-v1";
+const CACHE_NAME = "conf-pwa-v3"; // <-- 수정할 때마다 v4, v5로 올리세요
 const ASSETS = [
   "./",
   "./index.html",
   "./data.js",
   "./manifest.json",
   "./sw.js"
-  // PDF까지 오프라인 저장하고 싶으면 여기에 pdf 파일을 추가할 수 있지만,
-  // 파일 수가 많으면 용량 이슈가 있으니 보통은 "화면만" 캐시를 추천합니다.
 ];
 
 self.addEventListener("install", (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS))
-  );
+  self.skipWaiting(); // 새 SW 즉시 적용 준비
+  event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS)));
 });
 
 self.addEventListener("activate", (event) => {
-  event.waitUntil(
-    caches.keys().then(keys =>
-      Promise.all(keys.map(k => (k !== CACHE_NAME ? caches.delete(k) : null)))
-    )
-  );
+  event.waitUntil((async () => {
+    const keys = await caches.keys();
+    await Promise.all(keys.map(k => (k !== CACHE_NAME ? caches.delete(k) : null)));
+    await self.clients.claim(); // 열린 탭에도 즉시 적용
+  })());
 });
 
+// 네트워크 우선(최신), 실패 시 캐시
 self.addEventListener("fetch", (event) => {
-  event.respondWith(
-    caches.match(event.request).then((cached) => cached || fetch(event.request))
-  );
+  const req = event.request;
+  event.respondWith((async () => {
+    try {
+      const fresh = await fetch(req);
+      const cache = await caches.open(CACHE_NAME);
+      cache.put(req, fresh.clone());
+      return fresh;
+    } catch (e) {
+      const cached = await caches.match(req);
+      return cached || Response.error();
+    }
+  })());
 });
