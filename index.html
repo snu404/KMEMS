@@ -348,7 +348,17 @@ function render_() {
     head.className = 'timeblock-head';
     head.innerHTML = `
       <div class="timeblock-time">${blk.time}</div>
-      <div class="timeblock-meta">${(blk.sessions || []).length}개 프로그램</div>
+
+<div class="timeblock-meta">
+  ${
+    (blk.sessions || []).filter(
+      s => (s.talks || []).length > 0
+    ).length <= 1
+      ? 'Single session'
+      : 'Parallel session'
+  }
+</div>
+      
     `;
     block.appendChild(head);
 
