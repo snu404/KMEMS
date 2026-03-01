@@ -188,7 +188,7 @@
 }
 
 .session.in-parallel { margin: 0; }
-    
+.kbadge.invited{ border-color:#caa100; }
   </style>
 </head>
 
@@ -385,9 +385,9 @@ function render_() {
           item.innerHTML = `
             <div class="t1">
               <div class="time">${t.time || ''}</div>
-              <div class="title">${t.title || ''}</div>
+             <div class="title">${t.kind ? `<span class="kbadge">${t.kind}</span> ` : ``}${t.title || ''}</div>
             </div>
-            <div class="authors">${t.authors || ''}</div>
+            <div class="authors">${[t.speaker_affil, t.speaker_name].filter(Boolean).join(' · ') || (t.authors || '')}</div>
             <div class="btns">
               ${t.pdf ? `<a class="btn" href="${t.pdf}" target="_blank" rel="noopener">📄 초록 PDF</a>` : ``}
               ${t.slides ? `<a class="btn" href="${t.slides}" target="_blank" rel="noopener">🖥️ Slides</a>` : ``}
