@@ -41,52 +41,52 @@ const APP_DATA = {
         // 초청강연(Invited)
         {
           kind: "Invited",
-          time: "13:00~13:20",
-          title: "Invited Talk Title goes here",
-          speaker_affil: "서울대학교 기계공학부",
-          speaker_name: "홍길동",
+          time: "13:00~13:25",
+          title: "Raman Flow Cytometry for Single-Cell Microbial Functional Phenotyping",
+          speaker_affil: "울산과학기술원",
+          speaker_name: "이강수",
           pdf: "pdf/D1_Fluid1_INV_01.pdf"
         },
 
         // 일반 구두발표(Oral)
         {
           kind: "Oral",
-          time: "13:20~13:30",
-          title: "Oral Presentation 1 Title",
-          speaker_affil: "KAIST 기계공학과",
-          speaker_name: "김민수",
+          time: "13:25~13:40",
+          title: "PFOS Detection in Environmental Waters Using SERS: Solvent Optimization and Real-Time Monitoring",
+          speaker_affil: "금오공과대학교",
+          speaker_name: "압둘나만",
           pdf: "pdf/D1_Fluid1_O_01.pdf"
         },
         {
           kind: "Oral",
-          time: "13:30~13:40",
-          title: "Oral Presentation 2 Title",
-          speaker_affil: "POSTECH 화학공학과",
-          speaker_name: "이서연",
+          time: "13:40~13:55",
+          title: "귀 외이 구조 모사 모세관 기반 mTBI 센싱 미세유체칩 개발",
+          speaker_affil: "부산대학교",
+          speaker_name: "정종수",
           pdf: "pdf/D1_Fluid1_O_02.pdf"
         },
         {
           kind: "Oral",
-          time: "13:40~13:50",
-          title: "Oral Presentation 3 Title",
-          speaker_affil: "UNIST 기계공학과",
-          speaker_name: "박지훈",
+          time: "13:55~14:10",
+          title: "Ionic-Conductance-Enhanced Nanofluidic Memristor Enabling Low-Voltage Neuromorphic Computing",
+          speaker_affil: "서울대학교",
+          speaker_name: "곽성열",
           pdf: "pdf/D1_Fluid1_O_03.pdf"
         },
         {
           kind: "Oral",
-          time: "13:50~14:00",
-          title: "Oral Presentation 4 Title",
-          speaker_affil: "고려대학교 기계공학부",
-          speaker_name: "최유진",
+          time: "14:10~14:25",
+          title: "Microfluidic Cell-viability Monitoring Device based on Sharp-edge Acoustic Streaming",
+          speaker_affil: "명지대학교",
+          speaker_name: "아드마스다그 나츄데메스젠",
           pdf: "pdf/D1_Fluid1_O_04.pdf"
         },
         {
           kind: "Oral",
-          time: "14:00~14:10",
-          title: "Oral Presentation 5 Title",
-          speaker_affil: "연세대학교 기계공학과",
-          speaker_name: "정현우",
+          time: "14:25~14:40",
+            title: "GNR-CNC 복합필름 대면적 제조 공정을 통한 유연광열소자 응용",
+          speaker_affil: "한국과학기술원",
+          speaker_name: "국윤혁",
           pdf: "pdf/D1_Fluid1_O_05.pdf"
         }
       ]
