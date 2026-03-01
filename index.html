@@ -157,6 +157,37 @@
   .hero-title { font-size: 22px; }
   .hero-sub { font-size: 18px; }
 }
+
+.timeblock {
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+}
+
+.timeblock-head {
+  display:flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.timeblock-time { font-weight: 900; font-size: 13px; color:#111; }
+.timeblock-meta { font-size: 12px; color:#666; white-space: nowrap; }
+
+.parallel-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr; /* 모바일은 1열 */
+}
+
+@media (min-width: 720px) {
+  .parallel-grid { grid-auto-flow: row; }
+}
+
+.session.in-parallel { margin: 0; }
     
   </style>
 </head>
@@ -247,79 +278,132 @@
       return hay.includes(q);
     }
 
-    function render_() {
-      renderDayTabs_();
+function render_() {
+  renderDayTabs_();
 
-      const day = APP_DATA.days[state.dayIndex];
-      const q = norm_(state.query);
+  const day = APP_DATA.days[state.dayIndex];
+  const q = norm_(state.query);
 
-      content.innerHTML = '';
-      const dayTitle = document.createElement('div');
-      dayTitle.className = 'dayTitle';
-      dayTitle.textContent = `${day.date} · ${day.label}`;
-      content.appendChild(dayTitle);
+  content.innerHTML = '';
+  const dayTitle = document.createElement('div');
+  dayTitle.className = 'dayTitle';
+  dayTitle.textContent = `${day.date} · ${day.label}`;
+  content.appendChild(dayTitle);
 
-      day.sessions.forEach(sess => {
-        // 세션 내 talk 필터링
-        const talks = sess.talks.filter(t => talkMatches_(t, q));
-        if (talks.length === 0) return;
+  const blocks = day.timeBlocks || [];
+  const maxParallel = day.maxParallel || 3;
 
-        const card = document.createElement('div');
-        card.className = 'session';
+  for (const blk of blocks) {
+    // 시간 블록 컨테이너
+    const block = document.createElement('div');
+    block.className = 'timeblock';
 
-        const head = document.createElement('div');
-        head.className = 'sessionHead';
-        head.innerHTML = `
-          <div class="name">${sess.name}</div>
-          <div class="meta">${sess.time} · ${sess.room}</div>
+    const head = document.createElement('div');
+    head.className = 'timeblock-head';
+    head.innerHTML = `
+      <div class="timeblock-time">${blk.time}</div>
+      <div class="timeblock-meta">${(blk.sessions || []).length}개 프로그램</div>
+    `;
+    block.appendChild(head);
+
+    const grid = document.createElement('div');
+    grid.className = 'parallel-grid';
+
+    // 모바일 1열, 720px 이상에서만 2~3열
+    const cols = Math.min(maxParallel, Math.max(1, (blk.sessions || []).length));
+    grid.style.gridTemplateColumns = (window.innerWidth >= 720)
+      ? `repeat(${cols}, minmax(0, 1fr))`
+      : `1fr`;
+
+    // 각 세션 카드 렌더링
+    for (const sess of (blk.sessions || [])) {
+      const talksAll = sess.talks || [];
+      const talksFiltered = talksAll.filter(t => talkMatches_(t, q));
+      const talksToShow = q ? talksFiltered : talksAll;
+
+      // 검색 중이고, 이 세션에 talk가 있는데 매칭이 0이면 숨김
+      // (휴식/이동/점심처럼 talksAll이 0인 안내 세션은 계속 보임)
+      if (q && talksAll.length > 0 && talksToShow.length === 0) continue;
+
+      const card = document.createElement('div');
+      card.className = 'session in-parallel';
+
+      const sh = document.createElement('div');
+      sh.className = 'sessionHead';
+      sh.innerHTML = `
+        <div class="name">${sess.name || ''}</div>
+        <div class="meta">${sess.room || ''}</div>
+      `;
+      card.appendChild(sh);
+
+      const talksWrap = document.createElement('div');
+      talksWrap.className = 'talks';
+
+      if (talksAll.length === 0) {
+        // 안내 세션(휴식/이동/점심/세션없음 등)
+        const note = document.createElement('div');
+        note.className = 'talk';
+        note.innerHTML = `
+          <div class="t1">
+            <div class="time"></div>
+            <div class="title">${sess.name || ''}</div>
+          </div>
+          <div class="authors" style="color:#666;">${sess.room ? `장소: ${sess.room}` : ''}</div>
         `;
-        card.appendChild(head);
-
-        const talksWrap = document.createElement('div');
-        talksWrap.className = 'talks';
-
-        talks.forEach(t => {
+        talksWrap.appendChild(note);
+      } else {
+        // 발표 목록(초록 PDF 포함)
+        for (const t of talksToShow) {
           const item = document.createElement('div');
           item.className = 'talk';
 
-          const pdfUrl = t.pdf;               // e.g., "pdf/D1_S1_01.pdf" or external URL
-          const pdfView = `viewer.html?pdf=${encodeURIComponent(pdfUrl)}`; // (선택) 내부 뷰어를 쓰고 싶으면 viewer.html 추가 가능
-          // 여기서는 가장 단순하게 "그대로 pdf 링크"로 둡니다.
-          const openUrl = pdfUrl;
+          const pdfUrl = t.pdf;
+          const openUrl = pdfUrl; // 그대로 pdf 링크
 
           item.innerHTML = `
             <div class="t1">
               <div class="time">${t.time || ''}</div>
-              <div class="title">${t.title}</div>
+              <div class="title">${t.title || ''}</div>
             </div>
             <div class="authors">${t.authors || ''}</div>
             <div class="btns">
-              <a class="btn" href="${openUrl}" target="_blank" rel="noopener">📄 초록 PDF</a>
+              ${t.pdf ? `<a class="btn" href="${openUrl}" target="_blank" rel="noopener">📄 초록 PDF</a>` : ``}
               ${t.slides ? `<a class="btn" href="${t.slides}" target="_blank" rel="noopener">🖥️ Slides</a>` : ``}
               ${t.video ? `<a class="btn" href="${t.video}" target="_blank" rel="noopener">🎥 Video</a>` : ``}
             </div>
           `;
           talksWrap.appendChild(item);
-        });
-
-        card.appendChild(talksWrap);
-        content.appendChild(card);
-      });
-
-      if (content.children.length <= 1) {
-        const empty = document.createElement('div');
-        empty.style.padding = '12px';
-        empty.style.color = '#666';
-        empty.textContent = '검색 결과가 없습니다.';
-        content.appendChild(empty);
+        }
       }
+
+      card.appendChild(talksWrap);
+      grid.appendChild(card);
     }
 
-    qInput.addEventListener('input', (e) => {
+    // 검색 때문에 해당 시간 블록이 비면 출력하지 않음
+    if (grid.children.length === 0) continue;
+
+    block.appendChild(grid);
+    content.appendChild(block);
+  }
+
+  if (content.children.length <= 1) {
+    const empty = document.createElement('div');
+    empty.style.padding = '12px';
+    empty.style.color = '#666';
+    empty.textContent = '검색 결과가 없습니다.';
+    content.appendChild(empty);
+  }
+}
+
+    // 화면 회전/리사이즈 시 열 수 재계산
+window.addEventListener('resize', () => render_());
+    
+<!--    qInput.addEventListener('input', (e) => {
       state.query = e.target.value;
       setUrl_();
       render_();
-    });
+    }); -->
 
     render_();
 
