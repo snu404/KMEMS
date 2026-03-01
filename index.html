@@ -367,18 +367,17 @@ function render_() {
       const talksWrap = document.createElement('div');
       talksWrap.className = 'talks';
 
-      if (talksAll.length === 0) {
-        const note = document.createElement('div');
-        note.className = 'talk';
-        note.innerHTML = `
-          <div class="t1">
-            <div class="time"></div>
-            <div class="title">${sess.name || ''}</div>
-          </div>
-          <div class="authors" style="color:#666;">${sess.note ? sess.note : (sess.room ? `장소: ${sess.room}` : '')}</div>
-        `;
-        talksWrap.appendChild(note);
-      } else {
+     if (talksAll.length === 0) {
+  // 안내/튜토리얼: 발표자만 표시
+  const note = document.createElement('div');
+  note.style.marginTop = '6px';
+  note.style.fontSize = '13px';
+  note.style.color = '#555';
+  note.style.fontWeight = '600';
+  note.textContent = sess.note || '';
+  talksWrap.appendChild(note);
+}
+        else {
         for (const t of talksToShow) {
           const item = document.createElement('div');
           item.className = 'talk';
