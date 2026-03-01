@@ -232,7 +232,41 @@ const APP_DATA = {
           time: "09:20~10:20",
           sessions: [
             { name: "포스터발표FP-III", room: "백록홀", note: "일반 포스터발표 00편", talks: [] },
-            { name: "특별세션III (신진과학자 세션)", room: "영주홀B", note: "초청강연 4편", talks: [] }
+            { name: "특별세션III (신진과학자 세션)", room: "영주홀B", note: "초청강연 4편", talks: [
+    {
+      kind: "Special",
+      time: "09:20~09:40",
+      title: "96-Puddle Paper Plate: A Scalable Lab-on-Paper System for On-Site Sensing and Analysis",
+      speaker_affil: "고려대학교",
+      speaker_name: "이태하",
+      pdf: "pdf/D3_SS3_01.pdf"
+    },
+    {
+      kind: "Special",
+      time: "09:40~10:00",
+      title: "Carbon Nanotube Integration for Flexible and Stretchable Electronic Applications",
+      speaker_affil: "연세대학교",
+      speaker_name: "심상준",
+      pdf: "pdf/D3_SS3_02.pdf"
+    },
+    {
+      kind: "Special",
+      time: "10:00~10:20",
+      title: "Structural Designs of Triboelectric Material for High-Performance Soft Electronics and Neuromorphic Devices",
+      speaker_affil: "한국화학융합시험연구원",
+      speaker_name: "박용진",
+      pdf: "pdf/D3_SS3_03.pdf"
+    },
+    {
+      kind: "Special",
+      time: "10:20~10:40",
+      title: "Wireless, spatially-matched optoelectronic neural interfaces for simultaneous optogenetics and electrophysiology",
+      speaker_affil: "한국과학기술원",
+      speaker_name: "이주현",
+      pdf: "pdf/D3_SS3_04.pdf"
+    }
+  ]
+ }
           ]
         },
         {
