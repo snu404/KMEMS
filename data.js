@@ -41,7 +41,7 @@ const APP_DATA = {
         // 초청강연(Invited)
         {
           kind: "Invited",
-          time: "13:00~13:25",
+          time: "13:00~13:20",
           title: "Raman Flow Cytometry for Single-Cell Microbial Functional Phenotyping",
           speaker_affil: "울산과학기술원",
           speaker_name: "이강수 교수",
@@ -51,7 +51,7 @@ const APP_DATA = {
         // 일반 구두발표(Oral)
         {
           kind: "Oral",
-          time: "13:25~13:40",
+          time: "13:20~13:32",
           title: "PFOS Detection in Environmental Waters Using SERS: Solvent Optimization and Real-Time Monitoring",
           speaker_affil: "금오공과대학교",
           speaker_name: "압둘나만",
@@ -59,7 +59,7 @@ const APP_DATA = {
         },
         {
           kind: "Oral",
-          time: "13:40~13:55",
+          time: "13:32~13:44",
           title: "귀 외이 구조 모사 모세관 기반 mTBI 센싱 미세유체칩 개발",
           speaker_affil: "부산대학교",
           speaker_name: "정종수",
@@ -67,7 +67,7 @@ const APP_DATA = {
         },
         {
           kind: "Oral",
-          time: "13:55~14:10",
+          time: "13:44~13:56",
           title: "Ionic-Conductance-Enhanced Nanofluidic Memristor Enabling Low-Voltage Neuromorphic Computing",
           speaker_affil: "서울대학교",
           speaker_name: "곽성열",
@@ -75,7 +75,7 @@ const APP_DATA = {
         },
         {
           kind: "Oral",
-          time: "14:10~14:25",
+          time: "13:56~14:08",
           title: "Microfluidic Cell-viability Monitoring Device based on Sharp-edge Acoustic Streaming",
           speaker_affil: "명지대학교",
           speaker_name: "아드마스다그 나츄데메스젠",
@@ -83,7 +83,7 @@ const APP_DATA = {
         },
         {
           kind: "Oral",
-          time: "14:25~14:40",
+          time: "14:08~14:20",
             title: "GNR-CNC 복합필름 대면적 제조 공정을 통한 유연광열소자 응용",
           speaker_affil: "한국과학기술원",
           speaker_name: "국윤혁",
@@ -95,7 +95,7 @@ const APP_DATA = {
         // 초청강연(Invited)
         {
           kind: "Invited",
-          time: "13:00~13:25",
+          time: "13:00~13:20",
           title: "Highly Anisotropic 2D van der Waals Materials for Spintronic Device Applications",
           speaker_affil: "전북대학교",
           speaker_name: "조준현 교수",
@@ -105,7 +105,7 @@ const APP_DATA = {
         // 일반 구두발표(Oral)
         {
           kind: "Oral",
-          time: "13:25~13:40",
+          time: "13:20~13:32",
           title: "Self-Regulated Photosynthesis Assistance System Using MXene-Based Multifunctional",
           speaker_affil: "전북대학교",
           speaker_name: "고유진",
@@ -113,7 +113,7 @@ const APP_DATA = {
         },
         {
           kind: "Oral",
-          time: "13:40~13:55",
+          time: "13:32~13:44",
           title: "레이저 어닐링 기반 나노스케일 스텐실 박막의 제작과 스텐실 리소그래피를 통한 금속 나노디스크 배열 제작",
           speaker_affil: "한국과학기술원",
           speaker_name: "민두홍",
@@ -121,7 +121,7 @@ const APP_DATA = {
         },
         {
           kind: "Oral",
-          time: "13:55~14:10",
+          time: "13:44~13:56",
           title: "Poisson Effect-Assisted Replication Lithography and Its Implementation in a Roll-to-Roll Continuous Fabrication System",
           speaker_affil: "경북대학교",
           speaker_name: "김민수",
@@ -129,7 +129,7 @@ const APP_DATA = {
         },
         {
           kind: "Oral",
-          time: "14:10~14:25",
+          time: "13:56~14:08",
           title: "금형 공정 기반 다중구조 CNP-PDMS 표면의 초발수 및 광열 특성을 이용한 에너지프리 방빙 기술",
           speaker_affil: "국민대학교",
           speaker_name: "이영석",
@@ -137,7 +137,7 @@ const APP_DATA = {
         },
         {
           kind: "Oral",
-          time: "14:25~14:40",
+          time: "14:08~14:20",
             title: "Fabrication of Aerogel-Based Transparent Haze Film for Enhanced Forward Light Scattering and Passive Radiative Cooling in Solar Cells",
           speaker_affil: "중앙대학교",
           speaker_name: "이경완",
@@ -287,7 +287,7 @@ const APP_DATA = {
             { name: "특별세션III (신진과학자 세션)", room: "영주홀B", note: "초청강연 4편", talks: [
     {
       kind: "Special",
-      time: "09:20~09:40",
+      time: "09:20~09:35",
       title: "96-Puddle Paper Plate: A Scalable Lab-on-Paper System for On-Site Sensing and Analysis",
       speaker_affil: "고려대학교",
       speaker_name: "이태하 교수",
@@ -295,7 +295,7 @@ const APP_DATA = {
     },
     {
       kind: "Special",
-      time: "09:40~10:00",
+      time: "09:35~09:50",
       title: "Carbon Nanotube Integration for Flexible and Stretchable Electronic Applications",
       speaker_affil: "연세대학교",
       speaker_name: "심상준 교수",
@@ -303,7 +303,7 @@ const APP_DATA = {
     },
     {
       kind: "Special",
-      time: "10:00~10:20",
+      time: "09:50~10:05",
       title: "Structural Designs of Triboelectric Material for High-Performance Soft Electronics and Neuromorphic Devices",
       speaker_affil: "한국화학융합시험연구원",
       speaker_name: "박용진 박사",
@@ -311,7 +311,7 @@ const APP_DATA = {
     },
     {
       kind: "Special",
-      time: "10:20~10:40",
+      time: "10:05~10:20",
       title: "Wireless, spatially-matched optoelectronic neural interfaces for simultaneous optogenetics and electrophysiology",
       speaker_affil: "한국과학기술원",
       speaker_name: "이주현 교수",
