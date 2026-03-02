@@ -262,7 +262,10 @@
   color:#ff3b30;
   font-weight:900;
 }
-    
+.sessionHead .name { 
+  padding-left: 0 !important; 
+  margin-left: 0 !important;
+}    
   </style>
 </head>
 
@@ -552,7 +555,8 @@ head.innerHTML = `
   const sh = document.createElement('div');
   sh.className = 'sessionHead';
   sh.innerHTML = `
-    <div class="name">${sess.name || ''}</div>
+   // <div class="name">${sess.name || ''}</div>
+    <div class="name">${String(sess.name || '').replace(/^\s+/, '').trim()}</div>
     <div class="meta">${sess.room || ''}</div>
   `;
   card.appendChild(sh);
