@@ -155,8 +155,113 @@ const APP_DATA = {
         {
           time: "14:40~16:00",
           sessions: [
-            { name: "메디컬I", room: "영주홀A", note: "초청강연 1편, 일반 구두발표 5편", talks: [] },
-            { name: "화학I", room: "영주홀B", note: "초청강연 1편, 일반 구두발표 5편", talks: [] }
+            { name: "메디컬I", room: "영주홀A", note: "초청강연 1편, 일반 구두발표 5편", talks: [
+        // 초청강연(Invited)
+        {
+          kind: "Invited",
+          time: "14:00~14:20",
+          title: "Laser Microfabrication Enabling Immune-Stealth and Soft Bioelectronic Implants",
+          speaker_affil: "한국과학기술연구원",
+          speaker_name: "전호정 박사",
+          pdf: "pdf/D1_Medical1_INV_01.pdf"
+        },
+
+        // 일반 구두발표(Oral)
+        {
+          kind: "Oral",
+          time: "14:20~14:32",
+          title: "최소 침습적 뇌 신호 모니터링을 위한 고밀도 미세 유연 두개골 전극",
+          speaker_affil: "성균관대학교",
+          speaker_name: "이혜원",
+          pdf: "pdf/D1_Medical1_O_01.pdf"
+        },
+        {
+          kind: "Oral",
+          time: "14:32~14:44",
+          title: "아조벤젠 엘라스토머 필름을 이용한 원격 마이크로니들 약물 전달 시스템 개발",
+          speaker_affil: "부경대학교",
+          speaker_name: "김난경",
+          pdf: "pdf/D1_Medical1_O_02.pdf"
+        },
+        {
+          kind: "Oral",
+          time: "14:44~14:56",
+          title: "Hybrid Flexible-Rigid Neural Probe for Chronic Recording of Neural Signals with Reduced Tissue Damage",
+          speaker_affil: "고려대학교",
+          speaker_name: "조이아 나움키나",
+          pdf: "pdf/D1_Medical1_O_03.pdf"
+        },
+        {
+          kind: "Oral",
+          time: "14:56~15:08",
+          title: "A Natural-Biomaterial Microneedle Patch for Rapid Hemostasis and Wet-Tissue Adhesion",
+          speaker_affil: "인천대학교",
+          speaker_name: "김도훈",
+          pdf: "pdf/D1_Medical1_O_04.pdf"
+        },
+        {
+          kind: "Oral",
+          time: "15:08~15:20",
+            title: "Pre-snapback Mode Operation of CMUT for Enhanced Acoustic Performance",
+          speaker_affil: "한국과학기술원",
+          speaker_name: "박세영",
+          pdf: "pdf/D1_Medical1_O_05.pdf"
+        }
+        ]
+ },
+            { name: "화학I", room: "영주홀B", note: "초청강연 1편, 일반 구두발표 5편", talks: [
+        // 초청강연(Invited)
+        {
+          kind: "Invited",
+          time: "14:00~14:20",
+          title: "Laser Microfabrication Enabling Immune-Stealth and Soft Bioelectronic Implants",
+          speaker_affil: "한국과학기술연구원",
+          speaker_name: "전호정 박사",
+          pdf: "pdf/D1_Medical1_INV_01.pdf"
+        },
+
+        // 일반 구두발표(Oral)
+        {
+          kind: "Oral",
+          time: "14:20~14:32",
+          title: "최소 침습적 뇌 신호 모니터링을 위한 고밀도 미세 유연 두개골 전극",
+          speaker_affil: "성균관대학교",
+          speaker_name: "이혜원",
+          pdf: "pdf/D1_Medical1_O_01.pdf"
+        },
+        {
+          kind: "Oral",
+          time: "14:32~14:44",
+          title: "아조벤젠 엘라스토머 필름을 이용한 원격 마이크로니들 약물 전달 시스템 개발",
+          speaker_affil: "부경대학교",
+          speaker_name: "김난경",
+          pdf: "pdf/D1_Medical1_O_02.pdf"
+        },
+        {
+          kind: "Oral",
+          time: "14:44~14:56",
+          title: "Hybrid Flexible-Rigid Neural Probe for Chronic Recording of Neural Signals with Reduced Tissue Damage",
+          speaker_affil: "고려대학교",
+          speaker_name: "조이아 나움키나",
+          pdf: "pdf/D1_Medical1_O_03.pdf"
+        },
+        {
+          kind: "Oral",
+          time: "14:56~15:08",
+          title: "A Natural-Biomaterial Microneedle Patch for Rapid Hemostasis and Wet-Tissue Adhesion",
+          speaker_affil: "인천대학교",
+          speaker_name: "김도훈",
+          pdf: "pdf/D1_Medical1_O_04.pdf"
+        },
+        {
+          kind: "Oral",
+          time: "15:08~15:20",
+            title: "Pre-snapback Mode Operation of CMUT for Enhanced Acoustic Performance",
+          speaker_affil: "한국과학기술원",
+          speaker_name: "박세영",
+          pdf: "pdf/D1_Medical1_O_05.pdf"
+        }
+        ] }
           ]
         },
         {
