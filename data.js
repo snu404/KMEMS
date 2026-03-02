@@ -11,9 +11,9 @@ const APP_DATA = {
         {
           time: "09:00~10:20",
           sessions: [
-            { name: "튜토리얼 I (금속-유기 구조체: 나노에서 마이크로까지)", room: "A룸", note: "고려대학교 김현욱 교수", talks: [] },
-            { name: "튜토리얼 II (유체소자 개발을 위한 전통적/비전통적 마이크로/나노구조 제작)", room: "B룸", note: "전남대학교 배주열 교수", talks: [] },
-            { name: "튜토리얼 III (저차원 나노미터 공간에서의 물질 전달 현상)", room: "C룸", note: "포항공과대학교 박형규 교수", talks: [] }
+            { name: "튜토리얼 I (금속-유기 구조체: 나노에서 마이크로까지)", room: "203", note: "고려대학교 김현욱 교수", talks: [] },
+            { name: "튜토리얼 II (유체소자 개발을 위한 전통적/비전통적 마이크로/나노구조 제작)", room: "201A", note: "전남대학교 배주열 교수", talks: [] },
+            { name: "튜토리얼 III (저차원 나노미터 공간에서의 물질 전달 현상)", room: "201B", note: "포항공과대학교 박형규 교수", talks: [] }
           ]
         },
         {
@@ -52,9 +52,9 @@ const APP_DATA = {
         {
           kind: "Oral",
           time: "13:20~13:32",
-          title: "PFOS Detection in Environmental Waters Using SERS: Solvent Optimization and Real-Time Monitoring",
+          title: "투과형 멤브레인 기반 마이크로 패터닝과 전기분무증착을 이용한 Chip-Scale 균일 SERS 어레이 제작 및 공정 최적화",
           speaker_affil: "금오공과대학교",
-          speaker_name: "압둘나만",
+          speaker_name: "이명석",
           pdf: "pdf/D1_Fluid1_O_01.pdf"
         },
         {
@@ -78,7 +78,7 @@ const APP_DATA = {
           time: "13:56~14:08",
           title: "Microfluidic Cell-viability Monitoring Device based on Sharp-edge Acoustic Streaming",
           speaker_affil: "명지대학교",
-          speaker_name: "아드마스다그 나츄데메스젠",
+          speaker_name: "아드마스다그나츄테메스젠",
           pdf: "pdf/D1_Fluid1_O_04.pdf"
         },
         {
@@ -114,7 +114,7 @@ const APP_DATA = {
         {
           kind: "Oral",
           time: "13:32~13:44",
-          title: "레이저 어닐링 기반 나노스케일 스텐실 박막의 제작과 스텐실 리소그래피를 통한 금속 나노디스크 배열 제작",
+          title: "레이저 어닐링 기반 나노 스케일 스텐실 박막의 제작과 스텐실 리소그래피를 통한 금속 나노디스크 배열 제작",
           speaker_affil: "한국과학기술원",
           speaker_name: "민두홍",
           pdf: "pdf/D1_Packaging1_O_02.pdf"
