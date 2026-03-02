@@ -367,25 +367,14 @@ function normalizeDayToBlocks_(day) {
 
 function isEmptySession_(sess) {
   const name = String(sess?.name || '').trim();
-  const note = String(sess?.note || '').trim();
 
-  if (!name) return true;
+  // 세션 없음
+  if (name.includes('세션 없음') || name.includes('세션없음')) return true;
 
-  // 세션없음
-  if (/세션\s*없음|없음/i.test(name)) return true;
-
-  // 휴식/이동은 empty 처리 대상
+  // 휴식 및 이동
   if (isBreakSession_(sess)) return true;
 
-  const talks = Array.isArray(sess?.talks) ? sess.talks : [];
-
-  // 발표가 있으면 정상 세션
-  if (talks.length > 0) return false;
-
-  // note가 존재하면 실제 세션
-  if (note && !/세션\s*없음/i.test(note)) return false;
-
-  return true;
+  return false;
 }
 
 function isBlockLive_(dayDate, timeRange) {
@@ -413,7 +402,11 @@ function isBreakBlock_(blk) {
 
 function isBreakSession_(sess) {
   const name = String(sess?.name || '').trim();
-  return name.includes('휴식') || name.includes('이동');
+
+  // 정확히 "휴식 및 이동" 또는 "휴식", "이동" 포함
+  return name.includes('휴식 및 이동')
+      || name === '휴식'
+      || name === '이동';
 }
     
 function render_() {
