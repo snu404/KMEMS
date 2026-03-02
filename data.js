@@ -122,7 +122,7 @@ const APP_DATA = {
           time: "13:56~14:08",
           title: "Microfluidic Cell-viability Monitoring Device based on Sharp-edge Acoustic Streaming",
           speaker_affil: "명지대학교",
-          speaker_name: "아드마스다그나츄테메스젠",
+          speaker_name: "아드마스 다그나츄 테메스젠",
           pdf: "pdf/D1_Fluid1_O_04.pdf"
         },
         {
