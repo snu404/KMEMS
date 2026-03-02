@@ -472,10 +472,6 @@ head.innerHTML = `
   ? 'session in-parallel empty'
   : 'session in-parallel';
 
-      if (isBreakSession_(sess)) {
-  talksWrap.style.textAlign = 'center';
-  talksWrap.style.fontWeight = '700';
-}
       const live = isBlockLive_(day.date, blk.time);
       if (live) block.classList.add('live');
 
@@ -490,6 +486,11 @@ head.innerHTML = `
       const talksWrap = document.createElement('div');
       talksWrap.className = 'talks';
 
+      if (isBreakSession_(sess)) {
+  talksWrap.style.textAlign = 'center';
+  talksWrap.style.fontWeight = '700';
+}
+      
      if (talksAll.length === 0) {
         // 안내/튜토리얼: 발표자만 표시
         const note = document.createElement('div');
