@@ -475,6 +475,16 @@ function sessionMatches_(sess, q) {
 
   return hay.includes(q);
 }
+
+function formatKoreanDate_(iso) {
+  // iso: "2026-03-25"
+  const [y, m, d] = (iso || "").split("-").map(Number);
+  if (!y || !m || !d) return iso || "";
+
+  const dt = new Date(y, m - 1, d);
+  const weekday = new Intl.DateTimeFormat("ko-KR", { weekday: "long" }).format(dt); // "수요일"
+  return `${y}년 ${m}월 ${d}일 (${weekday})`;
+}    
     
 function render_() {
   renderDayTabs_();
@@ -485,7 +495,8 @@ function render_() {
   content.innerHTML = '';
   const dayTitle = document.createElement('div');
   dayTitle.className = 'dayTitle';
-  dayTitle.textContent = `${day.date} · ${day.label}`;
+//  dayTitle.textContent = `${day.date} · ${day.label}`;
+  dayTitle.textContent = formatKoreanDate_(day.date);
   content.appendChild(dayTitle);
 
   const { blocks, maxParallel } = normalizeDayToBlocks_(day);
