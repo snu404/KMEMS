@@ -515,7 +515,7 @@ const APP_DATA = {
       time: "10:05~10:20",
       title: "Wireless, spatially-matched optoelectronic neural interfaces for simultaneous optogenetics and electrophysiology",
       speaker_affil: "한국과학기술원",
-      speaker_name: "이주현 교수",
+      speaker_name: "이주현 박사",
       noPdf: true
       //pdf: "pdf/D3_SS3_04.pdf"
     }
@@ -555,7 +555,7 @@ const ORAL_TIMEBLOCKS_BY_DATE = {
               "id": "",
               "time": "",
               "title": "Raman Flow Cytometry for Single-Cell Microbial Functional Phenotyping",
-              "speaker_name": "이강수",
+              "speaker_name": "이강수 교수",
               "speaker_affil": "울산과학기술원",
               "kind": "Invited"
             },
@@ -873,7 +873,7 @@ function fillTalks(date, time, sessionName, talks) {
 
 // 08:00~08:56  융복합I-메디컬II
 fillTalks("2026-03-26", "08:00~08:56", "융복합I-메디컬II", [
-  { kind: "Invited", time: "08:00~08:20", title: "Pd-catalyzed SnO2/ZnO Heterojunction Hydrogen Sensor Enabling Wide-range Detection via Hydrogen-Induced Metal-Like Conduction", speaker_affil: "부산대학교", speaker_name: "정대웅" },
+  { kind: "Invited", time: "08:00~08:20", title: "Pd-catalyzed SnO2/ZnO Heterojunction Hydrogen Sensor Enabling Wide-range Detection via Hydrogen-Induced Metal-Like Conduction", speaker_affil: "부산대학교", speaker_name: "정대웅 교수" },
   { kind: "Oral",    time: "08:20~08:32", title: "비침습적 시간 간섭 기반의 선택적 뇌심부 자극을 위한 MEMS 기반 유연 전극 어레이와 임피던스 적응 형 폐루프 무선 시스템", speaker_affil: "고려대학교", speaker_name: "차지형" },
   { kind: "Oral",    time: "08:32~08:44", title: "빠른 포도당 검출을 위한 광 시냅틱 트랜지스터 기반 센서", speaker_affil: "서강대학교", speaker_name: "류승표" },
   { kind: "Oral",    time: "08:44~08:56", title: "만성 신경 질환 치료를 위한 장시간 구동 가능한 온도센서 집적된 소프트 마이크로유체 냉각 소자", speaker_affil: "부산대학교", speaker_name: "권효경" }
@@ -881,7 +881,7 @@ fillTalks("2026-03-26", "08:00~08:56", "융복합I-메디컬II", [
 
 // 08:00~08:56  물리I
 fillTalks("2026-03-26", "08:00~08:56", "물리I", [
-  { kind: "Invited", time: "08:00~08:20", title: "Micro- and Nano-Devices for Tailoring Heat and Light", speaker_affil: "중앙대학교", speaker_name: "임미경" },
+  { kind: "Invited", time: "08:00~08:20", title: "Micro- and Nano-Devices for Tailoring Heat and Light", speaker_affil: "중앙대학교", speaker_name: "임미경 교수" },
   { kind: "Oral",    time: "08:20~08:32", title: "Dummy Trench 설계에 따른 SiC Trench MOSFET의 전계 재분포와 항복 특성 분석", speaker_affil: "전북대학교", speaker_name: "이동석" },
   { kind: "Oral",    time: "08:32~08:44", title: "F-Fe-MOF Functionalized PVDF-HFP Nanofibrous Mats-based Triboelectric Nanogenerator for Self-Powered Respiratory Rehabilitation Monitoring", speaker_affil: "광운대학교", speaker_name: "소피울" },
   { kind: "Oral",    time: "08:44~08:56", title: "Silicon Nanohelices for Chiral Plasmonic in Ultraviolet", speaker_affil: "광주과학기술원", speaker_name: "김주환" }
@@ -889,7 +889,7 @@ fillTalks("2026-03-26", "08:00~08:56", "물리I", [
 
 // 11:15~12:23  유체II
 fillTalks("2026-03-26", "11:15~12:23", "유체II", [
-  { kind: "Invited", time: "11:15~11:35", title: "Hydrodynamics and Interfaces: Microbial Motility and Antifouling Surface Design", speaker_affil: "경희대학교", speaker_name: "이충엽" },
+  { kind: "Invited", time: "11:15~11:35", title: "Hydrodynamics and Interfaces: Microbial Motility and Antifouling Surface Design", speaker_affil: "경희대학교", speaker_name: "이충엽 교수" },
   { kind: "Oral",    time: "11:35~11:47", title: "A Novel Resistive Pulse Sensing Using Tunable Micro-/Nanopores for Analyte Size Characterization", speaker_affil: "울산과학기술원", speaker_name: "서동우" },
   { kind: "Oral",    time: "11:47~11:59", title: "표면파 유도 음향흐름유동 기반 고속 생화학 마이크로바이오리액터 개발", speaker_affil: "전남대학교", speaker_name: "차범석" },
   { kind: "Oral",    time: "11:59~12:11", title: "µPIV-assisted optimization of operating conditions and device geometry for a microfluidic cavitation-microstreaming DNA extractor", speaker_affil: "명지대학교", speaker_name: "케드르 소포니아스 눌세파" },
@@ -898,7 +898,7 @@ fillTalks("2026-03-26", "11:15~12:23", "유체II", [
 
 // 11:15~12:23  물리II-소재, 가공, 패키징II
 fillTalks("2026-03-26", "11:15~12:23", "물리II-소재, 가공, 패키징II", [
-  { kind: "Invited", time: "11:15~11:35", title: "Bidirectional Neural Interfaces for Neuroprosthesis and Electroceuticals", speaker_affil: "한국과학기술연구원", speaker_name: "김진석" },
+  { kind: "Invited", time: "11:15~11:35", title: "Bidirectional Neural Interfaces for Neuroprosthesis and Electroceuticals", speaker_affil: "한국과학기술연구원", speaker_name: "김진석 박사" },
   { kind: "Oral",    time: "11:35~11:47", title: "리간드 치환 CISe 양자점 집적에 따른 실리콘 포토다이오드의 광응답 특성 개선", speaker_affil: "전북대학교", speaker_name: "이지훈" },
   { kind: "Oral",    time: "11:47~11:59", title: "All-Optical PCR using Microspectrometer for Real-time Temperature and Multiplex Amplification Monitoring", speaker_affil: "한국과학기술원", speaker_name: "김기범" },
   { kind: "Oral",    time: "11:59~12:11", title: "고종횡비 실리콘 매크로포어 어레이 및 3차원 미세구조 제작을 위한 광여기 제어 전기화학 식각", speaker_affil: "한국과학기술원", speaker_name: "민두홍" },
@@ -907,7 +907,7 @@ fillTalks("2026-03-26", "11:15~12:23", "물리II-소재, 가공, 패키징II", [
 
 // 13:50~14:58  바이오I
 fillTalks("2026-03-26", "13:50~14:58", "바이오I", [
-  { kind: "Invited", time: "13:50~14:10", title: "Tunable Photonics based on Ultra-thin Films for Biosensing", speaker_affil: "한국과학기술원", speaker_name: "송영민" },
+  { kind: "Invited", time: "13:50~14:10", title: "Tunable Photonics based on Ultra-thin Films for Biosensing", speaker_affil: "한국과학기술원", speaker_name: "송영민 교수" },
   { kind: "Oral",    time: "14:10~14:22", title: "Optimization of Electrical Stimulation for Cardiomyocyte Maturation Based on Long-Term Wireless Monitoring", speaker_affil: "전남대학교", speaker_name: "유극" },
   { kind: "Oral",    time: "14:22~14:34", title: "양방향 신경 조절을 위한 마이크로 LED 집적 투명 표면 ECoG 센서 어레이", speaker_affil: "한국과학기술원", speaker_name: "리옹지아치" },
   { kind: "Oral",    time: "14:34~14:46", title: "Development of Wireless MEMS-Based Neural Probe System for Simultaneous Measurement of Electrical and Chemical Signals", speaker_affil: "고려대학교", speaker_name: "김근태" },
@@ -916,7 +916,7 @@ fillTalks("2026-03-26", "13:50~14:58", "바이오I", [
 
 // 13:50~14:58  유연I
 fillTalks("2026-03-26", "13:50~14:58", "유연I", [
-  { kind: "Invited", time: "13:50~14:10", title: "초고감도 금 도핑 실리콘 나노멤브레인 기반 온도 센서", speaker_affil: "가천대학교", speaker_name: "상민규" },
+  { kind: "Invited", time: "13:50~14:10", title: "초고감도 금 도핑 실리콘 나노멤브레인 기반 온도 센서", speaker_affil: "가천대학교", speaker_name: "상민규 교수" },
   { kind: "Oral",    time: "14:10~14:22", title: "비침습적 다종 암 스크리닝을 위한 멀티모달 호기 패턴 기반 계층적 딥러닝 모델", speaker_affil: "한국전자통신연구원", speaker_name: "이병주" },
   { kind: "Oral",    time: "14:22~14:34", title: "Versatile Water-Floated Nanostructure for Three-Dimensional Nanotransfer Printing", speaker_affil: "한국과학기술원", speaker_name: "강병호" },
   { kind: "Oral",    time: "14:34~14:46", title: "인간수준 고밀도-고해상도 촉각센서 기반 적응형 시-촉각 융합 및 로봇 인지 기술", speaker_affil: "연세대학교", speaker_name: "박병선" },
@@ -925,7 +925,7 @@ fillTalks("2026-03-26", "13:50~14:58", "유연I", [
 
 // 15:15~16:23  유체III
 fillTalks("2026-03-26", "15:15~16:23", "유체III", [
-  { kind: "Invited", time: "15:15~15:35", title: "회전환 증폭을 응용한 혈액 종양 순환 DNA 및 마이크로 RNA의 민감 액체 생검 전략", speaker_affil: "금오공과대학교", speaker_name: "류준석" },
+  { kind: "Invited", time: "15:15~15:35", title: "회전환 증폭을 응용한 혈액 종양 순환 DNA 및 마이크로 RNA의 민감 액체 생검 전략", speaker_affil: "금오공과대학교", speaker_name: "류준석 교수" },
   { kind: "Oral",    time: "15:35~15:47", title: "뉴턴 및 점탄성 유체 공동흐름을 이용한 박테리아 제거", speaker_affil: "전남대학교", speaker_name: "김현욱" },
   { kind: "Oral",    time: "15:47~15:59", title: "Wrinkle-Assisted Nanofluidic Memristors for Tunable Ionic Memory and Neuromorphic Learning", speaker_affil: "울산과학기술원", speaker_name: "권민수" },
   { kind: "Oral",    time: "15:59~16:11", title: "Low-Voltage Slippery Microbubble Manipulation Using Dual High-k and Lubricating Layers for Ultrasound Modulation", speaker_affil: "한국과학기술원", speaker_name: "김수빈" },
@@ -934,7 +934,7 @@ fillTalks("2026-03-26", "15:15~16:23", "유체III", [
 
 // 15:15~16:23  소재, 가공, 패키징III
 fillTalks("2026-03-26", "15:15~16:23", "소재, 가공, 패키징III", [
-  { kind: "Invited", time: "15:15~15:35", title: "Human-Heat Interface and Its Applications in Wearable Technology", speaker_affil: "동국대학교", speaker_name: "이진우" },
+  { kind: "Invited", time: "15:15~15:35", title: "Human-Heat Interface and Its Applications in Wearable Technology", speaker_affil: "동국대학교", speaker_name: "이진우 교수" },
   { kind: "Oral",    time: "15:35~15:47", title: "Multilayer Sticker-type Anti-reflective Film for High-efficiency Optoelectronic Devices", speaker_affil: "서강대학교", speaker_name: "최지성" },
   { kind: "Oral",    time: "15:47~15:59", title: "Smart Glasses for Binocular Monitoring using High-speed Off-axis Microlens Array Camera", speaker_affil: "한국과학기술원", speaker_name: "권재명" },
   { kind: "Oral",    time: "15:59~16:11", title: "Mediator-free Ether transfer of discrete and coalesced silicon nanostructures", speaker_affil: "한국과학기술원", speaker_name: "김태영" },
@@ -947,7 +947,7 @@ fillTalks("2026-03-26", "15:15~16:23", "소재, 가공, 패키징III", [
 
 // 08:00~09:08  바이오II
 fillTalks("2026-03-27", "08:00~09:08", "바이오II", [
-  { kind: "Invited", time: "08:00~08:20", title: "Wearable Mechanical Interfaces for Neural Interfaces and Digital Healthcare", speaker_affil: "한국과학기술원", speaker_name: "하경호" },
+  { kind: "Invited", time: "08:00~08:20", title: "Wearable Mechanical Interfaces for Neural Interfaces and Digital Healthcare", speaker_affil: "한국과학기술원", speaker_name: "하경호 교수" },
   { kind: "Oral",    time: "08:20~08:32", title: "A V₂CTx-MXene@f-MWCNTs Epidermal Patch for Sweat Glucose and Ketone Monitoring", speaker_affil: "광운대학교", speaker_name: "조후룰 이슬람" },
   { kind: "Oral",    time: "08:32~08:44", title: "A Droplet-based Microfluidic Screening System for the Discovery of Slow-growing and Novel Microbes in Environmental Samples", speaker_affil: "광운대학교", speaker_name: "오별님" },
   { kind: "Oral",    time: "08:44~08:56", title: "A Through-Hole Cantilever Platform Integrated with Silicon Strain Sensors for Physiologically Relevant Double-Layer Cardiomyocytes Culture and Monitoring", speaker_affil: "전남대학교", speaker_name: "Fusong Li" },
@@ -956,7 +956,7 @@ fillTalks("2026-03-27", "08:00~09:08", "바이오II", [
 
 // 08:00~09:08  유체IV-유연II-화학III
 fillTalks("2026-03-27", "08:00~09:08", "유체IV-유연II-화학III", [
-  { kind: "Invited", time: "08:00~08:20", title: "Light-Material Interaction Technologies for Wearable and Smart Electronic Systems", speaker_affil: "금오공과대학교", speaker_name: "박정환" },
+  { kind: "Invited", time: "08:00~08:20", title: "Light-Material Interaction Technologies for Wearable and Smart Electronic Systems", speaker_affil: "금오공과대학교", speaker_name: "박정환 교수" },
   { kind: "Oral",    time: "08:20~08:32", title: "미세 유동의 토출량 측정을 위한 MEMS 기반의 열량식 유량 센서 시스템", speaker_affil: "아주대학교", speaker_name: "이기용" },
   { kind: "Oral",    time: "08:32~08:44", title: "Analysis of Electroconvection near Ion-Selective Membranes in Non-Newtonian Fluids", speaker_affil: "서울대학교", speaker_name: "김동현" },
   { kind: "Oral",    time: "08:44~08:56", title: "전기화학 기반 나노플라스틱 검출 센서 개발", speaker_affil: "성균관대학교", speaker_name: "김치현" },
