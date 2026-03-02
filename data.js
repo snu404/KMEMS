@@ -765,7 +765,7 @@ const ORAL_TIMEBLOCKS_BY_DATE = {
               "time": "",
               "title": "Bio-MEMS and Organ-on-a-Chip for Precision Medicine",
               "speaker_name": "김민정",
-              "speaker_affil": "KAIST",
+              "speaker_affil": "한국과학기술원",
               "kind": "Invited"
             }
           ]
@@ -925,8 +925,8 @@ fillTalks("2026-03-26", "15:15~16:23", "유체III", [
   { kind: "Invited", time: "15:15~15:35", title: "회전환 증폭을 응용한 혈액 종양 순환 DNA 및 마이크로 RNA의 민감 액체 생검 전략", speaker_affil: "금오공과대학교", speaker_name: "류준석" },
   { kind: "Oral",    time: "15:35~15:47", title: "뉴턴 및 점탄성 유체 공동흐름을 이용한 박테리아 제거", speaker_affil: "전남대학교", speaker_name: "김현욱" },
   { kind: "Oral",    time: "15:47~15:59", title: "Wrinkle-Assisted Nanofluidic Memristors for Tunable Ionic Memory and Neuromorphic Learning", speaker_affil: "울산과학기술원", speaker_name: "권민수" },
-  { kind: "Oral",    time: "15:59~16:11", title: "Low-Voltage Slippery Microbubble Manipulation Using Dual High-k and Lubricating Layers for Ultrasound Modulation", speaker_affil: "KAIST", speaker_name: "김수빈" },
-  { kind: "Oral",    time: "16:11~16:23", title: "In-situ Visualization of Surfactant-regulated Marangoni Flow during Polymer Membrane Formation at Immiscible Liquid-liquid Interface", speaker_affil: "KAIST", speaker_name: "류준일" }
+  { kind: "Oral",    time: "15:59~16:11", title: "Low-Voltage Slippery Microbubble Manipulation Using Dual High-k and Lubricating Layers for Ultrasound Modulation", speaker_affil: "한국과학기술원", speaker_name: "김수빈" },
+  { kind: "Oral",    time: "16:11~16:23", title: "In-situ Visualization of Surfactant-regulated Marangoni Flow during Polymer Membrane Formation at Immiscible Liquid-liquid Interface", speaker_affil: "한국과학기술원", speaker_name: "류준일" }
 ]);
 
 // 15:15~16:23  소재, 가공, 패키징III
