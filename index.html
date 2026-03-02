@@ -413,7 +413,7 @@ function isBreakBlock_(blk) {
 
 function isBreakSession_(sess) {
   const name = String(sess?.name || '').trim();
-  return /휴식|이동|break|lunch|coffee/i.test(name);
+  return name.includes('휴식') || name.includes('이동');
 }
     
 function render_() {
