@@ -204,13 +204,44 @@
   margin-right:6px;
 }
 
-<div class="timeblock-meta">
-  ${
-    (blk.sessions || []).filter(s => !isEmptySession_(s)).length <= 1
-      ? 'Single session'
-      : 'Parallel session'
-  }
-</div>
+/* 빈 세션 회색 표시 */
+.session.empty {
+  background: #f3f3f3;
+  border: 1px dashed #cfcfcf;
+  color: #999;
+}
+
+.session.empty .sessionHead .name,
+.session.empty .sessionHead .meta {
+  color: #999;
+}
+
+.session.empty .talks {
+  opacity: 0.9;
+}
+
+/* 진행중 세션 강조 */
+.session.live {
+  border: 2px solid #ff3b30;
+  box-shadow: 0 0 0 2px rgba(255,59,48,0.12);
+}
+
+.session.live .sessionHead .name::after {
+  content: " ● LIVE";
+  color: #ff3b30;
+  font-weight: 900;
+  margin-left: 6px;
+  font-size: 12px;
+}
+.timeblock.live {
+  border: 2px solid #ff3b30;
+  box-shadow: 0 0 0 2px rgba(255,59,48,0.10);
+}
+.timeblock.live .timeblock-time::after{
+  content:"  ● NOW";
+  color:#ff3b30;
+  font-weight:900;
+}
     
   </style>
 </head>
@@ -336,17 +367,38 @@ function normalizeDayToBlocks_(day) {
 
 function isEmptySession_(sess) {
   const name = (sess.name || '').trim();
+  const note = (sess.note || '').trim();
 
-  // 세션 제목이 없거나 '세션없음' 포함 시 빈 세션
+  // 제목 없거나 '세션없음' 포함이면 빈 세션
   if (!name || name.includes('세션없음')) return true;
+  if (note.includes('세션없음')) return true;
 
-  // 발표 목록이 존재하면 빈 세션 아님
-  if (sess.talks && sess.talks.length > 0) return false;
+  // 발표 목록이 있으면 빈 세션 아님
+  const talks = Array.isArray(sess.talks) ? sess.talks : [];
+  if (talks.length > 0) return false;
 
-  // 요약 텍스트가 있으면 실제 세션으로 간주
+  // note가 있고 '세션없음'이 아니면(예: "초청강연 1편, 일반 4편" 요약) 실제 세션으로 간주
+  if (note) return false;
+
+  // 기타 요약 키가 있으면 실제 세션
   if (sess.summary || sess.meta || sess.desc) return false;
 
   return true;
+}
+
+function isBlockLive_(dayDate, timeRange) {
+  if (!dayDate || !timeRange) return false;
+
+  // timeRange 예: "08:00~09:08" 또는 "08:00–09:08"
+  const parts = timeRange.split(/~|–|-/).map(s => s.trim());
+  if (parts.length < 2) return false;
+
+  const [start, end] = parts;
+  const startDT = new Date(`${dayDate}T${start}:00`);
+  const endDT   = new Date(`${dayDate}T${end}:00`);
+  const now = new Date();
+
+  return now >= startDT && now <= endDT;
 }
     
 function render_() {
@@ -400,7 +452,11 @@ function render_() {
       if (q && talksAll.length > 0 && talksToShow.length === 0) continue;
 
       const card = document.createElement('div');
-      card.className = 'session in-parallel';
+      const empty = isEmptySession_(sess);
+      card.className = empty ? 'session in-parallel empty' : 'session in-parallel';
+
+      const live = isBlockLive_(day.date, blk.time);
+      if (live) block.classList.add('live');
 
       const sh = document.createElement('div');
       sh.className = 'sessionHead';
@@ -414,15 +470,15 @@ function render_() {
       talksWrap.className = 'talks';
 
      if (talksAll.length === 0) {
-  // 안내/튜토리얼: 발표자만 표시
-  const note = document.createElement('div');
-  note.style.marginTop = '6px';
-  note.style.fontSize = '13px';
-  note.style.color = '#555';
-  note.style.fontWeight = '600';
-  note.textContent = sess.note || '';
-  talksWrap.appendChild(note);
-}
+        // 안내/튜토리얼: 발표자만 표시
+        const note = document.createElement('div');
+        note.style.marginTop = '6px';
+        note.style.fontSize = '13px';
+        note.style.color = '#555';
+        note.style.fontWeight = '600';
+        note.textContent = sess.note || '';
+        talksWrap.appendChild(note);
+      }
         else {
         for (const t of talksToShow) {
           const item = document.createElement('div');
