@@ -366,22 +366,24 @@ function normalizeDayToBlocks_(day) {
 }
 
 function isEmptySession_(sess) {
-  const name = (sess.name || '').trim();
-  const note = (sess.note || '').trim();
+  const name = String(sess?.name || '').trim();
+  const note = String(sess?.note || '').trim();
 
-  // 제목 없거나 '세션없음' 포함이면 빈 세션
-  if (!name || name.includes('세션없음')) return true;
-  if (note.includes('세션없음')) return true;
+  if (!name) return true;
 
-  // 발표 목록이 있으면 빈 세션 아님
-  const talks = Array.isArray(sess.talks) ? sess.talks : [];
+  // 세션없음
+  if (/세션\s*없음|없음/i.test(name)) return true;
+
+  // 휴식/이동은 empty 처리 대상
+  if (isBreakSession_(sess)) return true;
+
+  const talks = Array.isArray(sess?.talks) ? sess.talks : [];
+
+  // 발표가 있으면 정상 세션
   if (talks.length > 0) return false;
 
-  // note가 있고 '세션없음'이 아니면(예: "초청강연 1편, 일반 4편" 요약) 실제 세션으로 간주
-  if (note) return false;
-
-  // 기타 요약 키가 있으면 실제 세션
-  if (sess.summary || sess.meta || sess.desc) return false;
+  // note가 존재하면 실제 세션
+  if (note && !/세션\s*없음/i.test(note)) return false;
 
   return true;
 }
@@ -407,6 +409,11 @@ function isBreakBlock_(blk) {
     const name = String(s?.name || '').trim();
     return /휴식|이동|break|lunch|coffee/i.test(name);
   });
+}
+
+function isBreakSession_(sess) {
+  const name = String(sess?.name || '').trim();
+  return /휴식|이동|break|lunch|coffee/i.test(name);
 }
     
 function render_() {
@@ -457,10 +464,18 @@ head.innerHTML = `
       // 검색 중: talk 있는 세션만 필터링
       if (q && talksAll.length > 0 && talksToShow.length === 0) continue;
 
-      const card = document.createElement('div');
-      const empty = isEmptySession_(sess);
-      card.className = empty ? 'session in-parallel empty' : 'session in-parallel';
+     const card = document.createElement('div');
 
+    const empty = isEmptySession_(sess);
+
+    card.className = empty
+  ? 'session in-parallel empty'
+  : 'session in-parallel';
+
+      if (isBreakSession_(sess)) {
+  talksWrap.style.textAlign = 'center';
+  talksWrap.style.fontWeight = '700';
+}
       const live = isBlockLive_(day.date, blk.time);
       if (live) block.classList.add('live');
 
