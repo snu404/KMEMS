@@ -486,7 +486,8 @@ const APP_DATA = {
       title: "96-Puddle Paper Plate: A Scalable Lab-on-Paper System for On-Site Sensing and Analysis",
       speaker_affil: "고려대학교",
       speaker_name: "이태하 교수",
-      pdf: "pdf/D3_SS3_01.pdf"
+      noPdf: true
+      //pdf: "pdf/D3_SS3_01.pdf"
     },
     {
       kind: "Special",
@@ -494,7 +495,8 @@ const APP_DATA = {
       title: "Carbon Nanotube Integration for Flexible and Stretchable Electronic Applications",
       speaker_affil: "연세대학교",
       speaker_name: "심상준 교수",
-      pdf: "pdf/D3_SS3_02.pdf"
+      noPdf: true
+      //pdf: "pdf/D3_SS3_02.pdf"
     },
     {
       kind: "Special",
@@ -502,7 +504,8 @@ const APP_DATA = {
       title: "Structural Designs of Triboelectric Material for High-Performance Soft Electronics and Neuromorphic Devices",
       speaker_affil: "한국화학융합시험연구원",
       speaker_name: "박용진 박사",
-      pdf: "pdf/D3_SS3_03.pdf"
+      noPdf: true
+      //pdf: "pdf/D3_SS3_03.pdf"
     },
     {
       kind: "Special",
@@ -510,7 +513,8 @@ const APP_DATA = {
       title: "Wireless, spatially-matched optoelectronic neural interfaces for simultaneous optogenetics and electrophysiology",
       speaker_affil: "한국과학기술원",
       speaker_name: "이주현 교수",
-      pdf: "pdf/D3_SS3_04.pdf"
+      noPdf: true
+      //pdf: "pdf/D3_SS3_04.pdf"
     }
   ]
  }
@@ -526,7 +530,7 @@ const APP_DATA = {
         { time: "11:00~11:10", sessions: [ { name: "휴식 및 이동", room: "로비", talks: [] } ] },
         { time: "11:10~11:40", sessions: [ { name: "2025 MNS 학술상 수상 기념 강연", room: "이벤트홀", talks: [{kind: "Invited", title: "질병 치료 및 진단을 위한 마이크로니들 기술",
       speaker_affil: "연세대학교",
-      speaker_name: "류원형 교수",}] } ] },
+      speaker_name: "류원형 교수", noPdf: true}] } ] },
         { time: "11:40~12:00", sessions: [ { name: "폐회식 준비", room: "이벤트홀", talks: [] } ] },
         { time: "12:00~12:30", sessions: [ { name: "우수논문 시상 및 폐회식", room: "이벤트홀", talks: [] } ] }
       ]
