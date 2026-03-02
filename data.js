@@ -45,8 +45,8 @@ const APP_DATA = {
     // Day 1 (Wed) — 3 parallel
     // =========================
     {
-      //label: "3월 25일 (수)",
-      date: "2026년 3월 25일(수)",
+      label: "3월 25일 (수)",
+      date: "2026-03-25",
       maxParallel: 3,
       timeBlocks: [
         {
