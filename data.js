@@ -948,7 +948,7 @@ fillTalks("2026-03-26", "15:15~16:23", "소재, 가공, 패키징III", [
 // 08:00~09:08  바이오II
 fillTalks("2026-03-27", "08:00~09:08", "바이오II", [
   { kind: "Invited", time: "08:00~08:20", title: "Wearable Mechanical Interfaces for Neural Interfaces and Digital Healthcare", speaker_affil: "한국과학기술원", speaker_name: "하경호" },
-  { kind: "Oral",    time: "08:20~08:32", title: "A V₂CTx-MXene@f-MWCNTs Epidermal Patch for Sweat Glucose and Ketone Monitoring", speaker_affil: "광운대학교", speaker_name: "조후룰이슬람" },
+  { kind: "Oral",    time: "08:20~08:32", title: "A V₂CTx-MXene@f-MWCNTs Epidermal Patch for Sweat Glucose and Ketone Monitoring", speaker_affil: "광운대학교", speaker_name: "조후룰 이슬람" },
   { kind: "Oral",    time: "08:32~08:44", title: "A Droplet-based Microfluidic Screening System for the Discovery of Slow-growing and Novel Microbes in Environmental Samples", speaker_affil: "광운대학교", speaker_name: "오별님" },
   { kind: "Oral",    time: "08:44~08:56", title: "A Through-Hole Cantilever Platform Integrated with Silicon Strain Sensors for Physiologically Relevant Double-Layer Cardiomyocytes Culture and Monitoring", speaker_affil: "전남대학교", speaker_name: "Fusong Li" },
   { kind: "Oral",    time: "08:56~09:08", title: "전혈 기반 NK세포 분리를 위한 미세유체 면역자기 플랫폼", speaker_affil: "고려대학교 세종캠퍼스", speaker_name: "한해희" }
