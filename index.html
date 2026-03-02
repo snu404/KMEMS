@@ -556,7 +556,7 @@ head.innerHTML = `
   sh.className = 'sessionHead';
   sh.innerHTML = `
     <div class="name">${String(sess.name || '').replace(/^\s+/, '').trim()}</div>
-    <div class="meta">${sess.room || ''}</div>
+    <div class="meta">${String(sess.room || '').trim()}</div>
   `;
   card.appendChild(sh);
 
