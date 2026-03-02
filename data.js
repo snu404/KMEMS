@@ -286,7 +286,7 @@ const APP_DATA = {
           time: "15:24~15:36",
           title: "Multimodal Biosensor Patch with Sphere-Shaped NPC-Supported Ti3C2Tx Heterostructures on Laser-Induced Graphene for Wearable Sweat Monitoring",
           speaker_affil: "광운대학교",
-          speaker_name: "아부다스사마드",
+          speaker_name: "아부다스 사마드",
           pdf: "pdf/D1_Chem1_O_03.pdf"
         },
         {
