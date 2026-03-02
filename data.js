@@ -45,14 +45,14 @@ const APP_DATA = {
     // Day 1 (Wed) — 3 parallel
     // =========================
     {
-      label: "3월 25일 (수)",
-      date: "2026-03-25",
+      //label: "3월 25일 (수)",
+      date: "2026년 3월 25일(수)",
       maxParallel: 3,
       timeBlocks: [
         {
           time: "09:00~10:20",
           sessions: [
-            { name: "튜토리얼 I", room: "203", note: "", talks: [{time:"", kind: "", title: "금속-유기 구조체: 나노에서 마이크로까지",
+            { name: "튜토리얼 I", room: "203", note: "", talks: [{kind: "", title: "금속-유기 구조체: 나노에서 마이크로까지",
       speaker_affil: "고려대학교",speaker_name: "김현욱 교수", noPdf: true}] },
             { name: "튜토리얼 II", room: "201A", note: "", talks: [{kind: "", title: "유체소자 개발을 위한 전통적/비전통적 마이크로/나노구조 제작",
       speaker_affil: "전남대학교",speaker_name: "배주열 교수", noPdf: true}] },
