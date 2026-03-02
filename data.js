@@ -1002,6 +1002,11 @@ function autolinkPdf_({ overwrite = true } = {}) {
 
         for (const t of talks) {
           if (!overwrite && t.pdf) continue;
+          
+          if (t.noPdf) {
+            delete t.pdf;
+            continue;
+          }
 
           const code = typeCode_(t.kind);
 
