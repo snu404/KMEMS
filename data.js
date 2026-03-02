@@ -921,8 +921,22 @@ function typeCode_(kind) {
   return "O"; // 기본은 Oral
 }
 
-// talks에 pdf가 없으면 자동 생성해서 넣기
-function autolinkPdf_() {
+function dayNoFromDate_(dateStr) {
+  if (dateStr === "2026-03-25") return 1;
+  if (dateStr === "2026-03-26") return 2;
+  if (dateStr === "2026-03-27") return 3;
+  return 0;
+}
+
+function typeCode_(kind) {
+  const k = String(kind || "").toLowerCase();
+  if (k === "invited") return "INV";
+  if (k === "special") return "SP";
+  return "O"; // 기본은 Oral
+}
+
+// ✅ Day1 포함 전부: pdf를 규칙대로 "무조건" 재생성(통일)
+function autolinkPdf_({ overwrite = true } = {}) {
   for (const day of (APP_DATA.days || [])) {
     const dn = dayNoFromDate_(day.date);
     if (!dn) continue;
@@ -934,11 +948,11 @@ function autolinkPdf_() {
 
         const talks = Array.isArray(sess.talks) ? sess.talks : [];
 
-        // 세션 내에서 kind별로 번호를 따로 매김 (INV 01.., O 01..)
+        // 세션 내에서 kind별 번호를 따로 매김
         let invN = 0, oralN = 0, spN = 0;
 
         for (const t of talks) {
-          if (t.pdf) continue; // 이미 수동 지정된 링크는 유지
+          if (!overwrite && t.pdf) continue;
 
           const code = typeCode_(t.kind);
 
@@ -955,5 +969,5 @@ function autolinkPdf_() {
   }
 }
 
-// data.js 로드 시 1회 실행
-autolinkPdf_();
+// ✅ 기본은 덮어쓰기 true
+autolinkPdf_({ overwrite: true });
