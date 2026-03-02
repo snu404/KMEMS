@@ -750,10 +750,96 @@ const ORAL_TIMEBLOCKS_BY_DATE = {
   ]
 };
 
-// 기존 APP_DATA에 병합: 해당 날짜의 timeBlocks 뒤에 oral 블록을 추가
-for (const d of (APP_DATA.days || [])) {
-  const extra = ORAL_TIMEBLOCKS_BY_DATE[d.date];
-  if (!extra) continue;
-  d.timeBlocks = Array.isArray(d.timeBlocks) ? d.timeBlocks : [];
-  d.timeBlocks = d.timeBlocks.concat(extra);
+/* =========================================================
+   Patch talks into existing APP_DATA (no concat, no new blocks)
+========================================================= */
+
+function fillTalks(date, time, sessionName, talks) {
+  const day = APP_DATA.days.find(d => d.date === date);
+  if (!day) return;
+
+  const block = (day.timeBlocks || []).find(b => (b.time || '').trim() === time);
+  if (!block) return;
+
+  const sess = (block.sessions || []).find(s => (s.name || '').trim() === sessionName);
+  if (!sess) return;
+
+  // 이미 내용 있으면 덮어쓰지 않음
+  if (Array.isArray(sess.talks) && sess.talks.length > 0) return;
+
+  sess.talks = talks;
 }
+
+/* =========================
+   Day 2 (2026-03-26)
+========================= */
+
+// 11:15~12:23  유체II
+fillTalks("2026-03-26", "11:15~12:23", "유체II", [
+  {
+    kind: "Invited",
+    time: "",
+    title: "Microfluidics for Next-Generation Lab-on-a-Chip Systems",
+    speaker_affil: "서울대학교",
+    speaker_name: "김태현 교수"
+  }
+]);
+
+// 11:15~12:23  물리II-소재, 가공, 패키징II
+fillTalks("2026-03-26", "11:15~12:23", "물리II-소재, 가공, 패키징II", [
+  {
+    kind: "Invited",
+    time: "",
+    title: "Advanced Packaging Technologies for Micro/Nano Systems",
+    speaker_affil: "성균관대학교",
+    speaker_name: "정우성 교수"
+  }
+]);
+
+// 13:50~14:58  바이오I
+fillTalks("2026-03-26", "13:50~14:58", "바이오I", [
+  {
+    kind: "Invited",
+    time: "",
+    title: "Bio-MEMS and Organ-on-a-Chip for Precision Medicine",
+    speaker_affil: "KAIST",
+    speaker_name: "김민정 교수"
+  }
+]);
+
+// 13:50~14:58  유연I
+fillTalks("2026-03-26", "13:50~14:58", "유연I", [
+  {
+    kind: "Invited",
+    time: "",
+    title: "Flexible and Wearable Microsystems: Materials to Systems",
+    speaker_affil: "연세대학교",
+    speaker_name: "박지영 교수"
+  }
+]);
+
+/* =========================
+   Day 3 (2026-03-27)
+========================= */
+
+// 08:00~09:08  바이오II
+fillTalks("2026-03-27", "08:00~09:08", "바이오II", [
+  {
+    kind: "Invited",
+    time: "",
+    title: "Wearable Mechanical Interfaces for Neural Interfaces and Digital Healthcare",
+    speaker_affil: "한국과학기술원",
+    speaker_name: "하경호 교수"
+  }
+]);
+
+// 08:00~09:08  유체IV-유연II-화학III  (※ 기존 APP_DATA 이름 그대로)
+fillTalks("2026-03-27", "08:00~09:08", "유체IV-유연II-화학III", [
+  {
+    kind: "Invited",
+    time: "",
+    title: "Light–Material Interaction Technologies for Wearable and Smart Electronic Systems",
+    speaker_affil: "금오공과대학교",
+    speaker_name: "박정환 교수"
+  }
+]);
