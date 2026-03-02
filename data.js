@@ -69,7 +69,8 @@ const APP_DATA = {
         {
           time: "10:30~12:00",
           sessions: [
-            { name: "공통 튜토리얼 (3차원 Rhino SW를 이용한 논문/과제 삽화 도식화의 개념과 전략)", room: "이벤트홀A", note: "고려대학교 유용상 교수", talks: [] }
+            { name: "튜토리얼IV", room: "이벤트홀A", note: "", talks: [{kind: "", title: "3차원 Rhino SW를 이용한 논문/과제 삽화 도식화의 개념과 전략",
+      speaker_affil: "고려대학교",speaker_name: "유용상 교수", noPdf: true}] }
           ]
         },
         {
