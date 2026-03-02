@@ -402,7 +402,8 @@ const APP_DATA = {
           ]
         },
         { time: "12:23~13:20", sessions: [ { name: "점심식사 및 전시부스 참관", room: "전시장", talks: [] } ] },
-        { time: "13:20~13:50", sessions: [ { name: "삼성미래기술육성사업 설명회", room: "영주홀B", talks: [] } ] },
+        { time: "13:20~13:50", sessions: [ { name: "삼성미래기술육성사업 설명회", room: "영주홀B", talks: [{kind: "Invited", title: "삼성미래기술육성사업 사업설명회",
+      speaker_affil: "삼성전자 미래기술육성센터", speaker_name: "조승희 PD",}] } ] },
         {
           time: "13:50~14:58",
           sessions: [
