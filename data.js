@@ -423,7 +423,22 @@ const APP_DATA = {
           time: "16:40~17:40",
           sessions: [
             { name: "포스터발표TP-II", room: "백록홀", note: "일반 포스터발표 00편", talks: [] },
-            { name: "특별세션II (연구 역량강화)", room: "영주홀B", note: "초청강연 2편", talks: [] }
+            { name: "특별세션II (연구 역량강화)", room: "영주홀B", note: "초청강연 2편", talks: [
+        // 초청강연(Invited)
+        {
+          kind: "Invited",
+          time: "16:40~17:20",
+          title: "국가연구개발사업 활성화 방안 및 연구지원 정책: 기초연구 중심으로",
+          speaker_affil: "한국연구재단 기초연구본부",
+          speaker_name: "이혁모 본부장"
+        },
+              {
+          kind: "Invited",
+          time: "17:20~17:40",
+          title: "한국연구재단 연구과제 수주 전략과 선정사례 분석",
+          speaker_affil: "국민대학교",
+          speaker_name: "임시형 교수"
+        }] }
           ]
         },
         {
