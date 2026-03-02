@@ -294,6 +294,8 @@
   min-width: 0 !important;
 }
 
+.talk .title { min-width: 0; }
+    
 .talk .authors {
   display: block !important;
   width: 100% !important;
@@ -635,22 +637,24 @@ head.innerHTML = `
       const item = document.createElement('div');
       item.className = 'talk';
 
-      item.innerHTML = `
-        <div class="t1">
-          <div class="time">${t.time || ''}</div>
+item.innerHTML = `
+  <div class="t1">
+    <div class="time">${t.time || ''}</div>
+    <div class="title">
+      ${(t.kind === "Invited" || t.kind === "Special") ? `<span class="kbadge">초청</span>` : ``}
+      ${t.title || ''}
+    </div>
+  </div>
 
-<div class="title">
-  ${(t.kind === "Invited" || t.kind === "Special") ? `<span class="kbadge">초청</span>` : ``}
-  ${t.title || ''}
-</div>
-       
-        <div class="authors">${[t.speaker_affil, t.speaker_name].filter(Boolean).join(' · ') || (t.authors || '')}</div>
-        <div class="btns">
-          ${(t.pdf && !t.noPdf && !t.hidePdf) ? `<a class="btn" href="${t.pdf}" target="_blank" rel="noopener">📄 초록 PDF</a>` : ``}
-          ${t.slides ? `<a class="btn" href="${t.slides}" target="_blank" rel="noopener">🖥️ Slides</a>` : ``}
-          ${t.video ? `<a class="btn" href="${t.video}" target="_blank" rel="noopener">🎥 Video</a>` : ``}
-        </div>
-      `;
+  <div class="authors">${[t.speaker_affil, t.speaker_name].filter(Boolean).join(' · ') || (t.authors || '')}</div>
+
+  <div class="btns">
+    ${(t.pdf && !t.noPdf && !t.hidePdf) ? `<a class="btn" href="${t.pdf}" target="_blank" rel="noopener">📄 초록 PDF</a>` : ``}
+    ${t.slides ? `<a class="btn" href="${t.slides}" target="_blank" rel="noopener">🖥️ Slides</a>` : ``}
+    ${t.video ? `<a class="btn" href="${t.video}" target="_blank" rel="noopener">🎥 Video</a>` : ``}
+  </div>
+`;
+      
       talksWrap.appendChild(item);
     }
   }
