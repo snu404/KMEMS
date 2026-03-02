@@ -556,6 +556,17 @@ head.innerHTML = `
   }
 
   if (talksAll.length === 0) {
+    // 📄 포스터 PDF 모음 버튼
+    if (sess.pdfBundle) {
+      const bundleBtn = document.createElement('a');
+      bundleBtn.className = 'btn';
+      bundleBtn.href = sess.pdfBundle;
+      bundleBtn.target = '_blank';
+      bundleBtn.rel = 'noopener';
+      bundleBtn.textContent = '📚 Poster PDF 모음';
+      talksWrap.appendChild(bundleBtn);
+    }
+    
     // talks가 없는 세션은 note로 표시 (검색어가 note에 있어도 표시됨)
     const note = document.createElement('div');
     note.style.marginTop = '6px';
