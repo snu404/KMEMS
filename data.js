@@ -214,52 +214,52 @@ const APP_DATA = {
         {
           kind: "Invited",
           time: "14:00~14:20",
-          title: "Laser Microfabrication Enabling Immune-Stealth and Soft Bioelectronic Implants",
-          speaker_affil: "한국과학기술연구원",
-          speaker_name: "전호정 박사",
-          pdf: "pdf/D1_Medical1_INV_01.pdf"
+          title: "Current and Emerging Sensors for per- and polyfluoroalkyl substances (PFAS) sensing in Aqueous Systems",
+          speaker_affil: "성균관대학교",
+          speaker_name: "김경훈 교수",
+          pdf: "pdf/D1_Chem1_INV_01.pdf"
         },
 
         // 일반 구두발표(Oral)
         {
           kind: "Oral",
           time: "14:20~14:32",
-          title: "최소 침습적 뇌 신호 모니터링을 위한 고밀도 미세 유연 두개골 전극",
-          speaker_affil: "성균관대학교",
-          speaker_name: "이혜원",
-          pdf: "pdf/D1_Medical1_O_01.pdf"
+          title: "Diffusion-induced Stress and Mechanical Degradation in Alloy-type Nanoparticle Anodes for High-performance Lithium-ion Batteries",
+          speaker_affil: "한국과학기술원",
+          speaker_name: "Thi Thu Phuong Vu",
+          pdf: "pdf/D1_Chem1_O_01.pdf"
         },
         {
           kind: "Oral",
           time: "14:32~14:44",
-          title: "아조벤젠 엘라스토머 필름을 이용한 원격 마이크로니들 약물 전달 시스템 개발",
-          speaker_affil: "부경대학교",
-          speaker_name: "김난경",
-          pdf: "pdf/D1_Medical1_O_02.pdf"
+          title: "고민감 뇌척수액 비루 진단을 위한 금@은 나노기둥 구조 기반 인공지능 접목 SERS 플랫폼 개발",
+          speaker_affil: "성균관대학교",
+          speaker_name: "박현준",
+          pdf: "pdf/D1_Chem1_O_02.pdf"
         },
         {
           kind: "Oral",
           time: "14:44~14:56",
-          title: "Hybrid Flexible-Rigid Neural Probe for Chronic Recording of Neural Signals with Reduced Tissue Damage",
-          speaker_affil: "고려대학교",
-          speaker_name: "조이아 나움키나",
-          pdf: "pdf/D1_Medical1_O_03.pdf"
+          title: "Multimodal Biosensor Patch with Sphere-Shaped NPC-Supported Ti3C2Tx Heterostructures on Laser-Induced Graphene for Wearable Sweat Monitoring",
+          speaker_affil: "광운대학교",
+          speaker_name: "아부다스사마드",
+          pdf: "pdf/D1_Chem1_O_03.pdf"
         },
         {
           kind: "Oral",
           time: "14:56~15:08",
-          title: "A Natural-Biomaterial Microneedle Patch for Rapid Hemostasis and Wet-Tissue Adhesion",
-          speaker_affil: "인천대학교",
-          speaker_name: "김도훈",
-          pdf: "pdf/D1_Medical1_O_04.pdf"
+          title: "금속 산화물 가스 센서를 기반으로 한 고습도 수소 환경에서의 상온 고속 산소 모니터링 시스템",
+          speaker_affil: "한국과학기술원",
+          speaker_name: "권영재",
+          pdf: "pdf/D1_Chem1_O_04.pdf"
         },
         {
           kind: "Oral",
           time: "15:08~15:20",
-            title: "Pre-snapback Mode Operation of CMUT for Enhanced Acoustic Performance",
-          speaker_affil: "한국과학기술원",
-          speaker_name: "박세영",
-          pdf: "pdf/D1_Medical1_O_05.pdf"
+            title: "플라스몬 유도 반응을 활용한 표면 플라스몬 폴라리톤의 전파길이 특성화",
+          speaker_affil: "포항공과대학교",
+          speaker_name: "이장호",
+          pdf: "pdf/D1_Chem1_O_05.pdf"
         }
         ] }
           ]
