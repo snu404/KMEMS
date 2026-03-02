@@ -323,7 +323,7 @@ const APP_DATA = {
           title: "Fusion and hybrid bonding – past, present and future",
           speaker_affil: "EVG코리아",
           speaker_name: "윤영식 대표",
-          nopdf: true
+          noPdf: true
           //pdf: ""
         },
           {
@@ -332,7 +332,7 @@ const APP_DATA = {
           title: "Microfluidic Intracellular Delivery Platforms: Advancements, Applications, and Commercialization",
           speaker_affil: "MxT Biotech / 고려대학교",
           speaker_name: "정아람 교수",
-          nopdf: true
+          noPdf: true
           //pdf: ""
         },
               {
@@ -341,7 +341,7 @@ const APP_DATA = {
           title: "스스로 청소하는 똑똑한 유리(SCG)로 세상을 바꾼다!",
           speaker_affil: "마이크로시스템 / 명지대학교",
           speaker_name: "정상국 교수",
-          nopdf: true
+          noPdf: true
                 //pdf: ""
         }]
               }
@@ -393,9 +393,9 @@ const APP_DATA = {
         { time: "08:56~09:10", sessions: [ { name: "휴식 및 이동", room: "로비", talks: [] } ] },
         { time: "09:10~09:30", sessions: [ { name: "개회식", room: "이벤트홀A", talks: [] } ] },
         { time: "09:30~10:10", sessions: [ { name: "기조강연I", room: "이벤트홀A", Note: "", talks: [{kind: "Invited", title: "Spatial & Physical AI: Empowering the Future of Smart Cities",
-      speaker_affil: "네이버랩스", speaker_name: "차재원 PM",}] } ] },
+      speaker_affil: "네이버랩스", speaker_name: "차재원 PM", noPdf: true}] } ] },
         { time: "10:10~11:00", sessions: [ { name: "기조강연II", room: "이벤트홀A", Note: "", Note: "", talks: [{kind: "Invited", title: "로봇 기술의 발전과 활용",
-      speaker_affil: "성균관대학교", speaker_name: "문형필 교수",}] } ] },
+      speaker_affil: "성균관대학교", speaker_name: "문형필 교수", noPdf: true}] } ] },
         { time: "11:00~11:15", sessions: [ { name: "휴식 및 이동", room: "로비", talks: [] } ] },
         {
           time: "11:15~12:23",
@@ -406,7 +406,7 @@ const APP_DATA = {
         },
         { time: "12:23~13:20", sessions: [ { name: "점심식사 및 전시부스 참관", room: "전시장", talks: [] } ] },
         { time: "13:20~13:50", sessions: [ { name: "삼성미래기술육성사업 설명회", room: "영주홀B", talks: [{kind: "Invited", title: "삼성미래기술육성사업 사업설명회",
-      speaker_affil: "삼성전자 미래기술육성센터", speaker_name: "조승희 PD", nopdf: true}] } ] },
+      speaker_affil: "삼성전자 미래기술육성센터", speaker_name: "조승희 PD", noPdf: true}] } ] },
         {
           time: "13:50~14:58",
           sessions: [
@@ -435,7 +435,7 @@ const APP_DATA = {
           title: "국가연구개발사업 활성화 방안 및 연구지원 정책: 기초연구 중심으로",
           speaker_affil: "한국연구재단 기초연구본부",
           speaker_name: "이혁모 본부장",
-          nopdf: true
+          noPdf: true
         },
               {
           kind: "Invited",
@@ -443,7 +443,7 @@ const APP_DATA = {
           title: "한국연구재단 연구과제 수주 전략과 선정사례 분석",
           speaker_affil: "국민대학교",
           speaker_name: "임시형 교수",
-          nopdf: true
+          noPdf: true
         }] }
           ]
         },
