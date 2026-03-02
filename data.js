@@ -443,3 +443,317 @@ const APP_DATA = {
     }
   ]
 };
+
+// === Oral sessions (from TPC excel: 2026-02-19) ===
+const ORAL_TIMEBLOCKS_BY_DATE = {
+  "2026-03-25": [
+    {
+      "time": "13:00~14:20",
+      "sessions": [
+        {
+          "name": "유체 I",
+          "room": "",
+          "talks": [
+            {
+              "id": "",
+              "time": "",
+              "title": "Raman Flow Cytometry for Single-Cell Microbial Functional Phenotyping",
+              "speaker_name": "이강수",
+              "speaker_affil": "울산과학기술원",
+              "kind": "Invited"
+            },
+            {
+              "id": "KMEMS23-006",
+              "time": "",
+              "title": "귀 외이 구조 모사 모세관 기반 mTBI 센싱 미세유체칩 개발",
+              "speaker_name": "정종수",
+              "speaker_affil": "부산대학교",
+              "kind": ""
+            },
+            {
+              "id": "KMEMS23-046",
+              "time": "",
+              "title": "Ionic-Conductance-Enhanced Nanofluidic Memristor for Reservoir Computing",
+              "speaker_name": "곽성열",
+              "speaker_affil": "서울대학교",
+              "kind": ""
+            },
+            {
+              "id": "KMEMS23-061",
+              "time": "",
+              "title": "Microfluidic Cell-viability Monitoring Device for 3D Bioprinted Tissue",
+              "speaker_name": "아드마스다그나츄테메스젠",
+              "speaker_affil": "명지대학교",
+              "kind": ""
+            },
+            {
+              "id": "KMEMS23-065",
+              "time": "",
+              "title": "GNR-CNC 복합필름 대면적 제조 공정을 통한 유연광열소자 응용",
+              "speaker_name": "국윤혁",
+              "speaker_affil": "한국과학기술원",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "name": "패키징 I",
+          "room": "",
+          "talks": [
+            {
+              "id": "",
+              "time": "",
+              "title": "Highly Anisotropic 2D van der Waals Materials for Scalable Micro/Nano Systems",
+              "speaker_name": "조준현",
+              "speaker_affil": "전북대학교",
+              "kind": "Invited"
+            },
+            {
+              "id": "KMEMS23-006",
+              "time": "",
+              "title": "레이저 어닐링 기반 나노 스케일 스텐실 박막의 제작과 스텐실 리소그래피를 통한 금속 패터닝",
+              "speaker_name": "민두홍",
+              "speaker_affil": "한국과학기술원",
+              "kind": ""
+            },
+            {
+              "id": "KMEMS23-046",
+              "time": "",
+              "title": "Poisson Effect-Assisted Replication Lithography for 3D Microstructure Fabrication",
+              "speaker_name": "김민수",
+              "speaker_affil": "경북대학교",
+              "kind": ""
+            },
+            {
+              "id": "KMEMS23-061",
+              "time": "",
+              "title": "금형 공정 기반 다중구조 CNP–PDMS 표면의 초발수 및 광열 특성을 이용한 에너지 하베스팅",
+              "speaker_name": "이영석",
+              "speaker_affil": "국민대학교",
+              "kind": ""
+            },
+            {
+              "id": "KMEMS23-065",
+              "time": "",
+              "title": "Fabrication of Aerogel-Based Transparent Haze Films for Advanced Optical Applications",
+              "speaker_name": "이경완",
+              "speaker_affil": "중앙대학교",
+              "kind": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "time": "14:40~16:00",
+      "sessions": [
+        {
+          "name": "메디컬 I",
+          "room": "",
+          "talks": [
+            {
+              "id": "",
+              "time": "",
+              "title": "Microsystems for Next-Generation Digital Healthcare",
+              "speaker_name": "최정원",
+              "speaker_affil": "서울대학교",
+              "kind": "Invited"
+            },
+            {
+              "id": "KMEMS23-005",
+              "time": "",
+              "title": "암 치료용 나노기공 기반 마이크로니들 패치의 제조 및 약물 전달 성능 평가",
+              "speaker_name": "김다은",
+              "speaker_affil": "연세대학교",
+              "kind": ""
+            },
+            {
+              "id": "KMEMS23-038",
+              "time": "",
+              "title": "자기장 구동식 마이크로로봇을 이용한 표적 약물 전달 시스템",
+              "speaker_name": "이상훈",
+              "speaker_affil": "고려대학교",
+              "kind": ""
+            },
+            {
+              "id": "KMEMS23-041",
+              "time": "",
+              "title": "웨어러블 바이오센서를 위한 유연기판 기반 미세전극 어레이 개발",
+              "speaker_name": "박지훈",
+              "speaker_affil": "성균관대학교",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "name": "화학 I",
+          "room": "",
+          "talks": [
+            {
+              "id": "",
+              "time": "",
+              "title": "Micro/Nano Systems for Advanced Chemical Sensing",
+              "speaker_name": "이성우",
+              "speaker_affil": "한양대학교",
+              "kind": "Invited"
+            },
+            {
+              "id": "KMEMS23-012",
+              "time": "",
+              "title": "고감도 가스 센서를 위한 나노구조 금속산화물 박막 공정",
+              "speaker_name": "김현수",
+              "speaker_affil": "POSTECH",
+              "kind": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "2026-03-26": [
+    {
+      "time": "08:00~08:56",
+      "sessions": [
+        {
+          "name": "유체 II",
+          "room": "",
+          "talks": [
+            {
+              "id": "",
+              "time": "",
+              "title": "Microfluidics for Next-Generation Lab-on-a-Chip Systems",
+              "speaker_name": "김태현",
+              "speaker_affil": "서울대학교",
+              "kind": "Invited"
+            }
+          ]
+        },
+        {
+          "name": "패키징 II",
+          "room": "",
+          "talks": [
+            {
+              "id": "",
+              "time": "",
+              "title": "Advanced Packaging Technologies for Micro/Nano Systems",
+              "speaker_name": "정우성",
+              "speaker_affil": "성균관대학교",
+              "kind": "Invited"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "time": "09:08~10:16",
+      "sessions": [
+        {
+          "name": "유연 I",
+          "room": "",
+          "talks": [
+            {
+              "id": "",
+              "time": "",
+              "title": "Flexible and Wearable Microsystems: Materials to Systems",
+              "speaker_name": "박지영",
+              "speaker_affil": "연세대학교",
+              "kind": "Invited"
+            }
+          ]
+        },
+        {
+          "name": "바이오 I",
+          "room": "",
+          "talks": [
+            {
+              "id": "",
+              "time": "",
+              "title": "Bio-MEMS and Organ-on-a-Chip for Precision Medicine",
+              "speaker_name": "김민정",
+              "speaker_affil": "KAIST",
+              "kind": "Invited"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "time": "10:24~11:32",
+      "sessions": [
+        {
+          "name": "화학 II",
+          "room": "",
+          "talks": [
+            {
+              "id": "",
+              "time": "",
+              "title": "Chemical Microsystems: From Sensors to Integrated Platforms",
+              "speaker_name": "이준호",
+              "speaker_affil": "UNIST",
+              "kind": "Invited"
+            }
+          ]
+        },
+        {
+          "name": "메디컬 II",
+          "room": "",
+          "talks": [
+            {
+              "id": "",
+              "time": "",
+              "title": "Microsystems for Diagnosis and Therapy",
+              "speaker_name": "류원형",
+              "speaker_affil": "서울대학교",
+              "kind": "Invited"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "2026-03-27": [
+    {
+      "time": "08:00~09:08",
+      "sessions": [
+        {
+          "name": "바이오 II",
+          "room": "",
+          "talks": [
+            {
+              "id": "",
+              "time": "",
+              "title": "Wearable Mechanical Interfaces for Neural Interfaces and Digital Healthcare",
+              "speaker_name": "하경호",
+              "speaker_affil": "한국과학기술원",
+              "kind": "Invited"
+            }
+          ]
+        },
+        {
+          "name": "유체 IV, 유연 II, 화학 III",
+          "room": "",
+          "talks": [
+            {
+              "id": "",
+              "time": "",
+              "title": "Light-Material Interaction Technologies for Wearable and Smart Electronic Systems",
+              "speaker_name": "박정환",
+              "speaker_affil": "금오공과대학교",
+              "kind": "Invited"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+};
+
+// 기존 APP_DATA에 병합: 해당 날짜의 timeBlocks 뒤에 oral 블록을 추가
+for (const d of (APP_DATA.days || [])) {
+  const extra = ORAL_TIMEBLOCKS_BY_DATE[d.date];
+  if (!extra) continue;
+  d.timeBlocks = Array.isArray(d.timeBlocks) ? d.timeBlocks : [];
+  d.timeBlocks = d.timeBlocks.concat(extra);
+}
