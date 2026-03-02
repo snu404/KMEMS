@@ -267,6 +267,16 @@
   padding-left: 0 !important; 
   margin-left: 0 !important;
 }   
+
+/* talk 카드 안에서 제목/저자 줄이 절대 한 줄로 합쳐지지 않게 강제 */
+.talk { display: block !important; }
+.talk .t1 { display: flex !important; }
+.talk .title { flex: 1 1 auto; min-width: 0; }
+.talk .authors { display: block !important; margin-top: 6px; width: 100%; }
+
+/* 혹시 authors가 떠버린 경우 방지 */
+.talk .authors { float: none !important; position: static !important; }
+    
   </style>
 </head>
 
