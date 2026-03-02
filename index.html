@@ -295,19 +295,35 @@
 }
 
 .talk .title { min-width: 0; }
-    
-.talk .authors {
-  display: block !important;
-  width: 100% !important;
-  margin-top: 6px !important;
 
-  /* 혹시 붙어버리게 하는 규칙들 무력화 */
-  float: none !important;
-  position: static !important;
-  margin-left: 0 !important;
-  right: auto !important;
-  left: auto !important;
-  top: auto !important;
+.talk .time{
+  min-width:82px;
+  font-weight:800;
+  font-size:12px;
+  color:#222;
+  white-space:nowrap;
+}
+    
+.talk .authors{
+  display:block !important;
+  width:100% !important;
+  margin-top:6px !important;
+
+  float:none !important;
+  position:static !important;
+  right:auto !important;
+  left:auto !important;
+  top:auto !important;
+
+  margin-left: 0; /* 기본(시간 없을 때) */
+}
+
+/* ✅ 시간 있을 때만 제목 시작점으로 정렬 */
+.talk.has-time .authors{
+  margin-left: calc(82px + 10px) !important; /* time폭 + gap */
+}
+  .talk.has-time .btns{
+  margin-left: calc(82px + 10px) !important;
 }
     
   </style>
@@ -636,7 +652,8 @@ head.innerHTML = `
     for (const t of talksToRender) {
       const item = document.createElement('div');
       item.className = 'talk';
-
+item.classList.toggle('has-time', !!(t.time && String(t.time).trim()));
+      
 item.innerHTML = `
   <div class="t1">
     <div class="time">${t.time || ''}</div>
