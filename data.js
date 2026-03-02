@@ -315,7 +315,33 @@ const APP_DATA = {
           time: "16:15~17:15",
           sessions: [
             { name: "포스터WP-I", room: "백록홀", note: "일반 포스터발표 00편", talks: [] },
-            { name: "특별세션I (기술사업화 역량강화)", room: "영주홀B", note: "초청강연 3편", talks: [] }
+            { name: "특별세션I (기술사업화 역량강화)", room: "영주홀B", note: "초청강연 3편", talks: [
+        // 초청강연(Invited)
+        {
+          kind: "Invited",
+          time: "16:15~16:35",
+          title: "Fusion and hybrid bonding – past, present and future",
+          speaker_affil: "EVG코리아",
+          speaker_name: "윤영식 대표",
+          pdf: ""
+        },
+          {
+          kind: "Invited",
+          time: "16:35~16:55",
+          title: "Microfluidic Intracellular Delivery Platforms: Advancements, Applications, and Commercialization",
+          speaker_affil: "MxT Biotech / 고려대학교",
+          speaker_name: "정아람 교수",
+          pdf: ""
+        },
+              {
+          kind: "Invited",
+          time: "16:55~17:15",
+          title: "스스로 청소하는 똑똑한 유리(SCG)로 세상을 바꾼다!",
+          speaker_affil: "마이크로시스템 / 명지대학교",
+          speaker_name: "정상국 교수",
+          pdf: ""
+        }]
+              }
           ]
         },
         {
