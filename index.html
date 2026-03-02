@@ -203,6 +203,14 @@
   font-weight:900;
   margin-right:6px;
 }
+
+<div class="timeblock-meta">
+  ${
+    (blk.sessions || []).filter(s => !isEmptySession_(s)).length <= 1
+      ? 'Single session'
+      : 'Parallel session'
+  }
+</div>
     
   </style>
 </head>
@@ -326,6 +334,29 @@ function normalizeDayToBlocks_(day) {
   return { blocks, maxParallel };
 }
 
+function isEmptySession_(s) {
+  const name = String(s?.name ?? s?.title ?? '').trim();
+
+  // 이름이 없으면 빈 세션 취급
+  if (!name) return true;
+
+  // '세션없음' 문구/패턴이면 빈 세션
+  if (/세션\s*없음|없음|empty/i.test(name)) return true;
+
+  // talks가 있으면 당연히 비어있지 않음
+  const talks = Array.isArray(s?.talks) ? s.talks : [];
+  if (talks.length > 0) return false;
+
+  // talks가 없어도 "요약/카운트" 정보가 있으면 실제 세션으로 취급
+  // (프로그램 카드에 '초청강연 1편…' 같은 정보가 있을 때를 커버)
+  const hasSummary =
+    !!s?.summary || !!s?.desc || !!s?.meta ||
+    typeof s?.count === 'number' ||
+    typeof s?.n === 'number';
+
+  return !hasSummary; // 요약도 없고 talks도 없으면 빈 세션
+}
+    
 function render_() {
   renderDayTabs_();
 
@@ -351,9 +382,7 @@ function render_() {
 
 <div class="timeblock-meta">
   ${
-    (blk.sessions || []).filter(
-      s => (s.talks || []).length > 0
-    ).length <= 1
+    (blk.sessions || []).filter(s => !isEmptySession_(s)).length <= 1
       ? 'Single session'
       : 'Parallel session'
   }
