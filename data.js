@@ -363,8 +363,10 @@ const APP_DATA = {
         },
         { time: "08:56~09:10", sessions: [ { name: "휴식 및 이동", room: "로비", talks: [] } ] },
         { time: "09:10~09:30", sessions: [ { name: "개회식", room: "이벤트홀A", talks: [] } ] },
-        { time: "09:30~10:10", sessions: [ { name: "기조강연I", room: "이벤트홀A", Note: "Spatial & Physical AI: Empowering the Future of Smart Cities, 네이버랩스 차재원 박사", talks: [] } ] },
-        { time: "10:10~11:00", sessions: [ { name: "기조강연II", room: "이벤트홀A", Note: "로봇 기술의 발전과 활용, 성균관대학교 문형필 교수", talks: [] } ] },
+        { time: "09:30~10:10", sessions: [ { name: "기조강연I", room: "이벤트홀A", Note: "", talks: [{kind: "Invited", title: "Spatial & Physical AI: Empowering the Future of Smart Cities",
+      speaker_affil: "네이버랩스", speaker_name: "차재원 박사",}] } ] },
+        { time: "10:10~11:00", sessions: [ { name: "기조강연II", room: "이벤트홀A", Note: "", Note: "", talks: [{kind: "Invited", title: "로봇 기술의 발전과 활용",
+      speaker_affil: "성균관대학교", speaker_name: "문형필 교수",}] } ] },
         { time: "11:00~11:15", sessions: [ { name: "휴식 및 이동", room: "로비", talks: [] } ] },
         {
           time: "11:15~12:23",
