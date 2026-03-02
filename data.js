@@ -1,3 +1,44 @@
+// 세션명 -> 파일명에 들어갈 sessionKey
+const SESSION_KEY = {
+  // Day 1 (3/25)
+  "유체I": "Fluid1",
+  "소재, 가공, 패키징I": "Packaging1",
+  "메디컬I": "Medical1",
+  "화학I": "Chem1",
+  "포스터WP-I": "PosterWP1",
+  "포스터WP-I (계속)": "PosterWP1Cont",
+  "특별세션I (기술사업화 역량강화)": "SS1",
+  "2026 MNS 춘계학술대회 평의원회": "Council",
+  "신진연구자 환영회": "Welcome",
+
+  // Day 2 (3/26)
+  "융복합I-메디컬II": "ConvMed2",
+  "물리I": "Phys1",
+  "유체II": "Fluid2",
+  "물리II-소재, 가공, 패키징II": "PhysPack2",
+  "바이오I": "Bio1",
+  "유연I": "Flex1",
+  "유체III": "Fluid3",
+  "소재, 가공, 패키징III": "Packaging3",
+  "포스터발표TP-II": "PosterTP2",
+  "포스터발표TP-II (계속)": "PosterTP2Cont",
+  "특별세션II (연구 역량강화)": "SS2",
+  "만찬(기업소개)": "Banquet",
+  "삼성미래기술육성사업 설명회": "SamsungBriefing",
+  "개회식": "Opening",
+  "기조강연I": "Keynote1",
+  "기조강연II": "Keynote2",
+
+  // Day 3 (3/27)
+  "바이오II": "Bio2",
+  "유체IV-유연II-화학III": "Fluid4Flex2Chem3",
+  "포스터발표FP-III": "PosterFP3",
+  "포스터발표FP-III (계속)": "PosterFP3Cont",
+  "특별세션III (신진과학자 세션)": "SS3",
+  "2025 MNS 학술상 수상 기념 강연": "AwardLecture",
+  "우수논문 시상 및 폐회식": "ClosingAwards"
+};
+
 const APP_DATA = {
   days: [
     // =========================
@@ -865,3 +906,54 @@ fillTalks("2026-03-27", "08:00~09:08", "유체IV-유연II-화학III", [
   { kind: "Oral",    time: "", title: "전기화학 기반 나노플라스틱 검출 센서 개발", speaker_affil: "성균관대학교", speaker_name: "김치현" },
   { kind: "Oral",    time: "", title: "웨어러블 촉각 디스플레이를 위한 강-연성 구조 기반 인장 둔감형 전기유체역학 액추에이터", speaker_affil: "연세대학교", speaker_name: "조승인" }
 ]);
+
+function dayNoFromDate_(dateStr) {
+  if (dateStr === "2026-03-25") return 1;
+  if (dateStr === "2026-03-26") return 2;
+  if (dateStr === "2026-03-27") return 3;
+  return 0;
+}
+
+function typeCode_(kind) {
+  const k = String(kind || "").toLowerCase();
+  if (k === "invited") return "INV";
+  if (k === "special") return "SP";
+  return "O"; // 기본은 Oral
+}
+
+// talks에 pdf가 없으면 자동 생성해서 넣기
+function autolinkPdf_() {
+  for (const day of (APP_DATA.days || [])) {
+    const dn = dayNoFromDate_(day.date);
+    if (!dn) continue;
+
+    for (const blk of (day.timeBlocks || [])) {
+      for (const sess of (blk.sessions || [])) {
+        const key = SESSION_KEY[sess.name];
+        if (!key) continue;
+
+        const talks = Array.isArray(sess.talks) ? sess.talks : [];
+
+        // 세션 내에서 kind별로 번호를 따로 매김 (INV 01.., O 01..)
+        let invN = 0, oralN = 0, spN = 0;
+
+        for (const t of talks) {
+          if (t.pdf) continue; // 이미 수동 지정된 링크는 유지
+
+          const code = typeCode_(t.kind);
+
+          let nInt = 0;
+          if (code === "INV") nInt = ++invN;
+          else if (code === "SP") nInt = ++spN;
+          else nInt = ++oralN;
+
+          const nn = String(nInt).padStart(2, "0");
+          t.pdf = `pdf/D${dn}_${key}_${code}_${nn}.pdf`;
+        }
+      }
+    }
+  }
+}
+
+// data.js 로드 시 1회 실행
+autolinkPdf_();
