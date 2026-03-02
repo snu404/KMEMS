@@ -44,7 +44,7 @@ const APP_DATA = {
           time: "13:00~13:25",
           title: "Raman Flow Cytometry for Single-Cell Microbial Functional Phenotyping",
           speaker_affil: "울산과학기술원",
-          speaker_name: "이강수",
+          speaker_name: "이강수 교수",
           pdf: "pdf/D1_Fluid1_INV_01.pdf"
         },
 
@@ -98,7 +98,7 @@ const APP_DATA = {
           time: "13:00~13:25",
           title: "Highly Anisotropic 2D van der Waals Materials for Spintronic Device Applications",
           speaker_affil: "전북대학교",
-          speaker_name: "조준현",
+          speaker_name: "조준현 교수",
           pdf: "pdf/D1_Packaging1_INV_01.pdf"
         },
 
