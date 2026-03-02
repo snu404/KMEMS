@@ -400,6 +400,14 @@ function isBlockLive_(dayDate, timeRange) {
 
   return now >= startDT && now <= endDT;
 }
+
+function isBreakBlock_(blk) {
+  const sessions = blk.sessions || [];
+  return sessions.some(s => {
+    const name = String(s?.name || '').trim();
+    return /휴식|이동|break|lunch|coffee/i.test(name);
+  });
+}
     
 function render_() {
   renderDayTabs_();
@@ -421,18 +429,16 @@ function render_() {
 
     const head = document.createElement('div');
     head.className = 'timeblock-head';
-    head.innerHTML = `
-      <div class="timeblock-time">${blk.time}</div>
+    
+const isBreak = isBreakBlock_(blk);
+const activeCount = (blk.sessions || []).filter(s => !isEmptySession_(s)).length;
+const sessionLabel = activeCount <= 1 ? 'Single session' : 'Parallel session';
 
-<div class="timeblock-meta">
-  ${
-    (blk.sessions || []).filter(s => !isEmptySession_(s)).length <= 1
-      ? 'Single session'
-      : 'Parallel session'
-  }
-</div>
-      
-    `;
+head.innerHTML = `
+  <div class="timeblock-time">${blk.time}</div>
+  ${isBreak ? '' : `<div class="timeblock-meta">${sessionLabel}</div>`}
+`;
+    
     block.appendChild(head);
 
     const grid = document.createElement('div');
