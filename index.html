@@ -276,6 +276,37 @@
 
 /* 혹시 authors가 떠버린 경우 방지 */
 .talk .authors { float: none !important; position: static !important; }
+
+    /* ===== FIX: authors가 제목 옆(오른쪽)으로 붙는 현상 강제 방지 ===== */
+.talk { 
+  display: block !important;
+}
+
+.talk .t1 {
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  align-items: baseline !important;
+}
+
+.talk .title {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+}
+
+.talk .authors {
+  display: block !important;
+  width: 100% !important;
+  margin-top: 6px !important;
+
+  /* 혹시 붙어버리게 하는 규칙들 무력화 */
+  float: none !important;
+  position: static !important;
+  margin-left: 0 !important;
+  right: auto !important;
+  left: auto !important;
+  top: auto !important;
+}
     
   </style>
 </head>
