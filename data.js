@@ -176,7 +176,7 @@ const APP_DATA = {
           time: "17:15~17:55",
           sessions: [
             { name: "포스터WP-I (계속)", room: "백록홀", note: "일반 포스터발표 00편", talks: [] },
-            { name: "세션없음", room: "영주홀B", talks: [] }
+            { name: "세션없음", room: "", talks: [] }
           ]
         },
         {
@@ -256,7 +256,7 @@ const APP_DATA = {
           time: "17:40~18:20",
           sessions: [
             { name: "포스터발표TP-II (계속)", room: "백록홀", note: "일반 포스터발표 00편", talks: [] },
-            { name: "세션없음", room: "영주홀B", talks: [] }
+            { name: "세션없음", room: "", talks: [] }
           ]
         },
         { time: "18:20~18:30", sessions: [ { name: "휴식 및 이동", room: "로비", talks: [] } ] },
@@ -325,7 +325,7 @@ const APP_DATA = {
           time: "10:20~11:00",
           sessions: [
             { name: "포스터발표FP-III (계속)", room: "백록홀", note: "일반 포스터발표 00편", talks: [] },
-            { name: "세션없음", room: "영주홀B", talks: [] }
+            { name: "세션없음", room: "", talks: [] }
           ]
         },
         { time: "11:00~11:10", sessions: [ { name: "휴식 및 이동", room: "로비", talks: [] } ] },
