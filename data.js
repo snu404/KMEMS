@@ -940,20 +940,20 @@ fillTalks("2026-03-26", "15:15~16:23", "소재, 가공, 패키징III", [
 
 // 08:00~09:08  바이오II
 fillTalks("2026-03-27", "08:00~09:08", "바이오II", [
-  { kind: "Invited", time: "", title: "Wearable Mechanical Interfaces for Neural Interfaces and Digital Healthcare", speaker_affil: "한국과학기술원", speaker_name: "하경호" },
-  { kind: "Oral",    time: "", title: "A V₂CTx-MXene@f-MWCNTs Epidermal Patch for Sweat Glucose and Ketone Monitoring", speaker_affil: "광운대학교", speaker_name: "조후룰이슬람" },
-  { kind: "Oral",    time: "", title: "A Droplet-based Microfluidic Screening System for the Discovery of Slow-growing and Novel Microbes in Environmental Samples", speaker_affil: "광운대학교", speaker_name: "오별님" },
-  { kind: "Oral",    time: "", title: "A Through-Hole Cantilever Platform Integrated with Silicon Strain Sensors for Physiologically Relevant Double-Layer Cardiomyocytes Culture and Monitoring", speaker_affil: "전남대학교", speaker_name: "Fusong Li" },
-  { kind: "Oral",    time: "", title: "전혈 기반 NK세포 분리를 위한 미세유체 면역자기 플랫폼", speaker_affil: "고려대학교 세종캠퍼스", speaker_name: "한해희" }
+  { kind: "Invited", time: "08:00~08:20", title: "Wearable Mechanical Interfaces for Neural Interfaces and Digital Healthcare", speaker_affil: "한국과학기술원", speaker_name: "하경호" },
+  { kind: "Oral",    time: "08:20~08:32", title: "A V₂CTx-MXene@f-MWCNTs Epidermal Patch for Sweat Glucose and Ketone Monitoring", speaker_affil: "광운대학교", speaker_name: "조후룰이슬람" },
+  { kind: "Oral",    time: "08:32~08:44", title: "A Droplet-based Microfluidic Screening System for the Discovery of Slow-growing and Novel Microbes in Environmental Samples", speaker_affil: "광운대학교", speaker_name: "오별님" },
+  { kind: "Oral",    time: "08:44~08:56", title: "A Through-Hole Cantilever Platform Integrated with Silicon Strain Sensors for Physiologically Relevant Double-Layer Cardiomyocytes Culture and Monitoring", speaker_affil: "전남대학교", speaker_name: "Fusong Li" },
+  { kind: "Oral",    time: "08:56~09:08", title: "전혈 기반 NK세포 분리를 위한 미세유체 면역자기 플랫폼", speaker_affil: "고려대학교 세종캠퍼스", speaker_name: "한해희" }
 ]);
 
 // 08:00~09:08  유체IV-유연II-화학III
 fillTalks("2026-03-27", "08:00~09:08", "유체IV-유연II-화학III", [
-  { kind: "Invited", time: "", title: "Light-Material Interaction Technologies for Wearable and Smart Electronic Systems", speaker_affil: "금오공과대학교", speaker_name: "박정환" },
-  { kind: "Oral",    time: "", title: "미세 유동의 토출량 측정을 위한 MEMS 기반의 열량식 유량 센서 시스템", speaker_affil: "아주대학교", speaker_name: "이기용" },
-  { kind: "Oral",    time: "", title: "Analysis of Electroconvection near Ion-Selective Membranes in Non-Newtonian Fluids", speaker_affil: "서울대학교", speaker_name: "김동현" },
-  { kind: "Oral",    time: "", title: "전기화학 기반 나노플라스틱 검출 센서 개발", speaker_affil: "성균관대학교", speaker_name: "김치현" },
-  { kind: "Oral",    time: "", title: "웨어러블 촉각 디스플레이를 위한 강-연성 구조 기반 인장 둔감형 전기유체역학 액추에이터", speaker_affil: "연세대학교", speaker_name: "조승인" }
+  { kind: "Invited", time: "08:00~08:20", title: "Light-Material Interaction Technologies for Wearable and Smart Electronic Systems", speaker_affil: "금오공과대학교", speaker_name: "박정환" },
+  { kind: "Oral",    time: "08:20~08:32", title: "미세 유동의 토출량 측정을 위한 MEMS 기반의 열량식 유량 센서 시스템", speaker_affil: "아주대학교", speaker_name: "이기용" },
+  { kind: "Oral",    time: "08:32~08:44", title: "Analysis of Electroconvection near Ion-Selective Membranes in Non-Newtonian Fluids", speaker_affil: "서울대학교", speaker_name: "김동현" },
+  { kind: "Oral",    time: "08:44~08:56", title: "전기화학 기반 나노플라스틱 검출 센서 개발", speaker_affil: "성균관대학교", speaker_name: "김치현" },
+  { kind: "Oral",    time: "08:56~09:08", title: "웨어러블 촉각 디스플레이를 위한 강-연성 구조 기반 인장 둔감형 전기유체역학 액추에이터", speaker_affil: "연세대학교", speaker_name: "조승인" }
 ]);
 
 function dayNoFromDate_(dateStr) {
