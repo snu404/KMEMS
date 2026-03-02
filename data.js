@@ -323,7 +323,8 @@ const APP_DATA = {
           title: "Fusion and hybrid bonding – past, present and future",
           speaker_affil: "EVG코리아",
           speaker_name: "윤영식 대표",
-          pdf: ""
+          nopdf: true
+          //pdf: ""
         },
           {
           kind: "Invited",
@@ -331,7 +332,8 @@ const APP_DATA = {
           title: "Microfluidic Intracellular Delivery Platforms: Advancements, Applications, and Commercialization",
           speaker_affil: "MxT Biotech / 고려대학교",
           speaker_name: "정아람 교수",
-          pdf: ""
+          nopdf: true
+          //pdf: ""
         },
               {
           kind: "Invited",
@@ -339,7 +341,8 @@ const APP_DATA = {
           title: "스스로 청소하는 똑똑한 유리(SCG)로 세상을 바꾼다!",
           speaker_affil: "마이크로시스템 / 명지대학교",
           speaker_name: "정상국 교수",
-          pdf: ""
+          nopdf: true
+                //pdf: ""
         }]
               }
           ]
@@ -403,7 +406,7 @@ const APP_DATA = {
         },
         { time: "12:23~13:20", sessions: [ { name: "점심식사 및 전시부스 참관", room: "전시장", talks: [] } ] },
         { time: "13:20~13:50", sessions: [ { name: "삼성미래기술육성사업 설명회", room: "영주홀B", talks: [{kind: "Invited", title: "삼성미래기술육성사업 사업설명회",
-      speaker_affil: "삼성전자 미래기술육성센터", speaker_name: "조승희 PD",}] } ] },
+      speaker_affil: "삼성전자 미래기술육성센터", speaker_name: "조승희 PD", nopdf: true}] } ] },
         {
           time: "13:50~14:58",
           sessions: [
@@ -431,14 +434,16 @@ const APP_DATA = {
           time: "16:40~17:20",
           title: "국가연구개발사업 활성화 방안 및 연구지원 정책: 기초연구 중심으로",
           speaker_affil: "한국연구재단 기초연구본부",
-          speaker_name: "이혁모 본부장"
+          speaker_name: "이혁모 본부장",
+          nopdf: true
         },
               {
           kind: "Invited",
           time: "17:20~17:40",
           title: "한국연구재단 연구과제 수주 전략과 선정사례 분석",
           speaker_affil: "국민대학교",
-          speaker_name: "임시형 교수"
+          speaker_name: "임시형 교수",
+          nopdf: true
         }] }
           ]
         },
