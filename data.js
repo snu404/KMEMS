@@ -911,7 +911,7 @@ fillTalks("2026-03-26", "13:50~14:58", "바이오I", [
   { kind: "Oral",    time: "14:10~14:22", title: "Optimization of Electrical Stimulation for Cardiomyocyte Maturation Based on Long-Term Wireless Monitoring", speaker_affil: "전남대학교", speaker_name: "유극" },
   { kind: "Oral",    time: "14:22~14:34", title: "양방향 신경 조절을 위한 마이크로 LED 집적 투명 표면 ECoG 센서 어레이", speaker_affil: "한국과학기술원", speaker_name: "리옹지아치" },
   { kind: "Oral",    time: "14:34~14:46", title: "Development of Wireless MEMS-Based Neural Probe System for Simultaneous Measurement of Electrical and Chemical Signals", speaker_affil: "고려대학교", speaker_name: "김근태" },
-  { kind: "Oral",    time: "14:46~14:58", title: "MOF-Derived Transition-Metal Carbide@Polypyrrole Nanohybrids for a Highly Sensitive and Stretchable Multimodal Sweat-Sensing Patch", speaker_affil: "광운대학교", speaker_name: "자히둘이슬람" }
+  { kind: "Oral",    time: "14:46~14:58", title: "MOF-Derived Transition-Metal Carbide@Polypyrrole Nanohybrids for a Highly Sensitive and Stretchable Multimodal Sweat-Sensing Patch", speaker_affil: "광운대학교", speaker_name: "자히둘 이슬람" }
 ]);
 
 // 13:50~14:58  유연I
