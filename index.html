@@ -38,9 +38,26 @@
       border: 1px solid #eee; border-radius: 14px; padding: 10px; background: #fafafa;
       display: grid; gap: 6px;
     }
-    .talk .t1 { display:flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+   
+    .talk .t1 {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    }
+
+    .talk .title {
+    flex: 1;              /* 제목이 남은 영역 차지 */
+    }
+    
     .talk .time { font-weight: 800; font-size: 12px; color:#222; white-space: nowrap; }
-    .talk .title { font-weight: 800; font-size: 13px; }
+    
+    .talk .title {
+    font-weight: 800;
+    font-size: 13px;
+    text-align: left;      /* ← 좌측 정렬 강제 */
+    display: block;        /* 줄 정렬 안정화 */
+    }
+    
     .talk .authors { font-size: 12px; color: #666; }
     .btns { display:flex; gap: 8px; flex-wrap: wrap; }
     a.btn {
@@ -190,7 +207,8 @@
 .session.in-parallel { margin: 0; }
 
 .kbadge{
-  display:inline-flex;
+  display:inline-block;
+  vertical-align: middle;
   align-items:center;
   justify-content:center;
   height:18px;
@@ -198,7 +216,9 @@
   padding:0 6px;
   border-radius:999px;
   border:1px solid #caa100;
-  background:#fff;
+  background:#fff8e1;
+  border-color:#e0b200;
+  color:#8a6d00;
   font-size:11px;
   font-weight:900;
   margin-right:6px;
