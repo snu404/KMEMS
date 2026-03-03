@@ -265,6 +265,31 @@
       color:#ff3b30;
       font-weight:900;
     }
+
+    /* ✅ 버튼 텍스트 줄바꿈 완전 금지 (우선순위 강제) */
+    a.btn,
+    .btns a.btn,
+    .timebtns a.btn{
+      white-space: nowrap !important;
+      word-break: keep-all !important;
+      overflow-wrap: normal !important;
+    }
+    
+    /* ✅ time 칼럼(시간 아래)에 들어간 버튼은 작게 만들어 1줄로 고정 */
+    .talk.has-time .timebtns a.btn{
+      font-size: 11px !important;
+      padding: 6px 8px !important;
+      gap: 4px !important;
+      line-height: 1 !important;
+      justify-content: center !important;
+    }
+    
+    /* (혹시 내부에 span/div가 block으로 잡히는 경우까지 방지) */
+    .talk.has-time .timebtns a.btn *{
+      display: inline !important;
+      white-space: nowrap !important;
+    }
+    
   </style>
 </head>
 
