@@ -318,7 +318,7 @@ const APP_DATA = {
         {
           time: "16:15~17:15",
           sessions: [
-            { name: "포스터WP-I", room: "백록홀", note: "일반 포스터발표 119편", pdfBundle: "pdf/poster/poster_WP-I.pdf", talks: [] },
+            { name: "포스터WP-I", room: "백록홀", note: "일반 포스터발표 119편\n좌장: 유재형(중앙대), 장두준(성균관대), 임종경(가천대), 안중호(성균관대), 박승현(부경대), 배주열(전남대), 김민구(연세대), 이응복(전남대)", pdfBundle: "pdf/poster/poster_WP-I.pdf", talks: [] },
             { name: "특별세션I (기술사업화 역량강화)", room: "영주홀B", note: "초청강연 3편", talks: [
         // 초청강연(Invited)
         {
