@@ -325,6 +325,17 @@
   .talk.has-time .btns{
   margin-left: calc(82px + 10px) !important;
 }
+
+/* time 없으면 시간 칸 자체 제거 */
+.talk:not(.has-time) .time {
+  display: none !important;
+}
+
+/* time 없으면 t1 레이아웃도 단순화 */
+.talk:not(.has-time) .t1 {
+  justify-content: flex-start !important;
+  gap: 0 !important;
+}
     
   </style>
 </head>
