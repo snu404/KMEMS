@@ -82,7 +82,7 @@ const APP_DATA = {
         {
           time: "13:00~14:20",
           sessions: [
-            { name: "유체I", room: "영주홀A", note: "초청강연 1편, 일반 구두발표 5편", talks: [
+            { name: "유체I / 좌장: 이충엽(경희대), 김승호(부산대)", room: "영주홀A", note: "초청강연 1편, 일반 구두발표 5편", talks: [
         // 초청강연(Invited)
         {
           kind: "Invited",
