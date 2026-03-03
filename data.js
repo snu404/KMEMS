@@ -79,7 +79,7 @@ const APP_DATA = {
         {
           time: "10:30~12:00",
           sessions: [
-            { name: "튜토리얼IV", room: "이벤트홀A", note: "", talks: [{kind: "", title: "3차원 Rhino SW를 이용한 논문/과제 삽화 도식화의 개념과 전략",
+            { name: "튜토리얼IV", room: "203", note: "", talks: [{kind: "", title: "3차원 Rhino SW를 이용한 논문/과제 삽화 도식화의 개념과 전략",
       speaker_affil: "고려대학교",speaker_name: "유용상 교수", noPdf: true}] }
           ]
         },
@@ -329,7 +329,7 @@ const APP_DATA = {
           time: "16:15~17:15",
           sessions: [
             { name: "포스터WP-I", room: "백록홀", note: "일반 포스터발표 119편\n좌장: 유재형(중앙대), 장두준(성균관대), 임종경(가천대), 안중호(성균관대), 박승현(부경대), 배주열(전남대), 김민구(연세대), 이응복(전남대)", pdfBundle: "pdf/poster/poster_WP-I.pdf", talks: [] },
-            { name: "특별세션I (기술사업화 역량) / 좌장: 이대식(ETRI)", room: "영주홀B", note: "초청강연 3편", talks: [
+            { name: "특별세션I (기술사업화 역량) / 좌장: 이대식(ETRI)", room: "영주홀A", note: "초청강연 3편", talks: [
         // 초청강연(Invited)
         {
           kind: "Invited",
@@ -383,7 +383,7 @@ const APP_DATA = {
         {
           time: "19:00~21:00",
           sessions: [
-            { name: "신진연구자 환영회", room: "추후공지", talks: [] }
+            { name: "신진연구자 환영회", room: "외부행사장소", talks: [] }
           ]
         }
       ]
@@ -401,7 +401,7 @@ const APP_DATA = {
           time: "08:00~08:56",
           sessions: [
             { name: "융복합I-메디컬II / 좌장: 서민호(부산대), 유성광(인제대)", room: "영주홀A", note: "초청강연 1편, 일반 구두발표 3편", talks: [] },
-            { name: "물리I / 좌장: 조은환(금오공대), 표순재(서울과기대)", room: "영주홀B", note: "초청강연 1편, 일반 구두발표 3편", talks: [] }
+            { name: "물리I / 좌장: 조은환(금오공대), 표순재(서울과기대)", room: "이벤트홀A", note: "초청강연 1편, 일반 구두발표 3편", talks: [] }
           ]
         },
         { time: "08:56~09:10", sessions: [ { name: "휴식 및 이동", room: "로비", talks: [] } ] },
@@ -415,11 +415,11 @@ const APP_DATA = {
           time: "11:15~12:23",
           sessions: [
             { name: "유체II / 좌장: 김원정(연세대), 전형국(서울과기대)", room: "영주홀A", note: "초청강연 1편, 일반 구두발표 4편", talks: [] },
-            { name: "물리II-소재, 가공, 패키징II / 좌장: 김회준(DGIST)", room: "영주홀B", note: "초청강연 1편, 일반 구두발표 4편", talks: [] }
+            { name: "물리II-소재, 가공, 패키징II / 좌장: 김회준(DGIST)", room: "이벤트홀A", note: "초청강연 1편, 일반 구두발표 4편", talks: [] }
           ]
         },
         { time: "12:23~13:20", sessions: [ { name: "점심식사 및 전시부스 참관", room: "전시장", talks: [] } ] },
-        { time: "13:20~13:50", sessions: [ { name: "삼성미래기술육성사업 설명회", room: "영주홀B", talks: [{kind: "Invited", title: "삼성미래기술육성사업 사업설명회",
+        { time: "13:20~13:50", sessions: [ { name: "삼성미래기술육성사업 설명회", room: "영주홀A", talks: [{kind: "Invited", title: "삼성미래기술육성사업 사업설명회",
       speaker_affil: "삼성전자 미래기술육성센터", speaker_name: "조승희 PD", noPdf: true}] } ] },
         {
           time: "13:50~14:58",
@@ -441,7 +441,7 @@ const APP_DATA = {
           time: "16:40~17:40",
           sessions: [
             { name: "포스터발표TP-II", room: "백록홀", note: "일반 포스터발표 88편\n좌장: 노윤수(UNIST), 박종철(NNFC), 박정환(금오공대), 김윤갑(GERI), 양다솜(중앙대), 최은표(서강대), 김해진(연세대), 안재혁(충남대)\n학부생 포스터발표 38편\n좌장: 최영수(광주대)\nFocused 포스터발표 34편\n좌장: 임미경(중앙대)", pdfBundle: "pdf/poster/poster_TP-II.pdf", talks: [] },
-            { name: "특별세션II (연구 역량) / 좌장: 정기훈(KAIST)", room: "영주홀B", note: "초청강연 2편", talks: [
+            { name: "특별세션II (연구 역량) / 좌장: 정기훈(KAIST)", room: "영주홀A", note: "초청강연 2편", talks: [
         // 초청강연(Invited)
         {
           kind: "Invited",
@@ -469,7 +469,7 @@ const APP_DATA = {
           ]
         },
         { time: "18:20~18:30", sessions: [ { name: "휴식 및 이동", room: "로비", talks: [] } ] },
-        { time: "18:30~20:30", sessions: [ { name: "만찬(기업소개)", room: "연회장", talks: [] } ] }
+        { time: "18:30~20:30", sessions: [ { name: "만찬(기업소개)", room: "탐라홀", talks: [] } ] }
       ]
     },
 
@@ -485,7 +485,7 @@ const APP_DATA = {
           time: "08:00~09:08",
           sessions: [
             { name: "바이오II / 좌장: 정현호(GIST), 이소민(경희대)", room: "영주홀A", note: "초청강연 1편, 일반 구두발표 4편", talks: [] },
-            { name: "유체IV-유연II-화학III / 좌장: 하지환(한밭대), 이도환(광운대)", room: "영주홀B", note: "초청강연 1편, 일반 구두발표 4편", talks: [] }
+            { name: "유체IV-유연II-화학III / 좌장: 하지환(한밭대), 이도환(광운대)", room: "이벤트홀A", note: "초청강연 1편, 일반 구두발표 4편", talks: [] }
           ]
         },
         { time: "09:08~09:20", sessions: [ { name: "휴식 및 이동", room: "로비", talks: [] } ] },
@@ -493,7 +493,7 @@ const APP_DATA = {
           time: "09:20~10:20",
           sessions: [
             { name: "포스터발표FP-III", room: "백록홀", note: "일반 포스터발표 92편\n좌장: 황순홍(강원대), 김인기(성균관대), 김현수(광운대), 한성연(경북대), 고광준(조선대), 최정일(아주대), 조인철(한국공학대), 박종성(경북대)", pdfBundle: "pdf/poster/poster_TP-II.pdf", talks: [] },
-            { name: "특별세션III (신진과학자) / 좌장: 김태성(UNIST), 김준원(포항공대)", room: "영주홀B", note: "초청강연 4편", talks: [
+            { name: "특별세션III (신진과학자) / 좌장: 김태성(UNIST), 김준원(포항공대)", room: "영주홀A", note: "초청강연 4편", talks: [
     {
       kind: "Special",
       time: "09:20~09:35",
@@ -542,11 +542,11 @@ const APP_DATA = {
           ]
         },
         { time: "11:00~11:10", sessions: [ { name: "휴식 및 이동", room: "로비", talks: [] } ] },
-        { time: "11:10~11:40", sessions: [ { name: "2025 MNS 학술상 수상 기념 강연 / 좌장: 윤광석(서강대)", room: "이벤트홀", talks: [{kind: "Invited", title: "질병 치료 및 진단을 위한 마이크로니들 기술",
+        { time: "11:10~11:40", sessions: [ { name: "2025 MNS 학술상 수상 기념 강연 / 좌장: 윤광석(서강대)", room: "이벤트홀A", talks: [{kind: "Invited", title: "질병 치료 및 진단을 위한 마이크로니들 기술",
       speaker_affil: "연세대학교",
       speaker_name: "류원형 교수", noPdf: true}] } ] },
-        { time: "11:40~12:00", sessions: [ { name: "폐회식 준비", room: "이벤트홀", talks: [] } ] },
-        { time: "12:00~12:30", sessions: [ { name: "우수논문 시상 및 폐회식", room: "이벤트홀", talks: [] } ] }
+        { time: "11:40~12:00", sessions: [ { name: "폐회식 준비", room: "이벤트홀A", talks: [] } ] },
+        { time: "12:00~12:30", sessions: [ { name: "우수논문 시상 및 폐회식", room: "이벤트홀A", talks: [] } ] }
       ]
     }
   ]
