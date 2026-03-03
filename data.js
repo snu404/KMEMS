@@ -13,6 +13,7 @@ const SESSION_KEY = {
 
   // Day 2 (3/26)
   "융복합I-메디컬II": "ConvMed2",
+  "융복합I-메디컬II / 좌장: 서민호(부산대), 유성광(인제대)" : "ConvMed2",
   "물리I": "Phys1",
   "유체II": "Fluid2",
   "물리II-소재, 가공, 패키징II": "PhysPack2",
