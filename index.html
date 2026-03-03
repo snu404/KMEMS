@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>2026 마이크로나노시스템학회 춘계학술대회 (제28회 한국 MEMS 학술대회) 프로그램</title>
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#111111">
+
+  <style>
+    :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    body { margin: 0; background: #f6f7f9; color: #111; }
+    header { position: sticky; top: 0; background: #111; color: #fff; padding: 14px 16px; z-index: 10; }
+    header h1 { margin: 0; font-size: 16px; font-weight: 700; }
+    .wrap { padding: 12px; max-width: 980px; margin: 0 auto; }
+    .row { display: grid; gap: 10px; grid-template-columns: 1fr; }
+    .controls { display: grid; gap: 10px; grid-template-columns: 1fr; margin: 10px 0 12px; }
+    .seg { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .seg button {
+      border: 1px solid #ddd; background: #fff; padding: 10px; border-radius: 12px;
+      font-weight: 700; cursor: pointer;
+    }
+    .seg button.active { background: #111; color: #fff; border-color: #111; }
+    input[type="search"] {
+      width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 12px; font-size: 14px;
+    }
+    .dayTitle { font-size: 14px; font-weight: 800; margin: 14px 2px 8px; color: #333; }
+    .session {
+      background: #fff; border: 1px solid #e7e7e7; border-radius: 16px;
+      padding: 12px; box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+    }
+
+    .sessionHead { display:flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+    .sessionHead .name { font-weight: 900; font-size: 14px; }
+    .sessionHead .meta { font-size: 12px; color: #666; white-space: nowrap; }
+    .talks { margin-top: 8px; display: grid; gap: 8px; }
+
+    /* ===== Talk Card ===== */
+    .talk{
+      border: 1px solid #eee; border-radius: 14px; padding: 10px; background: #fafafa;
+    }
+
+    /* ✅ 새 레이아웃: 시간(왼쪽) + 본문(오른쪽) Grid */
+    .talk .tgrid{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    .talk.has-time .tgrid{
+      grid-template-columns: 82px 1fr;
+      column-gap: 10px;
+      align-items: start;
+    }
+
+    .talk .timecol{ display:none; }
+    .talk.has-time .timecol{ display:block; }
+
+    .talk .time{
+      min-width:82px;
+      font-weight:800;
+      font-size:12px;
+      color:#222;
+      white-space:nowrap;
+    }
+
+    .talk .timebtns{ margin-top: 8px; }
+
+    .talk .maincol{ min-width:0; }
+
+    .talk .title{
+      font-weight: 800;
+      font-size: 13px;
+      text-align: left;
+      display: block;
+      line-height: 1.35;
+    }
+    .talk .authors{
+      font-size: 12px;
+      color: #666;
+      display:block;
+      margin-top: 6px;
+      width: 100%;
+      float:none !important;
+      position:static !important;
+    }
+
+    /* 버튼 */
+    .btns{ display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; }
+    a.btn{
+      display:inline-flex; align-items:center; gap:6px;
+      padding: 8px 10px; border-radius: 12px; border: 1px solid #ddd;
+      background:#fff; color:#111; text-decoration:none; font-size: 12px; font-weight: 800;
+    }
+    a.btn.btn-mini{
+      padding: 8px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    footer { padding: 18px 12px; color:#777; font-size: 12px; text-align:center; }
+
+    /* ---- Sponsors ---- */
+    .sponsors { margin-top: 14px; }
+    .sponsors-head {
+      background: #fff; border: 1px solid #e7e7e7; border-radius: 16px;
+      padding: 14px; box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+    }
+    .sponsors-head h2 { margin: 0; font-size: 15px; font-weight: 900; }
+    .sponsors-desc { margin: 8px 0 0; color: #666; font-size: 12px; line-height: 1.5; }
+
+    .tier { margin-top: 12px; }
+    .tier-title {
+      display:flex; align-items:center; justify-content: space-between; gap: 10px;
+      margin: 10px 2px 8px;
+    }
+    .tier-title .left { display:flex; align-items:center; gap: 8px; }
+    .badge {
+      font-size: 11px; font-weight: 900;
+      padding: 4px 8px; border-radius: 999px;
+      border: 1px solid #ddd; background: #fff;
+    }
+    .tier-title h3 { margin: 0; font-size: 13px; font-weight: 900; color: #333; }
+    .tier-title .count { font-size: 12px; color: #777; white-space: nowrap; }
+
+    .logo-grid {
+      display:grid; gap: 10px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    @media (min-width: 720px) {
+      .logo-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    }
+
+    .logo-card {
+      background: #fff; border: 1px solid #e7e7e7; border-radius: 16px;
+      padding: 10px; box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+      display:grid; gap: 8px;
+      text-decoration: none; color: inherit;
+      transition: transform .06s ease, box-shadow .06s ease;
+    }
+    .logo-card:active { transform: scale(0.99); }
+    .logo-box {
+      height: 72px; border-radius: 14px;
+      border: 1px solid #eee; background: #fafafa;
+      display:flex; align-items:center; justify-content:center;
+      overflow:hidden;
+    }
+    .logo-box img { max-height: 70%; max-width: 80%; object-fit: contain; }
+    .logo-name { font-size: 12px; font-weight: 900; }
+    .logo-note { font-size: 11px; color: #666; }
+
+    /* ===== Responsive Hero Header ===== */
+    .hero{
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      height: clamp(120px, calc(100vw / 4.0816), 220px);
+      background: url("/KMEMS/image/header.jpg") center/cover no-repeat;
+    }
+
+    .hero-title{
+      position: absolute;
+      top: 10px;
+      left: 12px;
+      margin: 0;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 1.25;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.55);
+    }
+    @media (max-width: 420px){
+      .hero-title{ font-size: 14px; }
+      .hero-sub{ font-size: 11px; }
+    }
+    .hero-sub{
+      display: inline-block;
+      margin-top: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      opacity: 0.95;
+    }
+    .hero-title { font-size: 16px; }
+    .hero-sub { font-size: 12px; }
+    @media (orientation: landscape), (min-width: 700px) {
+      .hero-title { font-size: 22px; }
+      .hero-sub { font-size: 18px; }
+    }
+
+    .timeblock {
+      background: #fff;
+      border: 1px solid #e7e7e7;
+      border-radius: 16px;
+      padding: 12px;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+    }
+
+    .timeblock-head {
+      display:flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .timeblock-time { font-weight: 900; font-size: 13px; color:#111; }
+    .timeblock-meta { font-size: 12px; color:#666; white-space: nowrap; }
+
+    .parallel-grid {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 720px) {
+      .parallel-grid { grid-auto-flow: row; }
+    }
+    .session.in-parallel { margin: 0; }
+
+    .kbadge{
+      display:inline-block;
+      vertical-align: middle;
+      height:18px;
+      min-width:18px;
+      padding:0 6px;
+      border-radius:999px;
+      border:1px solid #caa100;
+      background:#fff8e1;
+      border-color:#e0b200;
+      color:#8a6d00;
+      font-size:11px;
+      font-weight:900;
+      margin-right:6px;
+    }
+
+    /* 빈 세션 회색 표시 */
+    .session.empty {
+      background: #f3f3f3;
+      border: 1px dashed #cfcfcf;
+      color: #999;
+    }
+    .session.empty .sessionHead .name,
+    .session.empty .sessionHead .meta {
+      color: #999;
+    }
+    .session.empty .talks { opacity: 0.9; }
+
+    /* 진행중 세션 강조 */
+    .session.live {
+      border: 2px solid #ff3b30;
+      box-shadow: 0 0 0 2px rgba(255,59,48,0.12);
+    }
+    .session.live .sessionHead .name::after {
+      content: " ● LIVE";
+      color: #ff3b30;
+      font-weight: 900;
+      margin-left: 6px;
+      font-size: 12px;
+    }
+    .timeblock.live {
+      border: 2px solid #ff3b30;
+      box-shadow: 0 0 0 2px rgba(255,59,48,0.10);
+    }
+    .timeblock.live .timeblock-time::after{
+      content:"  ● NOW";
+      color:#ff3b30;
+      font-weight:900;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="hero">
+    <h1 class="hero-title">
+      2026 마이크로나노시스템학회 춘계학술대회<br>
+      <span class="hero-sub">제28회 한국 MEMS 학술대회</span>
+    </h1>
+  </header>
+
+  <div class="wrap">
+    <div class="controls">
+      <div class="seg" id="daySeg"></div>
+      <input id="q" type="search" placeholder="검색: 발표제목/저자/세션/키워드" />
+    </div>
+
+    <div id="content" class="row"></div>
+
+    <section class="sponsors" id="sponsors">
+      <div class="sponsors-head">
+        <h2>협찬사</h2>
+        <p class="sponsors-desc">
+          2026 마이크로나노시스템학회 춘계학술대회(제28회 한국 MEMS 학술대회)는 아래 협찬사들의 지원으로 개최됩니다.
+        </p>
+      </div>
+      <div id="sponsorsMount"></div>
+    </section>
+
+    <footer></footer>
+  </div>
+
+  <script src="data.js?v=5"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js').catch(console.error);
+    }
+
+    const state = { dayIndex: 0, query: '' };
+
+    const params = new URLSearchParams(location.search);
+    if (params.has('day')) state.dayIndex = Math.max(0, Math.min(2, Number(params.get('day')) || 0));
+    if (params.has('q')) state.query = params.get('q') || '';
+
+    const daySeg = document.getElementById('daySeg');
+    const content = document.getElementById('content');
+    const qInput = document.getElementById('q');
+    qInput.value = state.query;
+
+    function setUrl_() {
+      const u = new URL(location.href);
+      u.searchParams.set('day', String(state.dayIndex));
+      if (state.query) u.searchParams.set('q', state.query); else u.searchParams.delete('q');
+      history.replaceState({}, '', u.toString());
+    }
+
+    function norm_(s){
+      return (s || '')
+        .toString()
+        .toLowerCase()
+        .replace(/\s+/g, '')
+        .replace(/[·•・]/g, '')
+        .trim();
+    }
+
+    function renderDayTabs_() {
+      daySeg.innerHTML = '';
+      APP_DATA.days.forEach((d, idx) => {
+        const b = document.createElement('button');
+        b.textContent = d.label;
+        b.className = idx === state.dayIndex ? 'active' : '';
+        b.onclick = () => { state.dayIndex = idx; setUrl_(); render_(); };
+        daySeg.appendChild(b);
+      });
+    }
+
+    function talkMatches_(talk, q) {
+      if (!q) return true;
+      const hay = norm_([
+        talk.id, talk.kind, talk.time, talk.title,
+        talk.speaker_name, talk.speaker_affil,
+        talk.authors, talk.affil, talk.session, talk.room,
+        (talk.keywords || []).join(' ')
+      ].filter(Boolean).join(' '));
+      return hay.includes(q);
+    }
+
+    function normalizeDayToBlocks_(day) {
+      if (day.timeBlocks && Array.isArray(day.timeBlocks)) {
+        return { blocks: day.timeBlocks, maxParallel: day.maxParallel || 3 };
+      }
+      const sessions = day.sessions || [];
+      const map = new Map();
+      for (const s of sessions) {
+        const key = (s.time || "").trim();
+        if (!map.has(key)) map.set(key, []);
+        map.get(key).push({ name: s.name, room: s.room, talks: s.talks || [] });
+      }
+      const startMin = (t) => {
+        const m = (t || "").match(/(\d{1,2}):(\d{2})/);
+        return m ? (Number(m[1]) * 60 + Number(m[2])) : 9999;
+      };
+      const keys = Array.from(map.keys()).sort((a, b) => startMin(a) - startMin(b));
+      const blocks = keys.map(k => ({ time: k, sessions: map.get(k) }));
+      const maxParallel = Math.min(3, Math.max(1, ...blocks.map(b => b.sessions.length), 1));
+      return { blocks, maxParallel };
+    }
+
+    function isBreakSession_(sess) {
+      const name = String(sess?.name || '').trim();
+      return name.includes('휴식 및 이동') || name === '휴식' || name === '이동';
+    }
+    function isBreakBlock_(blk) {
+      const sessions = blk.sessions || [];
+      return sessions.some(s => /휴식|이동|break|lunch|coffee/i.test(String(s?.name || '').trim()));
+    }
+
+    function isEmptySession_(sess) {
+      const name = String(sess?.name || '').trim();
+      if (name.includes('세션 없음') || name.includes('세션없음')) return true;
+      if (isBreakSession_(sess)) return true;
+      return false;
+    }
+
+    function isBlockLive_(dayDate, timeRange) {
+      if (!dayDate || !timeRange) return false;
+      const parts = timeRange.split(/~|–|-/).map(s => s.trim());
+      if (parts.length < 2) return false;
+      const [start, end] = parts;
+      const startDT = new Date(`${dayDate}T${start}:00`);
+      const endDT   = new Date(`${dayDate}T${end}:00`);
+      const now = new Date();
+      return now >= startDT && now <= endDT;
+    }
+
+    function sessionMatches_(sess, q) {
+      if (!q) return true;
+      const hay = norm_([sess.name, sess.room, sess.note, sess.summary, sess.meta, sess.desc].filter(Boolean).join(' '));
+      return hay.includes(q);
+    }
+
+    function formatKoreanDate_(iso) {
+      const [y, m, d] = (iso || "").split("-").map(Number);
+      if (!y || !m || !d) return iso || "";
+      const dt = new Date(y, m - 1, d);
+      const weekday = new Intl.DateTimeFormat("ko-KR", { weekday: "long" }).format(dt);
+      return `${y}년 ${m}월 ${d}일 (${weekday})`;
+    }
+
+    function render_() {
+      renderDayTabs_();
+
+      const day = APP_DATA.days[state.dayIndex];
+      const q = norm_(state.query);
+
+      content.innerHTML = '';
+      const dayTitle = document.createElement('div');
+      dayTitle.className = 'dayTitle';
+      dayTitle.textContent = formatKoreanDate_(day.date);
+      content.appendChild(dayTitle);
+
+      const { blocks, maxParallel } = normalizeDayToBlocks_(day);
+
+      for (const blk of blocks) {
+        const block = document.createElement('div');
+        block.className = 'timeblock';
+
+        const live = isBlockLive_(day.date, blk.time);
+        if (live) block.classList.add('live');
+
+        const head = document.createElement('div');
+        head.className = 'timeblock-head';
+
+        const isBreak = isBreakBlock_(blk);
+        const activeCount = (blk.sessions || []).filter(s => !isEmptySession_(s)).length;
+        const sessionLabel = activeCount <= 1 ? 'Single session' : 'Parallel session';
+
+        head.innerHTML = `
+          <div class="timeblock-time">${blk.time}</div>
+          ${isBreak ? '' : `<div class="timeblock-meta">${sessionLabel}</div>`}
+        `;
+        block.appendChild(head);
+
+        const grid = document.createElement('div');
+        grid.className = 'parallel-grid';
+
+        const cols = Math.min(maxParallel || 3, Math.max(1, (blk.sessions || []).length));
+        grid.style.gridTemplateColumns = (window.innerWidth >= 720)
+          ? `repeat(${cols}, minmax(0, 1fr))`
+          : `1fr`;
+
+        for (const sess of (blk.sessions || [])) {
+          const talksAll = Array.isArray(sess.talks) ? sess.talks : [];
+          const talksFiltered = talksAll.filter(t => talkMatches_(t, q));
+
+          const sessMatch = sessionMatches_(sess, q);
+          const hasTalkMatch = talksFiltered.length > 0;
+
+          if (q && !sessMatch && !hasTalkMatch) continue;
+
+          const talksToRender = q
+            ? (hasTalkMatch ? talksFiltered : talksAll)
+            : talksAll;
+
+          const card = document.createElement('div');
+          const empty = isEmptySession_(sess);
+          card.className = empty ? 'session in-parallel empty' : 'session in-parallel';
+
+          const sh = document.createElement('div');
+          sh.className = 'sessionHead';
+          sh.innerHTML = `
+            <div class="name">${String(sess.name || '').trim()}</div>
+            <div class="meta">${String(sess.room || '').trim()}</div>
+          `;
+          card.appendChild(sh);
+
+          const talksWrap = document.createElement('div');
+          talksWrap.className = 'talks';
+
+          if (isBreakSession_(sess)) {
+            talksWrap.style.textAlign = 'center';
+            talksWrap.style.fontWeight = '700';
+          }
+
+          if (talksAll.length === 0) {
+            if (sess.pdfBundle) {
+              const bundleBtn = document.createElement('a');
+              bundleBtn.className = 'btn';
+              bundleBtn.href = sess.pdfBundle;
+              bundleBtn.target = '_blank';
+              bundleBtn.rel = 'noopener';
+              bundleBtn.textContent = '📚 Poster PDF 모음';
+              talksWrap.appendChild(bundleBtn);
+            }
+
+            const note = document.createElement('div');
+            note.style.marginTop = '6px';
+            note.style.fontSize = '13px';
+            note.style.color = '#555';
+            note.style.fontWeight = '600';
+            note.textContent = sess.note || '';
+            talksWrap.appendChild(note);
+          } else {
+            for (const t of talksToRender) {
+              const item = document.createElement('div');
+              item.className = 'talk';
+
+              const hasTime = !!(t.time && String(t.time).trim());
+              item.classList.toggle('has-time', hasTime);
+
+              item.innerHTML = `
+                <div class="tgrid">
+                  ${hasTime ? `
+                    <div class="timecol">
+                      <div class="time">${t.time}</div>
+                      <div class="timebtns">
+                        ${(t.pdf && !t.noPdf && !t.hidePdf) ? `<a class="btn btn-mini" href="${t.pdf}" target="_blank" rel="noopener">📄 초록 PDF</a>` : ``}
+                      </div>
+                    </div>
+                  ` : ``}
+
+                  <div class="maincol">
+                    <div class="title">
+                      ${(t.kind === "Invited" || t.kind === "Special") ? `<span class="kbadge">초청</span>` : ``}
+                      ${t.title || ''}
+                    </div>
+
+                    <div class="authors">${[t.speaker_affil, t.speaker_name].filter(Boolean).join(' · ') || (t.authors || '')}</div>
+
+                    <div class="btns">
+                      ${(!hasTime && t.pdf && !t.noPdf && !t.hidePdf) ? `<a class="btn" href="${t.pdf}" target="_blank" rel="noopener">📄 초록 PDF</a>` : ``}
+                      ${t.slides ? `<a class="btn" href="${t.slides}" target="_blank" rel="noopener">🖥️ Slides</a>` : ``}
+                      ${t.video ? `<a class="btn" href="${t.video}" target="_blank" rel="noopener">🎥 Video</a>` : ``}
+                    </div>
+                  </div>
+                </div>
+              `;
+
+              talksWrap.appendChild(item);
+            }
+          }
+
+          card.appendChild(talksWrap);
+          grid.appendChild(card);
+        }
+
+        if (grid.children.length === 0) continue;
+
+        block.appendChild(grid);
+        content.appendChild(block);
+      }
+
+      if (content.children.length <= 1) {
+        const empty = document.createElement('div');
+        empty.style.padding = '12px';
+        empty.style.color = '#666';
+        empty.textContent = '검색 결과가 없습니다.';
+        content.appendChild(empty);
+      }
+    }
+
+    window.addEventListener('resize', () => render_());
+
+    qInput.addEventListener('input', (e) => {
+      state.query = e.target.value || '';
+      setUrl_();
+      render_();
+    });
+
+    render_();
+
+    // ---- Sponsors Data ----
+    const SPONSORS = [
+      { name: "케이원솔루션", url: "http://www.k1solution.com", logo: "logo/02.jpg", note: "" },
+      { name: "LPKF Laser & Electronics Korea Ltd.", url: "https://www.lpkf.com/kr", logo: "logo/03.png", note: "" },
+      { name: "플라솔", url: "https://www.plasol.co.kr", logo: "logo/04.jpg", note: "" },
+      { name: "아메드", url: "https://www.amedmst.com", logo: "logo/05.jpg", note: "" },
+      { name: "DGIST 센소리움연구소", url: "https://example.com", logo: "logo/06.jpg", note: "" },
+      { name: "에이티엠아이앤씨", url: "http://www.atminc.co.kr", logo: "logo/07.jpg", note: "" },
+      { name: "마이다스시스템", url: "http://www.aligner.co.kr", logo: "logo/08.jpg", note: "" },
+      { name: "자이브솔루션즈", url: "http://www.jiveus.com", logo: "logo/09.jpg", note: "" },
+      { name: "알트소프트", url: "http://altsoft.co.kr", logo: "logo/10.jpg", note: "" },
+      { name: "프로윈", url: "http://www.maskaligner.co.kr", logo: "logo/11.gif", note: "" },
+      { name: "하이델베르크 인스트루먼트 코리아", url: "http://www.himt.kr", logo: "logo/12.jpg", note: "" },
+      { name: "한국과학기술연구원 마이크로나노팹센터", url: "http://www.micro-nano.re.kr", logo: "logo/13.jpg", note: "" },
+      { name: "넥스트론", url: "http://www.microprobesystem.com", logo: "logo/14.jpg", note: "" },
+      { name: "비엠아이텍", url: "http://www.bmi-int.kr", logo: "logo/15.jpg", note: "" },
+      { name: "아이티즈", url: "http://www.itiz.co.kr", logo: "logo/16.jpg", note: "" },
+      { name: "엠크래프츠", url: "http://www.emcrafts.com", logo: "logo/17.jpg", note: "" },
+      { name: "반도체연구조합", url: "http://www.ksia.co.kr", logo: "logo/18.jpg", note: "" },
+      { name: "퀀텀디자인", url: "http://www.qdkorea.com", logo: "logo/19.jpg", note: "" },
+      { name: "나노종합기술원", url: "http://www.nnfc.re.kr", logo: "logo/20.jpg", note: "" },
+      { name: "서울대학교 소프트파운드리연구소", url: "https://sites.google.com/view/snu-nsi/home", logo: "logo/21.jpg", note: "" },
+      { name: "스몰머신즈", url: "https://www.smallmachines.co.kr", logo: "logo/22.jpg", note: "" },
+      { name: "한국이브이그룹", url: "http://www.evgroup.com", logo: "logo/24.jpg", note: "" },
+      { name: "한국센서연구소", url: "http://ksensor.co.kr", logo: "logo/51.jpg", note: "" },
+      { name: "심혈관 환자맞춤형 차세대 정밀의료기술 선도연구센터", url: "https://rlrc.zenda.co.kr", logo: "logo/52.jpg", note: "" },
+      { name: "오방테크놀로지", url: "http://obangtechnology.com", logo: "logo/53.jpg", note: "" },
+      { name: "오티에스테크놀로지", url: "http://www.otstech.co.kr", logo: "logo/54.jpg", note: "" },
+      { name: "연세대학교 다상소재 혁신 생산공정 연구센터", url: "https://mmmcenter.yonsei.ac.kr", logo: "logo/55.jpg", note: "" },
+      { name: "로봇 기능성 표면 및 초감각 연구센터", url: "https://roses.kookmin.ac.kr", logo: "logo/56.jpg", note: "" },
+      { name: "티에스이", url: "http://www.tse21.com", logo: "logo/57.jpg", note: "" },
+      { name: "중앙대학교 에너지안전연구소", url: "https://example.com", logo: "logo/58.jpg", note: "" }
+    ];
+
+    function renderSponsors_() {
+      const mount = document.getElementById("sponsorsMount");
+      if (!mount) return;
+
+      mount.innerHTML = `
+        <div class="tier">
+          <div class="logo-grid" id="logoGrid"></div>
+        </div>
+      `;
+
+      const grid = document.getElementById("logoGrid");
+
+      for (const s of SPONSORS) {
+        const a = document.createElement("a");
+        a.className = "logo-card";
+        a.href = s.url || "#";
+        a.target = s.url ? "_blank" : "_self";
+        a.rel = s.url ? "noopener" : "";
+
+        a.innerHTML = `
+          <div class="logo-box">
+            ${s.logo
+              ? `<img src="${s.logo}" alt="${s.name} logo" loading="lazy" />`
+              : `<div style="font-weight:900;color:#777">${s.name}</div>`}
+          </div>
+          <div class="logo-name">${s.name}</div>
+          ${s.note ? `<div class="logo-note">${s.note}</div>` : ``}
+        `;
+
+        grid.appendChild(a);
+      }
+    }
+
+    renderSponsors_();
+  </script>
+</body>
+</html>
