@@ -136,7 +136,7 @@ const APP_DATA = {
         }
       ]
  },
-            { name: "소재, 가공, 패키징I", room: "영주홀B", note: "초청강연 1편, 일반 구두발표 5편", talks: [
+            { name: "소재, 가공, 패키징I / 좌장: 이상훈(DGIST), 홍찬화(ETRI)", room: "영주홀B", note: "초청강연 1편, 일반 구두발표 5편", talks: [
         // 초청강연(Invited)
         {
           kind: "Invited",
