@@ -902,7 +902,7 @@ fillTalks("2026-03-26", "11:15~12:23", "유체II / 좌장: 김원정(연세대),
 ]);
 
 // 11:15~12:23  물리II-소재, 가공, 패키징II
-fillTalks("2026-03-26", "11:15~12:23", "물리II-소재, 가공, 패키징II / 좌장: 김회준(DGIST)", [
+fillTalks("2026-03-26", "11:15~12:23", "물리II-소재, 가공, 패키징II / 좌장: 김회준(DGIST), 이한얼(GIST)", [
   { kind: "Invited", time: "11:15~11:35", title: "Bidirectional Neural Interfaces for Neuroprosthesis and Electroceuticals", speaker_affil: "한국과학기술연구원", speaker_name: "김진석 박사" },
   { kind: "Oral",    time: "11:35~11:47", title: "리간드 치환 CISe 양자점 집적에 따른 실리콘 포토다이오드의 광응답 특성 개선", speaker_affil: "전북대학교", speaker_name: "이지훈" },
   { kind: "Oral",    time: "11:47~11:59", title: "All-Optical PCR using Microspectrometer for Real-time Temperature and Multiplex Amplification Monitoring", speaker_affil: "한국과학기술원", speaker_name: "김기범" },
@@ -938,7 +938,7 @@ fillTalks("2026-03-26", "15:15~16:23", "유체III / 좌장: 이종완(군산대)
 ]);
 
 // 15:15~16:23  소재, 가공, 패키징III
-fillTalks("2026-03-26", "15:15~16:23", "소재, 가공, 패키징III / 좌장: TBD", [
+fillTalks("2026-03-26", "15:15~16:23", "소재, 가공, 패키징III / 좌장: 옥종걸(서울과기대), 이재홍(DGIST)", [
   { kind: "Invited", time: "15:15~15:35", title: "Human-Heat Interface and Its Applications in Wearable Technology", speaker_affil: "동국대학교", speaker_name: "이진우 교수" },
   { kind: "Oral",    time: "15:35~15:47", title: "Multilayer Sticker-type Anti-reflective Film for High-efficiency Optoelectronic Devices", speaker_affil: "서강대학교", speaker_name: "최지성" },
   { kind: "Oral",    time: "15:47~15:59", title: "Smart Glasses for Binocular Monitoring using High-speed Off-axis Microlens Array Camera", speaker_affil: "한국과학기술원", speaker_name: "권재명" },
