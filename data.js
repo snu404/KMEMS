@@ -440,7 +440,7 @@ const APP_DATA = {
         {
           time: "16:40~17:40",
           sessions: [
-            { name: "포스터발표TP-II", room: "백록홀", note: "일반 포스터발표 160편\n좌장: 노윤수(UNIST), 박종철(NNFC), 박정환(금오공대), 김윤갑(GERI), 양다솜(중앙대), 최은표(서강대), 김해진(연세대), 안재혁(충남대)", pdfBundle: "pdf/poster/poster_TP-II.pdf", talks: [] },
+            { name: "포스터발표TP-II", room: "백록홀", note: "일반 포스터발표 88편\n좌장: 노윤수(UNIST), 박종철(NNFC), 박정환(금오공대), 김윤갑(GERI), 양다솜(중앙대), 최은표(서강대), 김해진(연세대), 안재혁(충남대)\n학부생 포스터발표 38편\n좌장: 최영수(광주대)\nFocused 포스터발표 34편\n좌장: 임미경(중앙대)", pdfBundle: "pdf/poster/poster_TP-II.pdf", talks: [] },
             { name: "특별세션II (연구 역량) / 좌장: 정기훈(KAIST)", room: "영주홀B", note: "초청강연 2편", talks: [
         // 초청강연(Invited)
         {
@@ -464,7 +464,7 @@ const APP_DATA = {
         {
           time: "17:40~18:20",
           sessions: [
-            { name: "포스터발표TP-II (계속)", room: "백록홀", note: "일반 포스터발표 160편\n좌장: 노윤수(UNIST), 박종철(NNFC), 박정환(금오공대), 김윤갑(GERI), 양다솜(중앙대), 최은표(서강대), 김해진(연세대), 안재혁(충남대)", pdfBundle: "pdf/poster/poster_TP-II.pdf", talks: [] },
+            { name: "포스터발표TP-II (계속)", room: "백록홀", note: "일반 포스터발표 88편\n좌장: 노윤수(UNIST), 박종철(NNFC), 박정환(금오공대), 김윤갑(GERI), 양다솜(중앙대), 최은표(서강대), 김해진(연세대), 안재혁(충남대)\n학부생 포스터발표 38편\n좌장: 최영수(광주대)\nFocused 포스터발표 34편\n좌장: 임미경(중앙대)", pdfBundle: "pdf/poster/poster_TP-II.pdf", talks: [] },
             { name: "세션없음", room: "", talks: [] }
           ]
         },
