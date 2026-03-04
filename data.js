@@ -519,7 +519,7 @@ const APP_DATA = {
     {
       kind: "Special",
       time: "10:05~10:20",
-      title: "Wireless, spatially-matched optoelectronic neural interfaces for simultaneous optogenetics and electrophysiology",
+      title: "Wireless, Spatially-atched Optoelectronic Neural Interfaces for Simultaneous Optogenetics and Electrophysiology",
       speaker_affil: "한국과학기술원",
       speaker_name: "이주현 박사",
       noPdf: true
@@ -942,7 +942,7 @@ fillTalks("2026-03-26", "15:15~16:23", "소재, 가공, 패키징III / 좌장: �
   { kind: "Invited", time: "15:15~15:35", title: "Human-Heat Interface and Its Applications in Wearable Technology", speaker_affil: "동국대학교", speaker_name: "이진우 교수" },
   { kind: "Oral",    time: "15:35~15:47", title: "Multilayer Sticker-type Anti-reflective Film for High-efficiency Optoelectronic Devices", speaker_affil: "서강대학교", speaker_name: "최지성" },
   { kind: "Oral",    time: "15:47~15:59", title: "Smart Glasses for Binocular Monitoring using High-speed Off-axis Microlens Array Camera", speaker_affil: "한국과학기술원", speaker_name: "권재명" },
-  { kind: "Oral",    time: "15:59~16:11", title: "Mediator-free Ether transfer of discrete and coalesced silicon nanostructures", speaker_affil: "한국과학기술원", speaker_name: "김태영" },
+  { kind: "Oral",    time: "15:59~16:11", title: "Mediator-free Ether Transfer of Discrete and Coalesced Silicon Nanostructures", speaker_affil: "한국과학기술원", speaker_name: "김태영" },
   { kind: "Oral",    time: "16:11~16:23", title: "이중 가교 전략을 통한 고하중 지지 및 가변 강성 기반의 재구성 가능한 자성 소프트 인공 근육", speaker_affil: "울산과학기술원", speaker_name: "권혁주" }
 ]);
 
