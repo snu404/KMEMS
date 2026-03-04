@@ -381,7 +381,7 @@ const APP_DATA = {
         {
           time: "19:00~21:00",
           sessions: [
-            { name: "신진연구자 환영회", room: "외부행사장소", talks: [] }
+            { name: "신진연구자 환영회", room: "숙성돈가 제주중문본점", talks: [] }
           ]
         }
       ]
@@ -878,7 +878,7 @@ function fillTalks(date, time, sessionName, talks) {
 
 // 08:00~08:56  융복합I-메디컬II
 fillTalks("2026-03-26", "08:00~08:56", "융복합I-메디컬II / 좌장: 서민호(부산대), 유성광(인제대)", [
-  { kind: "Invited", time: "08:00~08:20", title: "Pd-catalyzed SnO2/ZnO Heterojunction Hydrogen Sensor Enabling Wide-range Detection via Hydrogen-Induced Metal-Like Conduction", speaker_affil: "부산대학교", speaker_name: "정대웅 교수" },
+  { kind: "Invited", time: "08:00~08:20", title: "Pd-catalyzed SnO₂/ZnO Heterojunction Hydrogen Sensor Enabling Wide-range Detection via Hydrogen-Induced Metal-Like Conduction", speaker_affil: "부산대학교", speaker_name: "정대웅 교수" },
   { kind: "Oral",    time: "08:20~08:32", title: "비침습적 시간 간섭 기반의 선택적 뇌심부 자극을 위한 MEMS 기반 유연 전극 어레이와 임피던스 적응 형 폐루프 무선 시스템", speaker_affil: "고려대학교", speaker_name: "차지형" },
   { kind: "Oral",    time: "08:32~08:44", title: "빠른 포도당 검출을 위한 광 시냅틱 트랜지스터 기반 센서", speaker_affil: "서강대학교", speaker_name: "류승표" },
   { kind: "Oral",    time: "08:44~08:56", title: "만성 신경 질환 치료를 위한 장시간 구동 가능한 온도센서 집적된 소프트 마이크로유체 냉각 소자", speaker_affil: "부산대학교", speaker_name: "권효경" }
@@ -897,7 +897,7 @@ fillTalks("2026-03-26", "11:15~12:23", "유체II / 좌장: 김원정(연세대),
   { kind: "Invited", time: "11:15~11:35", title: "Hydrodynamics and Interfaces: Microbial Motility and Antifouling Surface Design", speaker_affil: "경희대학교", speaker_name: "이충엽 교수" },
   { kind: "Oral",    time: "11:35~11:47", title: "A Novel Resistive Pulse Sensing Using Tunable Micro-/Nanopores for Analyte Size Characterization", speaker_affil: "울산과학기술원", speaker_name: "서동우" },
   { kind: "Oral",    time: "11:47~11:59", title: "표면파 유도 음향흐름유동 기반 고속 생화학 마이크로바이오리액터 개발", speaker_affil: "전남대학교", speaker_name: "차범석" },
-  { kind: "Oral",    time: "11:59~12:11", title: "µPIV-assisted optimization of operating conditions and device geometry for a microfluidic cavitation-microstreaming DNA extractor", speaker_affil: "명지대학교", speaker_name: "케드르 소포니아스 눌세파" },
+  { kind: "Oral",    time: "11:59~12:11", title: "µPIV-assisted Optimization of Operating Conditions and Device Geometry for a Microfluidic Cavitation-microstreaming DNA Extractor", speaker_affil: "명지대학교", speaker_name: "케드르 소포니아스 눌세파" },
   { kind: "Oral",    time: "12:11~12:23", title: "Physical AI를 위한 투명 히터 기반의 능동형 자가세정 시스템", speaker_affil: "명지대학교", speaker_name: "김영광" }
 ]);
 
