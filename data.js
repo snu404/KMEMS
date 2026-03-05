@@ -357,13 +357,13 @@ const APP_DATA = {
           noPdf: true
                 //pdf: ""
         }]
-              },  { name: "포스터WP-I", room: "백록홀", note: "일반 포스터발표 119편\n좌장: 유재형(중앙대), 장두준(성균관대), 임종경(가천대), 안중호(성균관대), 박승현(부경대), 배주열(전남대), 김민구(연세대), 이응복(전남대)", pdfBundle: "pdf/poster/poster_WP-I.pdf", talks: [] }
+              },  { name: "포스터WP-I", room: "백록홀", note: "일반 포스터발표 124편\n좌장: 유재형(중앙대), 장두준(성균관대), 임종경(가천대), 안중호(성균관대), 박승현(부경대), 배주열(전남대), 김민구(연세대), 이응복(전남대)", pdfBundle: "pdf/poster/poster_WP-I.pdf", talks: [] }
           ]
         },
         {
           time: "17:15~17:55",
           sessions: [
-            { name: "포스터WP-I (계속)", room: "백록홀", note: "일반 포스터발표 119편\n좌장: 유재형(중앙대), 장두준(성균관대), 임종경(가천대), 안중호(성균관대), 박승현(부경대), 배주열(전남대), 김민구(연세대), 이응복(전남대)", pdfBundle: "pdf/poster/poster_WP-I.pdf", talks: [] }
+            { name: "포스터WP-I (계속)", room: "백록홀", note: "일반 포스터발표 124편\n좌장: 유재형(중앙대), 장두준(성균관대), 임종경(가천대), 안중호(성균관대), 박승현(부경대), 배주열(전남대), 김민구(연세대), 이응복(전남대)", pdfBundle: "pdf/poster/poster_WP-I.pdf", talks: [] }
           ]
         },
         {
@@ -455,13 +455,13 @@ const APP_DATA = {
           speaker_affil: "국민대학교",
           speaker_name: "임시형 교수",
           noPdf: true
-        }] },  { name: "포스터발표TP-II", room: "백록홀", note: "일반 포스터발표 88편\n좌장: 노윤수(UNIST), 박종철(NNFC), 박정환(금오공대), 김윤갑(GERI), 양다솜(중앙대), 최은표(서강대), 김해진(연세대), 안재혁(충남대)\n학부생 포스터발표 38편\n좌장: 최영수(광주대)\nFocused 포스터발표 34편\n좌장: 임미경(중앙대)", pdfBundle: "pdf/poster/poster_TP-II.pdf", talks: [] }
+        }] },  { name: "포스터발표TP-II", room: "백록홀", note: "일반 포스터발표 90편\n좌장: 노윤수(UNIST), 박종철(NNFC), 박정환(금오공대), 김윤갑(GERI), 양다솜(중앙대), 최은표(서강대), 김해진(연세대), 안재혁(충남대)\nFocused 포스터발표 34편\n좌장: 임미경(중앙대)", pdfBundle: "pdf/poster/poster_TP-II.pdf", talks: [] }
           ]
         },
         {
           time: "17:40~18:20",
           sessions: [
-            { name: "포스터발표TP-II (계속)", room: "백록홀", note: "일반 포스터발표 88편\n좌장: 노윤수(UNIST), 박종철(NNFC), 박정환(금오공대), 김윤갑(GERI), 양다솜(중앙대), 최은표(서강대), 김해진(연세대), 안재혁(충남대)\n학부생 포스터발표 38편\n좌장: 최영수(광주대)\nFocused 포스터발표 34편\n좌장: 임미경(중앙대)", pdfBundle: "pdf/poster/poster_TP-II.pdf", talks: [] }
+            { name: "포스터발표TP-II (계속)", room: "백록홀", note: "일반 포스터발표 90편\n좌장: 노윤수(UNIST), 박종철(NNFC), 박정환(금오공대), 김윤갑(GERI), 양다솜(중앙대), 최은표(서강대), 김해진(연세대), 안재혁(충남대)\nFocused 포스터발표 34편\n좌장: 임미경(중앙대)", pdfBundle: "pdf/poster/poster_TP-II.pdf", talks: [] }
           ]
         },
         { time: "18:20~18:30", sessions: [ { name: "휴식 및 이동", room: "로비", talks: [] } ] },
@@ -526,13 +526,13 @@ const APP_DATA = {
       //pdf: "pdf/D3_SS3_04.pdf"
     }
   ]
- },  { name: "포스터발표FP-III", room: "백록홀", note: "일반 포스터발표 92편\n좌장: 황순홍(강원대), 김인기(성균관대), 김현수(광운대), 한성연(경북대), 고광준(조선대), 최정일(아주대), 조인철(한국공학대), 박종성(경북대)", pdfBundle: "pdf/poster/poster_TP-II.pdf", talks: [] }
+ },  { name: "포스터발표FP-III", room: "백록홀", note: "일반 포스터발표 86편\n좌장: 황순홍(강원대), 김인기(성균관대), 김현수(광운대), 한성연(경북대), 고광준(조선대), 최정일(아주대), 조인철(한국공학대), 박종성(경북대)\n학부생 포스터발표 38편\n좌장: 최영수(광주대)", pdfBundle: "pdf/poster/poster_FP-III.pdf", talks: [] }
           ]
         },
         {
           time: "10:20~11:00",
           sessions: [
-            { name: "포스터발표FP-III (계속)", room: "백록홀", note: "일반 포스터발표 92편\n좌장: 황순홍(강원대), 김인기(성균관대), 김현수(광운대), 한성연(경북대), 고광준(조선대), 최정일(아주대), 조인철(한국공학대), 박종성(경북대)", pdfBundle: "pdf/poster/poster_FP-III.pdf", talks: [] }
+            { name: "포스터발표FP-III (계속)", room: "백록홀", note: "일반 포스터발표 86편\n좌장: 황순홍(강원대), 김인기(성균관대), 김현수(광운대), 한성연(경북대), 고광준(조선대), 최정일(아주대), 조인철(한국공학대), 박종성(경북대)\n학부생 포스터발표 38편\n좌장: 최영수(광주대)", pdfBundle: "pdf/poster/poster_FP-III.pdf", talks: [] }
           ]
         },
         { time: "11:00~11:10", sessions: [ { name: "휴식 및 이동", room: "로비", talks: [] } ] },
