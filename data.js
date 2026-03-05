@@ -161,7 +161,7 @@ const APP_DATA = {
         {
           kind: "Oral",
           time: "13:20~13:32",
-          title: "Self-Regulated Photosynthesis Assistance System Using MXene-Based Multifunctional",
+          title: "Self-Regulated Photosynthesis Assistance System Using MXene-Based Multifunctional Sensors and Micro-LED Arrays",
           speaker_affil: "전북대학교",
           speaker_name: "고유진",
           pdf: "pdf/D1_Packaging1_O_01.pdf"
@@ -269,7 +269,7 @@ const APP_DATA = {
         {
           kind: "Invited",
           time: "14:40~15:00",
-          title: "Current and Emerging Sensors for per- and polyfluoroalkyl substances (PFAS) sensing in Aqueous Systems",
+          title: "Current and Emerging Sensors for Per- and PolyFluoroalkyl Substances (PFAS) Sensing in Aqueous Systems",
           speaker_affil: "성균관대학교",
           speaker_name: "김경훈 교수",
           pdf: "pdf/D1_Chem1_INV_01.pdf"
@@ -417,7 +417,7 @@ const APP_DATA = {
           ]
         },
         { time: "12:23~13:20", sessions: [ { name: "점심식사 및 전시부스 참관", room: "전시장", talks: [] } ] },
-        { time: "13:20~13:50", sessions: [ { name: "삼성미래기술육성사업 설명회 / 좌장: 조일주(고려대)", room: "영주홀A", talks: [{kind: "Invited", title: "삼성미래기술육성사업 사업설명회",
+        { time: "13:20~13:50", sessions: [ { name: "특별세션II (삼성미래기술육성사업 설명회) / 좌장: 조일주(고려대)", room: "영주홀A", talks: [{kind: "Invited", title: "삼성미래기술육성사업 사업설명회",
       speaker_affil: "삼성전자 미래기술육성센터", speaker_name: "조승희 PD", noPdf: true}] } ] },
         {
           time: "13:50~14:58",
@@ -438,7 +438,7 @@ const APP_DATA = {
         {
           time: "16:40~17:40",
           sessions: [
-            { name: "특별세션II (연구 역량) / 좌장: 정기훈(KAIST)", room: "영주홀A", note: "초청강연 2편", talks: [
+            { name: "특별세션III (연구 역량) / 좌장: 정기훈(KAIST)", room: "영주홀A", note: "초청강연 2편", talks: [
         // 초청강연(Invited)
         {
           kind: "Invited",
@@ -488,7 +488,7 @@ const APP_DATA = {
         {
           time: "09:20~10:20",
           sessions: [
-            { name: "특별세션III (신진과학자) / 좌장: 김태성(UNIST), 김준원(포항공대)", room: "영주홀A", note: "초청강연 4편", talks: [
+            { name: "특별세션IV (신진과학자) / 좌장: 김태성(UNIST), 김준원(포항공대)", room: "영주홀A", note: "초청강연 4편", talks: [
     {
       kind: "Special",
       time: "09:20~09:35",
