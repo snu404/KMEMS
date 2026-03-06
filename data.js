@@ -831,7 +831,7 @@ const ORAL_TIMEBLOCKS_BY_DATE = {
               "title": "Wearable Mechanical Interfaces for Neural Interfaces and Digital Healthcare",
               "speaker_name": "하경호",
               "speaker_affil": "한국과학기술원",
-              "kind": "Invited"
+              "kind": "Invited",
               "pdf" : "pdf/Kyungha.pdf"
             }
           ]
