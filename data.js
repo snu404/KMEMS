@@ -405,7 +405,7 @@ const APP_DATA = {
         { time: "09:00~09:10", sessions: [ { name: "휴식 및 이동", room: "로비", talks: [] } ] },
         { time: "09:10~09:30", sessions: [ { name: "개회식", room: "이벤트홀A", talks: [] } ] },
         { time: "09:30~10:10", sessions: [ { name: "기조강연I / 좌장: 이정철(한국과학기술원)", room: "이벤트홀A", Note: "", talks: [{kind: "Invited", title: "Spatial & Physical AI: Empowering the Future of Smart Cities",
-      speaker_affil: "네이버랩스", speaker_name: "차재원 PM", pdf: "pdf/Naverlabs.pdf"}] } ] },
+      speaker_affil: "네이버랩스", speaker_name: "차재원 PM", pdf: "pdf/Navelabs.pdf"}] } ] },
         { time: "10:10~11:00", sessions: [ { name: "기조강연II / 좌장: 류원형(연세대)", room: "이벤트홀A", Note: "", Note: "", talks: [{kind: "Invited", title: "로봇 기술의 발전과 활용",
       speaker_affil: "성균관대학교", speaker_name: "문형필 교수", pdf: "pdf/hyungmoon.pdf"}] } ] },
         { time: "11:00~11:15", sessions: [ { name: "휴식 및 이동", room: "로비", talks: [] } ] },
@@ -832,6 +832,7 @@ const ORAL_TIMEBLOCKS_BY_DATE = {
               "speaker_name": "하경호",
               "speaker_affil": "한국과학기술원",
               "kind": "Invited"
+              "pdf" : "pdf/Kyungha.pdf"
             }
           ]
         },
