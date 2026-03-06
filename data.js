@@ -405,9 +405,9 @@ const APP_DATA = {
         { time: "09:00~09:10", sessions: [ { name: "휴식 및 이동", room: "로비", talks: [] } ] },
         { time: "09:10~09:30", sessions: [ { name: "개회식", room: "이벤트홀A", talks: [] } ] },
         { time: "09:30~10:10", sessions: [ { name: "기조강연I / 좌장: 이정철(한국과학기술원)", room: "이벤트홀A", Note: "", talks: [{kind: "Invited", title: "Spatial & Physical AI: Empowering the Future of Smart Cities",
-      speaker_affil: "네이버랩스", speaker_name: "차재원 PM", noPdf: true}] } ] },
+      speaker_affil: "네이버랩스", speaker_name: "차재원 PM", pdf: "pdf/Naverlabs.pdf"}] } ] },
         { time: "10:10~11:00", sessions: [ { name: "기조강연II / 좌장: 류원형(연세대)", room: "이벤트홀A", Note: "", Note: "", talks: [{kind: "Invited", title: "로봇 기술의 발전과 활용",
-      speaker_affil: "성균관대학교", speaker_name: "문형필 교수", noPdf: true}] } ] },
+      speaker_affil: "성균관대학교", speaker_name: "문형필 교수", pdf: "pdf/hyungmoon.pdf"}] } ] },
         { time: "11:00~11:15", sessions: [ { name: "휴식 및 이동", room: "로비", talks: [] } ] },
         {
           time: "11:15~12:25",
@@ -418,7 +418,7 @@ const APP_DATA = {
         },
         { time: "12:25~13:20", sessions: [ { name: "점심식사 및 전시부스 참관", room: "전시장", talks: [] } ] },
         { time: "13:20~13:50", sessions: [ { name: "특별세션II (삼성미래기술육성사업 설명회) / 좌장: 조일주(고려대)", room: "영주홀A", talks: [{kind: "Invited", title: "삼성미래기술육성사업 사업설명회",
-      speaker_affil: "삼성전자 미래기술육성센터", speaker_name: "조승희 PD", noPdf: true}] } ] },
+      speaker_affil: "삼성전자 미래기술육성센터", speaker_name: "조승희 PD", pdf: "pdf/Seungcho.pdf"}] } ] },
         {
           time: "13:50~15:00",
           sessions: [
@@ -497,8 +497,8 @@ const APP_DATA = {
       title: "96-Puddle Paper Plate: A Scalable Lab-on-Paper System for On-Site Sensing and Analysis",
       speaker_affil: "고려대학교",
       speaker_name: "이태하 교수",
-      noPdf: true
-      //pdf: "pdf/D3_SS3_01.pdf"
+      //noPdf: true
+      pdf: "pdf/Taelee.pdf"
     },
     {
       kind: "Special",
@@ -506,8 +506,8 @@ const APP_DATA = {
       title: "Carbon Nanotube Integration for Flexible and Stretchable Electronic Applications",
       speaker_affil: "연세대학교",
       speaker_name: "심상준 교수",
-      noPdf: true
-      //pdf: "pdf/D3_SS3_02.pdf"
+      //noPdf: true
+      pdf: "pdf/Sangsim.pdf"
     },
     {
       kind: "Special",
@@ -515,8 +515,8 @@ const APP_DATA = {
       title: "Structural Designs of Triboelectric Material for High-Performance Soft Electronics and Neuromorphic Devices",
       speaker_affil: "한국화학융합시험연구원",
       speaker_name: "박용진 박사",
-      noPdf: true
-      //pdf: "pdf/D3_SS3_03.pdf"
+      //noPdf: true
+      pdf: "pdf/Yongpark.pdf"
     },
     {
       kind: "Special",
@@ -524,8 +524,8 @@ const APP_DATA = {
       title: "Wireless, Spatially-atched Optoelectronic Neural Interfaces for Simultaneous Optogenetics and Electrophysiology",
       speaker_affil: "한국과학기술원",
       speaker_name: "이주현 박사",
-      noPdf: true
-      //pdf: "pdf/D3_SS3_04.pdf"
+      //noPdf: true
+      pdf: "pdf/Julee.pdf"
     }
   ]
  },  { name: "포스터발표FP-III", room: "백록홀", note: "일반 포스터발표 86편\n좌장: 황순홍(강원대), 김인기(성균관대), 김현수(광운대), 한성연(경북대), 고광준(조선대), 최정일(아주대), 조인철(한국공학대), 박종성(경북대)\n학부생 포스터발표 38편\n좌장: 최영수(광주대)", pdfBundle: "pdf/poster/poster_FP-III.pdf", talks: [] }
@@ -540,7 +540,7 @@ const APP_DATA = {
         { time: "11:00~11:10", sessions: [ { name: "휴식 및 이동", room: "로비", talks: [] } ] },
         { time: "11:10~11:40", sessions: [ { name: "2025 MNS 학술상 수상 기념 강연 / 좌장: 윤광석(서강대)", room: "이벤트홀A", talks: [{kind: "Invited", title: "질병 치료 및 진단을 위한 마이크로니들 기술",
       speaker_affil: "연세대학교",
-      speaker_name: "류원형 교수", noPdf: true}] } ] },
+      speaker_name: "류원형 교수", pdf: "pdf/Wonryu.pdf"}] } ] },
         { time: "11:40~12:00", sessions: [ { name: "폐회식 준비", room: "이벤트홀A", talks: [] } ] },
         { time: "12:00~12:30", sessions: [ { name: "우수논문 시상 및 폐회식", room: "이벤트홀A", talks: [] } ] }
       ]
