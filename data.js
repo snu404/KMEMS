@@ -65,9 +65,9 @@ const APP_DATA = {
             { name: "튜토리얼 I", room: "203", note: "", talks: [{kind: "", title: "금속-유기 구조체: 나노에서 마이크로까지",
       speaker_affil: "고려대학교",speaker_name: "김현욱 교수", pdf: "pdf/김현욱.pdf"}] },
             { name: "튜토리얼 II", room: "201A", note: "", talks: [{kind: "", title: "유체소자 개발을 위한 전통적/비전통적 마이크로/나노구조 제작",
-      speaker_affil: "전남대학교",speaker_name: "배주열 교수", noPdf: true}] },
+      speaker_affil: "전남대학교",speaker_name: "배주열 교수", pdf: "pdf/배주열.pdf"}] },
             { name: "튜토리얼 III", room: "201B", note: "", talks: [{kind: "", title: "저차원 나노미터 공간에서의 물질 전달 현상",
-      speaker_affil: "포항공과대학교",speaker_name: "박형규 교수", noPdf: true}] }
+      speaker_affil: "포항공과대학교",speaker_name: "박형규 교수", pdf: "pdf/박형규.pdf"}] }
           ]
         },
         {
