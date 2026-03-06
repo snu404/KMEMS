@@ -897,7 +897,7 @@ fillTalks("2026-03-26", "08:00~09:00", "물리I / 좌장: 조은환(금오공대
 
 // 11:15~12:23  유체II
 fillTalks("2026-03-26", "11:15~12:25", "유체II / 좌장: 김원정(연세대), 전형국(서울과기대)", [
-  { kind: "Invited", time: "11:15~11:37", title: "Hydrodynamics and Interfaces: Microbial Motility and Antifouling Surface Design", speaker_affil: "경희대학교", speaker_name: "이충엽 교수" },
+  { kind: "Invited", time: "11:15~11:37", title: "Hydrodynamics and Interfaces: Microbial Motility and Antifouling Surface Design", speaker_affil: "경희대학교", speaker_name: "이충엽 교수", pdf: "pdf/Chunglee.pdf" },
   { kind: "Oral",    time: "11:37~11:49", title: "A Novel Resistive Pulse Sensing Using Tunable Micro-/Nanopores for Analyte Size Characterization", speaker_affil: "울산과학기술원", speaker_name: "서동우" },
   { kind: "Oral",    time: "11:49~12:01", title: "표면파 유도 음향흐름유동 기반 고속 생화학 마이크로바이오리액터 개발", speaker_affil: "전남대학교", speaker_name: "차범석" },
   { kind: "Oral",    time: "12:01~12:13", title: "µPIV-assisted Optimization of Operating Conditions and Device Geometry for a Microfluidic Cavitation-microstreaming DNA Extractor", speaker_affil: "명지대학교", speaker_name: "케드르 소포니아스 눌세파" },
@@ -906,7 +906,7 @@ fillTalks("2026-03-26", "11:15~12:25", "유체II / 좌장: 김원정(연세대),
 
 // 11:15~12:23  물리II-소재, 가공, 패키징II
 fillTalks("2026-03-26", "11:15~12:25", "물리II-소재, 가공, 패키징II / 좌장: 김회준(DGIST), 이한얼(GIST)", [
-  { kind: "Invited", time: "11:15~11:37", title: "Bidirectional Neural Interfaces for Neuroprosthesis and Electroceuticals", speaker_affil: "한국과학기술연구원", speaker_name: "김진석 박사" },
+  { kind: "Invited", time: "11:15~11:37", title: "Bidirectional Neural Interfaces for Neuroprosthesis and Electroceuticals", speaker_affil: "한국과학기술연구원", speaker_name: "김진석 박사", pdf: "pdf/Jinkim.pdf" },
   { kind: "Oral",    time: "11:37~11:49", title: "리간드 치환 CISe 양자점 집적에 따른 실리콘 포토다이오드의 광응답 특성 개선", speaker_affil: "전북대학교", speaker_name: "이지훈" },
   { kind: "Oral",    time: "11:49~12:01", title: "All-Optical PCR using Microspectrometer for Real-time Temperature and Multiplex Amplification Monitoring", speaker_affil: "한국과학기술원", speaker_name: "김기범" },
   { kind: "Oral",    time: "12:01~12:13", title: "고종횡비 실리콘 매크로포어 어레이 및 3차원 미세구조 제작을 위한 광여기 제어 전기화학 식각", speaker_affil: "한국과학기술원", speaker_name: "민두홍" },
