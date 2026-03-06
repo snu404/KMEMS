@@ -336,7 +336,7 @@ const APP_DATA = {
           title: "Skin-Interfaced Wireless Medical Devices: From Academic Research to Clinical Translation and Commercialization",
           speaker_affil: "사이벨 인터내셔널",
           speaker_name: "정하욱 대표",
-          noPdf: true
+          //noPdf: true
           pdf: "pdf/Hachung.pdf"
         },
           {
