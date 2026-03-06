@@ -345,8 +345,8 @@ const APP_DATA = {
           title: "Microfluidic Intracellular Delivery Platforms: Advancements, Applications, and Commercialization",
           speaker_affil: "MxT Biotech / 고려대학교",
           speaker_name: "정아람 교수",
-          noPdf: true
-          //pdf: ""
+          //noPdf: true
+          pdf: "pdf/Aramchung.pdf"
         },
               {
           kind: "Invited",
@@ -354,8 +354,8 @@ const APP_DATA = {
           title: "스스로 청소하는 똑똑한 유리(SCG)로 세상을 바꾼다!",
           speaker_affil: "마이크로시스템 / 명지대학교",
           speaker_name: "정상국 교수",
-          noPdf: true
-                //pdf: ""
+          //noPdf: true
+          pdf: "pdf/Sangchung.pdf"
         }]
               },  { name: "포스터WP-I", room: "백록홀", note: "일반 포스터발표 124편\n좌장: 유재형(중앙대), 장두준(성균관대), 임종경(가천대), 안중호(성균관대), 박승현(부경대), 배주열(전남대), 김민구(연세대), 이응복(전남대)", pdfBundle: "pdf/poster/poster_WP-I.pdf", talks: [] }
           ]
