@@ -496,7 +496,7 @@ const APP_DATA = {
       time: "09:20~09:35",
       title: "96-Puddle Paper Plate: A Scalable Lab-on-Paper System for On-Site Sensing and Analysis",
       speaker_affil: "고려대학교",
-      speaker_name: "이태하 교수",
+      speaker_name: "이태하 박사",
       //noPdf: true
       pdf: "pdf/Taelee.pdf"
     },
@@ -505,7 +505,7 @@ const APP_DATA = {
       time: "09:35~09:50",
       title: "Carbon Nanotube Integration for Flexible and Stretchable Electronic Applications",
       speaker_affil: "연세대학교",
-      speaker_name: "심상준 교수",
+      speaker_name: "심상준 박사",
       //noPdf: true
       pdf: "pdf/Sangsim.pdf"
     },
