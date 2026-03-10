@@ -357,13 +357,13 @@ const APP_DATA = {
           //noPdf: true
           pdf: "pdf/Sangchung.pdf"
         }]
-              },  { name: "포스터WP-I", room: "백록홀", note: "일반 포스터발표 124편\n좌장: 유재형(중앙대), 장두준(성균관대), 임종경(가천대), 안중호(성균관대), 박승현(부경대), 배주열(전남대), 김민구(연세대), 이응복(전남대)", pdfBundle: "pdf/compressed_MNS26S_WP_ALL.pdf", talks: [] }
+              },  { name: "포스터WP-I", room: "백록홀", note: "일반 포스터발표 124편\n좌장: 유재형(중앙대), 장두준(성균관대), 임종경(가천대), 안중호(성균관대), 박승현(부경대), 배주열(전남대), 하지환(한밭대), 이용복(전남대)", pdfBundle: "pdf/compressed_MNS26S_WP_ALL.pdf", talks: [] }
           ]
         },
         {
           time: "17:15~17:55",
           sessions: [
-            { name: "포스터WP-I (계속)", room: "백록홀", note: "일반 포스터발표 124편\n좌장: 유재형(중앙대), 장두준(성균관대), 임종경(가천대), 안중호(성균관대), 박승현(부경대), 배주열(전남대), 김민구(연세대), 이응복(전남대)", pdfBundle: "pdf/compressed_MNS26S_WP_ALL.pdf", talks: [] }
+            { name: "포스터WP-I (계속)", room: "백록홀", note: "일반 포스터발표 124편\n좌장: 유재형(중앙대), 장두준(성균관대), 임종경(가천대), 안중호(성균관대), 박승현(부경대), 배주열(전남대), 하지환(한밭대), 이용복(전남대)", pdfBundle: "pdf/compressed_MNS26S_WP_ALL.pdf", talks: [] }
           ]
         },
         {
