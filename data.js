@@ -196,7 +196,7 @@ const APP_DATA = {
             title: "Fabrication of Aerogel-Based Transparent Haze Film for Enhanced Forward Light Scattering and Passive Radiative Cooling in Solar Cells",
           speaker_affil: "중앙대학교",
           speaker_name: "이경완",
-          pdf: "pdf/D1_Fluid1_O_05.pdf"
+          pdf: "pdf/D1_Packaging1_O_05.pdf"
         }
       ] }
           ]
