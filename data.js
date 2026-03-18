@@ -13,7 +13,7 @@ const SESSION_KEY = {
 
   // Day 2 (3/26)
   "융복합I-메디컬II": "ConvMed2",
-  "융복합I-메디컬II / 좌장: 서민호(부산대), 유성광(인제대)" : "ConvMed2",
+  "융복합I-메디컬II / 좌장: 정준수(부산대), 유성광(인제대)" : "ConvMed2",
   "물리I": "Phys1",
   "물리I / 좌장: 조은환(금오공대), 표순재(서울과기대)": "Phys1",
   "유체II": "Fluid2",
@@ -399,7 +399,7 @@ const APP_DATA = {
           time: "08:00~09:00",
           sessions: [
             { name: "물리I / 좌장: 조은환(금오공대), 표순재(서울과기대)", room: "이벤트홀A", note: "초청강연 1편, 일반 구두발표 3편", talks: [] },
-            { name: "융복합I-메디컬II / 좌장: 서민호(부산대), 유성광(인제대)", room: "영주홀A", note: "초청강연 1편, 일반 구두발표 3편", talks: [] }
+            { name: "융복합I-메디컬II / 좌장: 정준수(부산대), 유성광(인제대)", room: "영주홀A", note: "초청강연 1편, 일반 구두발표 3편", talks: [] }
           ]
         },
         { time: "09:00~09:10", sessions: [ { name: "휴식 및 이동", room: "로비", talks: [] } ] },
@@ -879,7 +879,7 @@ function fillTalks(date, time, sessionName, talks) {
 ========================================================= */
 
 // 08:00~08:56  융복합I-메디컬II
-fillTalks("2026-03-26", "08:00~09:00", "융복합I-메디컬II / 좌장: 서민호(부산대), 유성광(인제대)", [
+fillTalks("2026-03-26", "08:00~09:00", "융복합I-메디컬II / 좌장: 정준수(부산대), 유성광(인제대)", [
   { kind: "Invited", time: "08:00~08:24", title: "Pd-catalyzed SnO₂/ZnO Heterojunction Hydrogen Sensor Enabling Wide-range Detection via Hydrogen-Induced Metal-Like Conduction", speaker_affil: "부산대학교", speaker_name: "정대웅 교수" },
   { kind: "Oral",    time: "08:24~08:36", title: "비침습적 시간 간섭 기반의 선택적 뇌심부 자극을 위한 MEMS 기반 유연 전극 어레이와 임피던스 적응 형 폐루프 무선 시스템", speaker_affil: "고려대학교", speaker_name: "차지형" },
   { kind: "Oral",    time: "08:36~08:48", title: "빠른 포도당 검출을 위한 광 시냅틱 트랜지스터 기반 센서", speaker_affil: "서강대학교", speaker_name: "류승표" },
